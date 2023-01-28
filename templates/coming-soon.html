@@ -1,0 +1,36 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block head %}
+<style>
+      body {
+        background-color: #111111;
+      }
+      .container {
+        height: 80vh; /* 80% of the viewport height */
+        display: flex;
+        align-items: center; /* centers the content vertically */
+        justify-content: center; /* centers the content horizontally */
+      }
+      .content {
+        display: flex;
+        flex-direction: column; /* stack the elements vertically */
+        align-items: center; /* centers the content vertically */
+        justify-content: center; /* centers the content horizontally */
+      }
+      h1 {
+        color: #FF8C00;
+      }
+      p {
+        color: #999999;
+      }
+    </style>
+    {% endblock %}
+  {% block body %}
+
+  <div class="container" style="text-align: center;">
+    <div class="content">
+      <h1>Coming Soon</h1>
+      <p>We're working hard to bring you something awesome.</p>
+    </div>
+  </div>
+{% endblock %}

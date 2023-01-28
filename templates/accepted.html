@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+{% endblock %}
+{% block body %}
+<div class="d-flex justify-content-center align-items-center accepted-screen" style="height:100vh">
+    <div class="card-accepted text-center" style="width:40%">
+        <div class="card-accepted-body">
+            <h1 class="card-accepted-title">Congratulations!</h1>
+            <p class="card-accepted-text">You are eligibile.</p>
+            <p>We will be in touch soon.</p>
+            <hr class="my-4">
+            <div class='row contact'>
+                <div class='col-lg-4 col-md-4 col-sm-12 col-xs-12'>
+                    <h4>
+                        Rakin Rahmaan
+                    </h4>
+                    <p onclick='window.location.href="https://www.instagram.com/rakthemedic/?hl=en"'>@rakthemedic</p>
+                </div>
+                <div class='col-lg-4 col-md-4 col-sm-12 col-xs-12'>
+                    <h4>
+                        99ForMed
+                    </h4>
+                    <p onclick='window.location.href="https://www.instagram.com/99formed/?hl=en"'>@99formed</p>
+                </div>
+                <div class='col-lg-4 col-md-4 col-sm-12 col-xs-12'>
+                    <h4>
+                        Rafi Ashraf
+                    </h4>
+                    <p onclick='window.location.href="https://www.instagram.com/therifraf/?hl=en"'>@therifraf</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

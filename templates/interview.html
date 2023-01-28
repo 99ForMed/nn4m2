@@ -1,0 +1,189 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+<div class='interview-page'>
+    
+    <div class='course-title'>
+        <h1 class="text-center">Interview</h1>
+    </div>
+    <div class="container"><div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        {% comment %} <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="interview-page-card-body">
+                    <h2 class="interview-page-card-title">Medicine</h2>
+                    <p class="interview-page-card-text">Undergraduate Interview preparation for any Australian University</p>
+                    <ul>
+                        <li>Preparatory Phase: 8+ modules</li>
+                        <li>Practice Phase: up to 3 one-on-one mock interviews</li>
+                    </ul>
+                    <p>Interview Preparation program is specifically designed to help you ace your interviews for any Australian University. With 8+ modules, our program covers everything you need to know for your interview.
+                        <br/><br/>
+                        Each module includes a pre-recorded lecture that covers important content such as traits and strategies, a 1.5 hour tutorial, self-directed practice on Discord for 7 hours a week, ethical practice questions on Notion, and a 48 hour response time for any questions or concerns.
+                        <br/><br/>
+                        In the practice phase, your skills will already be well-developed. We offer up to 3 one-on-one mock interviews, each lasting 1.5 hours. These sessions include a 45-minute, no-break simulation of your desired university's interview, followed by 45 minutes of feedback tailored to your specific performance.</p>
+                
+                        <a href='/eligibility-check/' class='book-button'>Book Now</a>
+                </div>
+            </div>
+          <div class="carousel-item">
+            <div class="interview-page-card">
+                <div class="interview-page-card-body">
+                    <h2 class="interview-page-card-title">Dentistry</h2>
+                    <p class="interview-page-card-text">Undergraduate Dentistry Preparation for any Australian Dentistry Interview</p>
+                    <ul>
+                        <li>Preparatory Phase: 8+ modules</li>
+                        <li>Practice Phase: up to 3 one-on-one mock interviews</li>
+                    </ul>
+                    <p>
+                        Dentistry Interview Preparation program is designed to help you excel in your interviews for any Australian Dentistry program. With 8+ modules, our program is based on video content that covers everything you need to know.
+                        <br/><br/>
+                        Each module includes a pre-recorded lecture that covers important content such as traits and strategies, a 1.5 hour tutorial, self-directed practice on Discord for 7 hours a week, ethical practice questions on Notion, and a 48 hour response time for any questions or concerns.
+                        <br/><br/>
+                        In the practice phase, your skills will already be well-developed. We offer up to 3 one-on-one mock interviews, each lasting 1.5 hours. These sessions include a 45-minute, no-break simulation of your desired university's interview, followed by 45 minutes of feedback tailored to your specific performance.
+                    </p>
+                    <a href='/eligibility-check/' class='book-button'>Book Now</a>
+                </div>
+            </div>
+          </div>
+            <div class="carousel-item">
+            <div class="interview-page-card">
+                <div class="interview-page-card-body">
+                    <h2 class="interview-page-card-title">Application Writing</h2>
+                    <p class="interview-page-card-text">Available for purchase separately for non-students</p>
+                    <ul>
+                        <li>JCU Application Considerations</li>
+                        <li>UNSW Application Considerations</li>
+                        <li>WSU Community Station Considerations</li>
+                    </ul>
+                    <p>
+                        Application Writing program offers application writing services for James Cook University (JCU), University of New South Wales (UNSW), and Western Sydney University Community Station (WSU) considerations. These services are included in the program for students, but can also be purchased separately for non-students.
+                        <br/><br/>
+                        In addition, Application Writing program includes mock interviews, which consist of 1.5 hour sessions. The mock interviews are divided into 45 minutes of MMI (Multiple Mini Interviews), semi-structured medical/dental interviews, and 45 minutes of one-on-one feedback with a trained interviewer. We allow you to emulate any university of your choice for your mock interview. Our program also provides marking criteria for every question asked during the mock interviews, to help you understand where you excel and where you need improvement.
+                    </p><a href='/eligibility-check/' class='book-button'>Book Now</a>
+                </div>
+            </div>
+            </div>
+        </div> {% endcomment %}
+        {% comment %} <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button> {% endcomment %}
+        </div>
+        <div class="interview-page-card">
+            <div class="interview-page-card-body">
+                
+                <div class="interview-page-card" id='medicine'>
+                    <div class="interview-page-card-body">
+                        <h2 class="interview-page-card-title">Medicine</h2>
+                        <p class="interview-page-card-text">Undergraduate Interview preparation for any Australian University</p>
+                        <ul>
+                            <li>Preparatory Phase: 8+ modules</li>
+                            <li>Practice Phase: up to 3 one-on-one mock interviews</li>
+                        </ul>
+                        <div class='row'>
+                            <div class='col-lg-4 col-md-4 col-sm-12 col-xs-12'>
+                                <p>Interview Preparation program is specifically designed to help you ace your interviews for any Australian University. With 8+ modules, our program covers everything you need to know for your interview.</p>
+                            </div>
+                            <div class='col-lg-4 col-md-4 col-sm-12 col-xs-12'>
+                                <p>Each module includes a pre-recorded lecture that covers important content such as traits and strategies, a 1.5 hour tutorial, self-directed practice on Discord for 7 hours a week, ethical practice questions on Notion, and a 48 hour response time for any questions or concerns.</p>
+                            </div>
+                            <div class='col-lg-4 col-md-4 col-sm-12 col-xs-12'>
+                                <p>In the practice phase, your skills will already be well-developed. We offer up to 3 one-on-one mock interviews, each lasting 1.5 hours. These sessions include a 45-minute, no-break simulation of your desired university's interview, followed by 45 minutes of feedback tailored to your specific performance.</p>
+                            </div>
+                        </div>
+                        <a href='/eligibility-check/' class='book-button'>Book Now</a><a href='/course-content/interview/medicine/' class='course-content-btn'>Course Content</a>
+                    </div>
+                </div>
+                <hr/>
+                <div class="interview-page-card" id='dentistry'>
+                    <div class="interview-page-card-body">
+                        <h2 class="interview-page-card-title">Dentistry</h2>
+                        <p class="interview-page-card-text">Undergraduate Dentistry Preparation for any Australian Dentistry Interview</p>
+                        <ul>
+                            <li>Preparatory Phase: 8+ modules</li>
+                            <li>Practice Phase: up to 3 one-on-one mock interviews</li>
+                        </ul>
+                        <div class='row'>
+                            <div class='col-lg-4 col-md-4 col-sm-12 col-xs-12'>
+                                <p>Dentistry Interview Preparation program is designed to help you excel in your interviews for any Australian Dentistry program. With 8+ modules, our program is based on video content that covers everything you need to know.</p>
+                            </div>
+                            <div class='col-lg-4 col-md-4 col-sm-12 col-xs-12'>
+                                <p>Each module includes a pre-recorded lecture that covers important content such as traits and strategies, a 1.5 hour tutorial, self-directed practice on Discord for 7 hours a week, ethical practice questions on Notion, and a 48 hour response time for any questions or concerns.</p>
+                            </div>
+                            <div class='col-lg-4 col-md-4 col-sm-12 col-xs-12'>
+                                <p> In the practice phase, your skills will already be well-developed. We offer up to 3 one-on-one mock interviews, each lasting 1.5 hours. These sessions include a 45-minute, no-break simulation of your desired university's interview, followed by 45 minutes of feedback tailored to your specific performance.</p>
+                            </div>
+                        </div>
+                        <a href='/eligibility-check/' class='book-button'>Book Now</a><a href='/course-content/interview/dentistry/' class='course-content-btn'>Course Content</a>
+                    </div>
+                </div>
+                <hr/>
+                <div class="interview-page-card" id='application-writing'>
+                    <div class="interview-page-card-body">
+                        <h3 class="interview-page-card-title">Application Writing</h3>
+                        <p class="interview-page-card-text">Available for purchase separately for non-students</p>
+                        <ul>
+                            <li>JCU Application Considerations</li>
+                            <li>UNSW Application Considerations</li>
+                            <li>WSU Community Station Considerations</li>
+                        </ul>
+                        <div class='row'>
+                            <div class='col-lg-6 col-md-6 col-sm-12 col-xs-12'>
+                                <p>The Application Writing program offers application writing services for James Cook University (JCU), University of New South Wales (UNSW), and Western Sydney University Community Station (WSU) considerations. These services are included in the program for students, but can also be purchased separately for non-students.
+                                </p>
+                            </div>
+                            <div class='col-lg-6 col-md-6 col-sm-12 col-xs-12'>
+                                <p>In addition, the program includes guidance and support to help you prepare for your interview. This includes tips, strategies, and practice questions to help you showcase your skills, knowledge, and experience to the best of your abilities. Our team is dedicated to ensuring that you have all the tools and support you need to excel in your interview process.</p>
+                            </div>
+                        </div>
+                        <a href='/eligibility-check/' class='book-button'>Book Now</a>
+                    </div>
+                </div>
+                <hr/>
+                <div class="interview-page-card" id='application-writing'>
+                    <div class="interview-page-card-body">
+                        <h3 class="interview-page-card-title">1on1 Mocks</h3>
+                        <p class="interview-page-card-text">Available for purchase separately for non-students</p>
+                        <ul>
+                            <li>1.5 hour mock sessions with 45 minutes of MMI/Semi-structured Medical/Dental Mocks</li>
+                            <li>1 on 1 feedback with trained interviewer</li>
+                            <li>Emulate any university of choice and access to marking criteria for every question.</li>
+                        </ul>
+                        <div class='row'>
+                            <div class='col-lg-4 col-md-4 col-sm-12 col-xs-12'>
+                                <p>Our 1on1 Mocks provide a comprehensive and realistic preparation for your medical or dental interview. Each mock session lasts 1.5 hours, with 45 minutes dedicated to MMI/Semi-structured Medical/Dental Mocks, where you'll have the opportunity to emulate any university of your choice. 
+                                </p>
+                            </div>
+                            <div class='col-lg-4 col-md-4 col-sm-12 col-xs-12'>
+                                <p>This will give you an idea of what to expect during the actual interview, and help you fine-tune your skills and knowledge. The remaining 45 minutes of the session will be dedicated to 1 on 1 feedback with a trained interviewer. The interviewer will provide valuable insights and guidance on how to improve your performance, and help you identify areas for improvement.
+                                </p>
+
+                            </div>
+                            <div class='col-lg-4 col-md-4 col-sm-12 col-xs-12'>
+                                <p>Additionally, you will have access to marking criteria for every question asked, which will give you a clear understanding of what's expected during the actual interview. This will give you a clear understanding of what's expected during the actual interview and help you to better prepare. For non-students, 1on1 Mocks can also be purchased separately. With our 1on1 Mocks, you will be able to put your best foot forward, and increase your chances of success in your medical or dental interview.</p>
+                            </div>
+                        </div>
+                        <a href='/eligibility-check/' class='book-button'>Book Now</a>
+                    </div>
+                </div>
+                
+                
+            </div>
+        </div>
+        {% comment %} <h1 class="text-center">Interview Preparation</h1>
+         {% endcomment %}
+        
+    </div>
+</div>
+
+{% endblock %}

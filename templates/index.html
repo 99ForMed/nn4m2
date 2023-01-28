@@ -1,0 +1,563 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+<link rel='stylesheet' type='text/css' href='{% static 'css/vertical-carousel.css' %}'/>
+{% endblock %}
+{% block body %}
+
+<div class='loading-screen'>
+	<img src='{% static "img/logo.png"%}'/>
+</div>
+<script>
+	setTimeout(function(){document.querySelector('.loading-screen').style.opacity = '0'}, 4000);
+	setTimeout(function(){document.querySelector('.loading-screen').style.display = 'none'}, 4500)
+</script>
+
+<div class='landing-page'>
+	<div class='container-fluid'>
+		<div class='banner-info'>
+			<h1>Tailored Medical/ Dental Entrance Specialists</h1>
+			<h4>End pointless failure. A rewarding career awaits you. </h4>
+				<br><br>
+			<a href='eligibility-check/'>
+				Enrol Today</a>
+		</div>
+	</div>
+</div>
+
+{% comment %} <div class='landing-page'>
+	<div class='row'>
+		<div class='col-lg-4 col-md-4 col-sm-12 col-sm-12'>
+			<div class='banner-info'>
+			<h1>ACTUALLY GET IN</h1>
+			<h4>We know medicine inside and out. Let's get into medicine.</h4>
+				<br><br>
+			<a>Enrol Today</a>
+			</div>
+		</div>
+		<div class='col-lg-8 col-md-8 col-sm-12 col-sm 12'>
+			<div class='banner-img'>
+			</div>
+		</div>
+	</div>
+	
+</div> {% endcomment %}
+<div class="ParallaxVideo">
+	<video autoplay muted controls class='landing-vid'>
+	<source src="{% static 'vid/vid1.mp4' %}" type="video/mp4">
+	</video>
+  </div>
+<div class='ucat-interview'>
+	<div class='toggles' id='toggles' style=>
+		<h4>
+			<span id='ucat-toggle' class='ucat-heading active' onclick='activate("ucat-toggle", "interview-toggle", "seminars-toggle")'>Ucat Tutoring</span>
+			<span id='interview-toggle' class='interview-heading' onclick='activate("interview-toggle", "ucat-toggle", "seminars-toggle")'>Interview Training</span>
+			<span id='seminars-toggle' class='seminars-heading' onclick='activate("seminars-toggle", "interview-toggle", "ucat-toggle")'>Seminars</span>
+		</h4>
+	</div>
+		<div class='container-fluid ucat' id='ucat-section'>
+			<div id="ucat-only-carousel" class="carousel slide" data-bs-ride="true">
+					<div class="carousel-indicators">
+					  	<button type="button" data-bs-target="#ucat-only-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+					  	<button type="button" data-bs-target="#ucat-only-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+					  	<button type="button" data-bs-target="#ucat-only-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+					</div>
+					<div class="carousel-inner">
+					  	<div class="carousel-item active">
+							<h2>Personalised To You</h2>
+							<h4>Targeted Practice at your personal weaknesses</h4>
+							<p>We don’t waste our students time. The moment you enrol you recieve access to all 100+ UCAT video walkthroughs on all 5 sections, exam strategies, preparation tactics and psychological know how. This way you can spend every day focusing on YOUR weaknesses. Weekly classes don’t follow a set structure and spend the entire session addressing YOUR roadblocks to success. </p>
+
+					  	</div>
+					  	<div class="carousel-item">
+							<h2>Support through the entire UCAT journey</h2>
+							<h4>We take your success very personally so you’ll never be alone this year. </h4>
+							<p>Surround yourself with diligent like-minded individuals and if you find yourself in a ditch know that 99forMed is one message away. </p>
+
+						</div>
+					  	<div class="carousel-item">
+							<h2>Quality control across everything</h2>
+							<h4>This is a quality instituition built by people who care. </h4>
+							<p>Small classes. Vetted Students. Co-Founder groomed mentors. Dedicated discord servers. Past successful alumni networking events. Recorded UCAT strategies viewable anytime. </p>
+							
+					  	</div>
+					</div>
+					<button class="carousel-control-prev" type="button" data-bs-target="#ucat-only-carousel" data-bs-slide="prev">
+					  	<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					  	<span class="visually-hidden">Previous</span>
+					</button>
+					<button class="carousel-control-next" type="button" data-bs-target="#ucat-only-carousel" data-bs-slide="next">
+					  	<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					  	<span class="visually-hidden">Next</span>
+					</button>
+				</div>
+		</div>
+		<div class='container-fluid interview' id='interview-section'>
+			<div id="interview-only-carousel" class="carousel slide" data-bs-ride="true">
+					<div class="carousel-indicators">
+					  	<button type="button" data-bs-target="#interview-only-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+					  	<button type="button" data-bs-target="#interview-only-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+					  	<button type="button" data-bs-target="#interview-only-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+					</div>
+					<div class="carousel-inner">
+					  	<div class="carousel-item active">
+							<h2>94% success rate <span style='cursor: pointer;color: darkorange; font-size: 18px' onclick='window.location.href="/#past-students"'>See proof...</span></h2>
+							<p>Our track record speaks for itself. With a proven history of delivering results, there's no need to consider any other options. Don't take unnecessary chances with your future in medicine - choose us and make it happen.</p>
+
+					  	</div>
+					  	<div class="carousel-item">
+							<h2>Strategies for every interview station. For every university. </h2>
+							<h4>No seriously we have everything covered. Why do you think our success rate is so high.</h4>
+							<p>Medical interviews, Dentistry interviews, Purpose of interviews, How to promote your traits, Discussing Ethical Issues, Response Structure, Unpacking the Question, Considering Stakeholders, Anecdote Banks, Acting Stations, Conflict resolutions, Breaking Bad news, Anxious Scenarios, Personal questions, Community Stations, Pressurised MMIs, Critiquing medical consultations, Indigenous stations, Rural stations, Disability, Understanding Dentistry Stations and more. </p>
+
+						</div>
+					  	<div class="carousel-item">
+							<h2>Confident candidates built over 3 months</h2>
+							
+							<p>Other interview prep courses may only last a few hours or days, but how can they possibly compete with our students who have spent months preparing? It takes time to truly transform one's vocal framework and increase their chances of success. Don't settle for a cursory prep course that won't get you where you want to be. Choose us and give yourself the best chance of getting in this year.</p>
+							
+					  	</div>
+					</div>
+					<button class="carousel-control-prev" type="button" data-bs-target="#interview-only-carousel" data-bs-slide="prev">
+					  	<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					  	<span class="visually-hidden">Previous</span>
+					</button>
+					<button class="carousel-control-next" type="button" data-bs-target="#interview-only-carousel" data-bs-slide="next">
+					  	<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					  	<span class="visually-hidden">Next</span>
+					</button>
+				</div>
+		</div>
+		<div class='container-fluid interview' id='seminars-section'>
+			<div id="seminars-only-carousel" class="carousel slide" data-bs-ride="true">
+					<div class="carousel-indicators">
+					  	<button type="button" data-bs-target="#seminars-only-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+					  	<button type="button" data-bs-target="#seminars-only-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+					  	
+					</div>
+					<div class="carousel-inner">
+					  	<div class="carousel-item active">
+							<h2>Jan 14: UCAT 2023 Strategy Seminar</h2>
+							<h4>Our 99forMed Co-Founders detail their tried and tested strategies to cultivate a 99%ile in the 2023 UCAT season.  </h4>
+							<p>QnA session for attendees.</p>
+					  	</div>
+					  	<div class="carousel-item">
+							<h2>Jan 31: UCAT 2023 Strategy Seminar #2</h2>
+							<h4>Open your Medifys and show us your problems. 99forMed is here to solve them. </h4>
+							<p>A 3 hour Seminar purely dedicated to identifying UCAT issues for attendees and teaching relevant strategies to tackle them. </p>
+
+						</div>
+					</div>
+					<button class="carousel-control-prev" type="button" data-bs-target="#seminars-only-carousel" data-bs-slide="prev">
+					  	<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					  	<span class="visually-hidden">Previous</span>
+					</button>
+					<button class="carousel-control-next" type="button" data-bs-target="#seminars-only-carousel" data-bs-slide="next">
+					  	<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					  	<span class="visually-hidden">Next</span>
+					</button>
+				</div>
+		</div>
+</div>
+
+<div class='fluff-section'>
+	<div class='container'>
+		
+		<div class='row'>
+			
+			<div class='col-lg-6 col-md-6 col-sm-12 col-xs-12'>
+			
+				<div class='fluff-info'>
+					<h1>We cut the fluff.</h1>
+					<div id="carouselExampleCaptions" class="carousel slide vertical" data-bs-ride="false">
+						<div class="carousel-indicators">
+							<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+							<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+							<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+							<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+						</div>
+						<div class="carousel-inner">
+							<div class="carousel-item active">
+								{% comment %} <img src="https://source.unsplash.com/0RbbLWm6rLk/1920x1080" class="d-block w-100" alt="...">
+							
+								<div class="carousel-caption d-none d-md-block">
+									<h5>First slide label</h5>
+									<p>Some representative placeholder content for the first slide.</p>
+								</div> {% endcomment %}
+								<ul>
+									<li>Our co-founders have personally crafted all of the recorded teaching materials.</li>
+									<li>Our co-founders have carefully chosen the most qualified and knowledgeable candidates from the previous year to
+										serve as mentors. These individuals have recieved extensive personal training from our co-founders and 
+										are equipped with all of their knowledge and expertises.
+									</li>
+								</ul>
+								
+							</div>
+							<div class="carousel-item">
+								{% comment %} <img src="https://source.unsplash.com/Iw36tzggvQY/1920x1080" class="d-block w-100" alt="..."> {% endcomment %}
+								<ul>
+									<li>Our co-founders are always available on our Discord server to answer any questions that may arise, even if your mentor is unable to provide an answer.</li>
+									<li>
+										We are dedicated to your overwall well-being and success. Our team will regularly check in with you on a mental, social and academic level to ensure that you are on track and supported in your journey.
+									</li>
+
+								</ul>
+								{% comment %} <div class="carousel-caption d-none d-md-block">
+									<h5>Second slide label</h5>
+									<p>Some representative placeholder content for the second slide.</p>
+								</div> {% endcomment %}
+							</div>
+								
+							<div class="carousel-item">
+								{% comment %} <img src="https://source.unsplash.com/qJKT2rMU0VU/1920x1080" class="d-block w-100" alt="...">
+								<div class="carousel-caption d-none d-md-block">
+									<h5>Third slide label</h5>
+									<p>Some representative placeholder content for the third slide.</p>
+								</div> {% endcomment %}
+								<ul>
+									<li>
+										Our strategies are clear, concise and easy to understand. No need to sit through repetitive teaching - you can watch and rewatch as many times as you need. We've made it accessible and convenient for you to achieve your goals.
+									</li>
+									<li>
+										Our mentors are dedicated to helping you reach your goals. They'll make sure you understand and properly follow the strategies, and they're always available to troubleshoot any issues you may have. With their support, you'll be well on your way to achieving your dreams.
+
+									</li>
+									
+								</ul>
+							</div>
+							<div class="carousel-item">
+								{% comment %} <img src="https://source.unsplash.com/qJKT2rMU0VU/1920x1080" class="d-block w-100" alt="...">
+								<div class="carousel-caption d-none d-md-block">
+									<h5>Third slide label</h5>
+									<p>Some representative placeholder content for the third slide.</p>
+								</div> {% endcomment %}
+								<ul>
+									<li>We only work with the most serious and dedicated students. Our program is only open to those with a proven track record of diligence. When you join us, you'll be surrounded by like-minded individuals who are all working towards the same goal - to achieve their dreams.</li>
+								</ul>
+							</div>
+							<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+								<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+								<span class="visually-hidden">Previous</span>
+							</button>
+							<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+								<span class="carousel-control-next-icon" aria-hidden="true"></span>
+								<span class="visually-hidden">Next</span>
+							</button>
+						</div>
+						<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+						<script>
+							try {
+							fetch(new Request("https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js", { method: 'HEAD', mode: 'no-cors' })).then(function(response) {
+									return true;
+								}).catch(function(e) {
+									var carbonScript = document.createElement("script");
+									carbonScript.src = "//cdn.carbonads.com/carbon.js?serve=CE7DC2JW&placement=wwwcssscriptcom";
+									carbonScript.id = "_carbonads_js";
+									document.getElementById("carbon-block").appendChild(carbonScript);
+								});
+								} catch (error) {
+								console.log(error);
+								}
+						</script>
+						<script async src="https://www.googletagmanager.com/gtag/js?id=G-LLWL5N9CSM"></script>
+						<script>
+							window.dataLayer = window.dataLayer || [];
+							function gtag(){dataLayer.push(arguments);}
+							gtag('js', new Date());
+							gtag('config', 'G-LLWL5N9CSM');
+						</script>
+					</div>
+				</div>
+			</div>
+			<div class='col-lg-6 col-md-6 col-sm-12 col-xs-12'>
+				<br/><br/>
+				<div class='video-container'>
+					<video controls poster="{% static 'img/thumbnail.png' %}" style='z-index: 1'>
+					<source src="{% static 'vid/vid2.mp4' %}" type="video/mp4">
+							  Your browser does not support the video tag.
+					</video>
+				</div>
+						
+			</div>
+		</div>	
+		
+	</div>
+</div>
+<div class='past-students' id='past-students'>
+	<div class='container'>
+		<div class='row'>
+			<div class='col-lg-6 col-md-6 col-sm-12 col-sm-12'>
+				<div class='info'>
+					<h2>Guaranteed entry *</h2>
+					<hr/>
+					<h4>
+						99forMed has an exceptionally high success rate. 
+						If you put in the work and effort, you will get 
+						into medicine with their help.
+					</h4>
+					<br/>
+					<span class='success-rate'>
+						<h3>97%</h3>
+						<p>Our Success Rate</p>
+					</span>
+					<span class='amount-students'>
+						<h3>21</h3>
+						<p>Students successful</p>
+					</span>
+				</div>
+			</div>
+			<div class='col-lg-6 col-md-6 col-sm-12 col-sm-12 test'>
+				<div class='flex-list'>
+					<div class='row student-flex'>
+						<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 img-container'>
+								<img src='{% static 'img/wsu-logo.webp' %}'>
+							
+						</div>
+						<div class='col-lg-10 col-md-10 col-sm-10 col-xs-10'>
+							<div class='student-info-container'>
+								<span class='score'>
+									<p>Name </p><span class='big'>R.Ashraf</span>
+								</span>
+								<span class='score' style="padding-left: 0px;">
+									<p>Score</p><span class='big'>3200 <span style='color: darkorange'>98th Percentile</span></span>
+								</span>
+								
+							</div>
+						</div>
+						
+					</div>
+					<div class='row student-flex'>
+						<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 img-container'>
+								<img src='{% static 'img/unsw-logo.png' %}'>
+							
+						</div>
+						<div class='col-lg-10 col-md-10 col-sm-10 col-xs-10'>
+							<div class='student-info-container'>
+								<span class='score'>
+									<p>Name </p><span class='big'>S.Bhatia</span>
+								</span>
+								<span class='score' style="padding-left: 0px;">
+									<p>Score</p><span class='big'>3080 <span style='color: darkorange'>95th Percentile</span></span>
+								</span>
+								
+							</div>
+						</div>
+						
+					</div>
+					<div class='row student-flex'>
+						<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 img-container'>
+								<img src='{% static 'img/university-of-adelaide-logo.png' %}'>
+							
+						</div>
+						<div class='col-lg-10 col-md-10 col-sm-10 col-xs-10'>
+							<div class='student-info-container'>
+								<span class='score'>
+									<p>Name </p><span class='big'>A.Rajapakse</span>
+								</span>
+								<span class='score' style="padding-left: 0px;">
+									<p>Score</p><span class='big'>3320 <span style='color: darkorange'>99th Percentile</span></span>
+								</span>
+								
+							</div>
+						</div>
+						
+					</div>
+					<div class='row student-flex'>
+						<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 img-container'>
+								<img src='{% static 'img/une-logo.png' %}'>
+							
+						</div>
+						<div class='col-lg-10 col-md-10 col-sm-10 col-xs-10'>
+							<div class='student-info-container'>
+								<span class='score'>
+									<p>Name </p><span class='big'>A.Rahman</span>
+								</span>
+								<span class='score' style="padding-left: 0px;">
+									<p>Score</p><span class='big'>3100 <span style='color: darkorange'>95th Percentile</span></span>
+								</span>
+								
+							</div>
+						</div>
+						
+					</div>
+					<div class='row student-flex' style='margin-bottom: 13px'>
+						<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 img-container'>
+								<img src='{% static 'img/university-of-qld-logo.png' %}'>
+							
+						</div>
+						<div class='col-lg-10 col-md-10 col-sm-10 col-xs-10'>
+							<div class='student-info-container'>
+								<span class='score'>
+									<p>Name </p><span class='big'> M.Ahmad</span>
+								</span>
+								<span class='score' style="padding-left: 0px;">
+									<p>Score</p><span class='big'>3100 <span style='color: darkorange'>95th Percentile</span></span>
+								</span>
+								
+							</div>
+						</div>
+						
+					</div>
+				</div>
+				<a class='see-more-successful-students' href='successful-students/'>See more...</a>
+			</div>
+		</div>
+		
+	</div>
+</div>
+<div class='testimonials-section'>
+	<div class='container'>
+		
+		<div id="carouselExampleIndicators" class="carousel slide desktop" data-bs-ride="carousel">
+			<h2 style='color: rgba(0,0,0,0.4)'>Testimonials</h2>
+			<div class="carousel-indicators">
+			  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+			  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+			  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+			</div>
+			<div class="carousel-inner">
+			  {% for group in testimonials_grouped %}
+			  <div class="carousel-item{% if forloop.counter == 1 %} active{% endif %}">
+				
+				<div class="d-flex justify-content-evenly">
+					{% for testimonial in group %}
+					<div class='testimonial'>
+						<h3>{{testimonial.name}}</h3>
+						<h5>{{testimonial.credentials}}</h5>
+						<p>{{testimonial.content|truncatechars:300|safe}}
+						</p>
+						<p class='expand-testimonial' style='position: absolute; bottom: 10px' onclick='window.location.href="full-testimonial/{{testimonial.id}}"'>Expand</p>
+					</div>
+					{% endfor %}
+				</div>
+			  </div>
+			  {% endfor %}
+			  {% comment %} <div class="carousel-item">
+				<div class="d-flex justify-content-evenly">
+					<div class='testimonial'>
+						<h3>A. RAJAPAKSE</h3>
+						<h5>WSU MD, 2022</h5>
+						<p>Just wanted to thank you for all of your help leading up to the interviews, especially the mocks were such a good way for me to really get into the style of the upcoming interviews and I know I definitely wouldn't have got an offer without your insight and help.
+						</p>
+					</div>
+					<div class='testimonial'>
+						<h3>P.TRAN</h3>
+						<h5>WSU MD, 2022</h5>
+						<p>Interview training was very helpful. I wish I had started preparation with these guys sooner. 
+						</p>
+					</div>
+					<div class='testimonial'>
+						<h3>I. KARIM</h3>
+						<h5>WSU MD, 2022</h5>
+						<p>What helped me the most get used to the real interview where the mock interviews and the feedback given on every single question. 
+						</p>
+					</div>
+				</div>
+			  </div>
+			  <div class="carousel-item">
+				<div class="d-flex justify-content-evenly">
+					<div class='testimonial'>
+						<h3>M. AHMAD</h3>
+						<h5>WSU MD, 2022</h5>
+						<p>What helped most was the wide variety of prep that focused on question themes allowing the practice answers to be molded to any question they could ask
+						</p>
+					</div>
+					<div class='testimonial'>
+						<h3>P. LAY</h3>
+						<h5>WSU MD, 2022</h5>
+						<p>Going through practice questions helped me a lot. Particularly with your different perspective/approach to questions.
+						</p>
+					</div>
+					<div class='testimonial'>
+						<h3>N.HASSAN</h3>
+						<h5>WSU MD, 2022</h5>
+						<p>I liked the practice interviews which were the most helpful. It makes it easier to understand what to improve when u are doing an actual interview under actual interview conditions
+						</p>
+					</div>
+				</div>
+			  </div> {% endcomment %}
+			</div>
+			{% comment %} <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+			  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			  <span class="visually-hidden">Previous</span>
+			</button>
+			<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+			  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+			  <span class="visually-hidden">Next</span>
+			</button> {% endcomment %}
+		</div>
+
+		<div id="carouselExampleIndicators" class="carousel slide mobile" data-bs-ride="carousel">
+			<h2>Testimonials</h2>
+			<div class="carousel-indicators">
+			  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+			  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+			  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+			</div>
+			<div class="carousel-inner">
+			  <div class="carousel-item active">
+				<div class="d-flex justify-content-evenly">
+					<div class='testimonial'>
+						<h3>T.AMIR</h3>
+						<h5>WSU MD, 2022</h5>
+						<p>The most helpful parts were when you randomly made us
+							answer questions and we didn't give great answers, but you
+							broke down exactly what we did wrong and how to improve next time...
+						</p>
+					</div>
+				</div>
+			  </div>
+			  <div class="carousel-item">
+				<div class="d-flex justify-content-evenly">
+					<div class='testimonial'>
+						<h3>T.AMIR</h3>
+						<h5>WSU MD, 2022</h5>
+						<p>The most helpful parts were when you randomly made us
+							answer questions and we didn't give great answers, but you
+							broke down exactly what we did wrong and how to improve next time...
+						</p>
+					</div>
+				</div>
+			  </div>
+			  <div class="carousel-item">
+				<div class="d-flex justify-content-evenly">
+					<div class='testimonial'>
+						<h3>T.AMIR</h3>
+						<h5>WSU MD, 2022</h5>
+						<p>The most helpful parts were when you randomly made us
+							answer questions and we didn't give great answers, but you
+							broke down exactly what we did wrong and how to improve next time...
+						</p>
+					</div>
+				</div>
+			  </div>
+			</div>
+			{% comment %} <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+			  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			  <span class="visually-hidden">Previous</span>
+			</button>
+			<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+			  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+			  <span class="visually-hidden">Next</span>
+			</button> {% endcomment %}
+		</div>
+	</div>
+</div>
+
+
+
+<div class='final-call-to-action'>
+	<div class='container'>
+		<div class='info-block'>
+		<h2>Finally get into medicine</h2>
+		<h4>Succeed with us.</h4>
+		<br/>
+		<br/>
+		<a href='eligibility-check/'>Enrol Today</a>
+		</div>
+	</div>
+</div>
+
+
+
+{% endblock %}
