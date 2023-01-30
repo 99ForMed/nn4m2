@@ -23,13 +23,15 @@ def eligibility_view(request):
             accepted = False
             status_list = ['accepted', 'waiting_to_be_contacted', 'rejected']
             atar = float(request.POST['atar'])
-            gpa = float(request.POST['gpa'])
+            try:
+                gpa = float(request.POST['gpa'])
+            except ValueError as e:
+                None
             if atar > 96 or gpa > 6:
                 accepted = True
-                print('accepted for scores')
                 return redirect('secondary-qualifiers/?fname=%s&lname=%s&email=%s&pn=%s&sm=%s&gpa=%s&a=%s&atar=%s' % (request.POST['fname'], request.POST['lname'], request.POST['email'], request.POST['mob'], request.POST['job'], request.POST['gpa'], str(accepted), str(atar)))
             elif atar < 93 and gpa < 5.5:
-                return HttpResponse('Rejected.')
+                return redirect('rejected/?scores=1')
             else:
                 return redirect('secondary-qualifiers/?fname=%s&lname=%s&email=%s&pn=%s&sm=%s&gpa=%s&a=%s&atar=%s' % (request.POST['fname'], request.POST['lname'], request.POST['email'], request.POST['mob'], request.POST['job'], request.POST['gpa'], str(accepted), str(atar)))
 
@@ -54,7 +56,7 @@ def secondary_qualifiers_view(request):
 
         if float(request.POST['hours-amount']) > 90:
             print(int(request.POST['hours-amount']))
-            return HttpResponse('Rejected. Click to return <a href="/">home</a>')
+            return redirect('rejected/?hours=1')
         if accepted:
             status = "accepted"
         else:
@@ -122,8 +124,26 @@ def secondary_qualifiers_view(request):
 
 
 def accepted_view(request):
-    context = {}
+    context = {
+
+    }
     return render(request, 'accepted.html', context)
+
+def rejected_view(request):
+    scores = False
+    hours = False
+
+    if 'scores' in request.GET.keys():
+        scores = True
+    
+    if 'hours' in request.GET.keys():
+        hours = True
+    
+    context = {
+        'scores': scores,
+        'hours': hours
+    }
+    return render(request, 'rejected.html', context)
 
 def submitted_view(request):
     context = {}

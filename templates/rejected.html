@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+{% endblock %}
+{% block body %}
+<div class="d-flex justify-content-center align-items-center accepted-screen" style="height:100vh">
+    <div class="card-accepted text-center" style="width:40%">
+        <div class="card-accepted-body">
+            <h1 class="card-accepted-title" style='color: orange'>Ineligible.</h1>
+            <p class="card-accepted-text">{% if hours %}UCAT preparation is very time intensive. Starting UCAT preparation without first addressing your time committments is setting yourself up for failure. It is likely if you are unable to have addressed it by now these issues will stay for the duration of your preparation. Your preparation will thus be insufficient and guarantee a non-competitive UCAT percentile. <br/><br/>If you feel this assessment is unfair please screenshot your form summary and contact us <span href='www.instagram.com/99formed/'>@99forMed</span> (instagram logo hyperlink) {% elif scores %}Your highest tertiary score is not competitive for a place in Medicine. The effort required to raise this mark while UCAT study historically has proven to be too difficult. We recommend focusing on raising your tertiary mark or applying for the GAMSAT if you are eligible. Try applying again next year.{% endif %}</p>
+            
+            
+        </div>
+    </div>
+</div>
+{% endblock %}
