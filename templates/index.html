@@ -9,11 +9,12 @@
 	<img src='{% static "img/logo.png"%}'/>
 </div>
 <script>
-	setTimeout(function(){document.querySelector('.loading-screen').style.opacity = '0'}, 4000);
-	setTimeout(function(){document.querySelector('.loading-screen').style.display = 'none'}, 4500)
+	setTimeout(function(){document.querySelector('.loading-screen').style.opacity = '0'}, 0);
+	setTimeout(function(){document.querySelector('.loading-screen').style.display = 'none'}, 0)
 </script>
 
 <div class='landing-page'>
+	
 	<div class='container-fluid'>
 		<div class='banner-info'>
 			<h1>Tailored Medical/ Dental Entrance Specialists</h1>
@@ -24,7 +25,22 @@
 		</div>
 	</div>
 </div>
-
+<div id="landing-page-carousel" class="carousel slide" data-bs-ride="carousel">
+	<div class="carousel-inner">
+	  <div class="carousel-item active">
+		<img src="{% static 'img/9.jpg' %}" class="d-block w-100" alt="...">
+	  </div>
+	  <div class="carousel-item">
+		<img src="{% static 'img/15.jpg' %}" class="d-block w-100" alt="...">
+	  </div>
+	  <div class="carousel-item">
+		<img src="{% static 'img/23.jpg' %}" class="d-block w-100" alt="...">
+	  </div>
+	  <div class="carousel-item">
+		<img src="{% static 'img/24.jpg' %}" class="d-block w-100" alt="...">
+	  </div>
+	</div>
+  </div>
 {% comment %} <div class='landing-page'>
 	<div class='row'>
 		<div class='col-lg-4 col-md-4 col-sm-12 col-sm-12'>
@@ -159,6 +175,18 @@
 				</div>
 		</div>
 </div>
+{% comment %} <div class='fluff-section-bg-container'>
+	<video poster="{% static 'img/thumbnail.png' %}" autoplay muted loop id="fluff-section-bg-vid">
+		<source src="{% static 'vid/vid2.mp4' %}" type="video/mp4">
+				  Your browser does not support the video tag.
+  </video>
+</div> {% endcomment %}
+{% comment %} <div style="position: fixed; top: 0; width: 100%; height: 100%; z-index: 0;">
+    <video id="video" style="width:100%; height:100%">
+        <source src="{% static 'vid/vid2.mp4' %}" type="video/mp4">
+    </video>
+</div> {% endcomment %}
+
 
 <div class='fluff-section'>
 	<div class='container'>
@@ -297,11 +325,11 @@
 					</h4>
 					<br/>
 					<span class='success-rate'>
-						<h3>97%</h3>
+						<h3><span></span>%</h3>
 						<p>Our Success Rate</p>
 					</span>
 					<span class='amount-students'>
-						<h3>21</h3>
+						<h3><span></span></h3>
 						<p>Students successful</p>
 					</span>
 				</div>
@@ -315,7 +343,7 @@
 						</div>
 						<div class='col-lg-10 col-md-10 col-sm-10 col-xs-10'>
 							<div class='student-info-container'>
-								<span class='score'>
+								<span class='score' style="padding-left: 0px;">
 									<p>Name </p><span class='big'>R.Ashraf</span>
 								</span>
 								<span class='score' style="padding-left: 0px;">
@@ -333,7 +361,7 @@
 						</div>
 						<div class='col-lg-10 col-md-10 col-sm-10 col-xs-10'>
 							<div class='student-info-container'>
-								<span class='score'>
+								<span class='score' style="padding-left: 0px;">
 									<p>Name </p><span class='big'>S.Bhatia</span>
 								</span>
 								<span class='score' style="padding-left: 0px;">
@@ -351,7 +379,7 @@
 						</div>
 						<div class='col-lg-10 col-md-10 col-sm-10 col-xs-10'>
 							<div class='student-info-container'>
-								<span class='score'>
+								<span class='score' style="padding-left: 0px;">
 									<p>Name </p><span class='big'>A.Rajapakse</span>
 								</span>
 								<span class='score' style="padding-left: 0px;">
@@ -369,7 +397,7 @@
 						</div>
 						<div class='col-lg-10 col-md-10 col-sm-10 col-xs-10'>
 							<div class='student-info-container'>
-								<span class='score'>
+								<span class='score' style="padding-left: 0px;">
 									<p>Name </p><span class='big'>A.Rahman</span>
 								</span>
 								<span class='score' style="padding-left: 0px;">
@@ -387,7 +415,7 @@
 						</div>
 						<div class='col-lg-10 col-md-10 col-sm-10 col-xs-10'>
 							<div class='student-info-container'>
-								<span class='score'>
+								<span class='score' style="padding-left: 0px;">
 									<p>Name </p><span class='big'> M.Ahmad</span>
 								</span>
 								<span class='score' style="padding-left: 0px;">
@@ -557,7 +585,49 @@
 		</div>
 	</div>
 </div>
+<script>
 
+	addEventListener("scroll", (event) => {
+		if(isInViewport(document.querySelector('.past-students .info'))){
+			//console.log(getComputedStyle(document.querySelector('.past-students .container .row .col-lg-6 .success-rate h3')).getPropertyValue("--num"));
+			document.querySelector('.past-students .container .row .col-lg-6 .success-rate h3 span').style.setProperty('--num', 97);
+			document.querySelector('.past-students .container .row .col-lg-6 .amount-students h3 span').style.setProperty('--num', 21);
+		}
+	});
 
+	function isInViewport(element) {
+		const rect = element.getBoundingClientRect();
+		return (
+			rect.top >= 0 &&
+			rect.left >= 0 &&
+			rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+			rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+		);
+	}
+
+	/*function isVisibleThroughViewport(element){
+		const rect = element.getBoundingClientRect();
+		return(
+			rect.bottom >= 0 &&
+			rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+			rect.left >= 0 &&
+			rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+		)
+	}*/
+</script>
+
+<script>
+	//vertically centering the university
+	var divList = document.getElementsByClassName('student-flex');
+	
+	window.addEventListener("load", (event) => {
+		for(var i = 0; i < divList.length; i++){
+			height = divList[i].offsetHeight;
+			divList[i].childNodes[1].style.paddingTop = String(parseInt(height)/5)+'px';
+		}
+	  });
+	
+	
+</script>
 
 {% endblock %}

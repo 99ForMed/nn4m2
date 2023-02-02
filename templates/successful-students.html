@@ -347,6 +347,25 @@
     </div>
     <p class='back' style='padding-left: 10px'>Back</p>
 </div>
-
+<script>
+	//vertically centering the university
+	var divList = document.getElementsByClassName('student-flex');
+	
+	window.addEventListener("load", (event) => {
+		for(var i = 0; i < divList.length; i++){
+			height = divList[i].offsetHeight;
+			divList[i].childNodes[1].style.paddingTop = String(parseInt(height)/5)+'px';
+		}
+	  });
+    
+      window.addEventListener("resize", (event) => {
+		for(var i = 0; i < divList.length; i++){
+			height = divList[i].offsetHeight;
+			divList[i].childNodes[1].style.paddingTop = String(parseInt(height)/5)+'px';
+		}
+	  });
+	
+	
+</script>
 
 {% endblock %}
