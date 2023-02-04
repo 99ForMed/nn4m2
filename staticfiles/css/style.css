@@ -804,8 +804,9 @@ nav a{
 
 @media (max-width: 786px){
   .past-students{
-    background-image: url(../img/past-students-mobile.jpg);
-    background-size: auto 100%; 
+    background-image: url(../img/past-students.jpg);
+    background-size: cover;
+    background-attachment: fixed;
   }
   .past-students .container .row .col-lg-6{
     padding: 5vh 0;
