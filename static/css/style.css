@@ -108,7 +108,9 @@ body {
 .banner-info{
   padding-left: 30px;
   padding-right: 30px;
-  padding-top: 55vh;
+  width:100vw;
+  position: absolute;
+  bottom: 10vh;
 }
 
 .banner-info h1{
@@ -120,14 +122,6 @@ body {
 .banner-info h4{
   color: #ccc;
   font-family: 'montage';
-}
-
-@media (min-width: 787px){
-  .landing-page .banner-info{
-    width:100vw;
-    position: absolute;
-    bottom: 10vh;
-  }
 }
 
 .landing-page .container-fluid .banner-info a{
