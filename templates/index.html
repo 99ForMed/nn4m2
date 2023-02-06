@@ -6,13 +6,13 @@
 {% block body %}
 
 <div class='loading-screen'>
-	<img src='{% static "img/logo.png"%}'/>
+	<img src='{% static "img/logo.png" %}'/>
 </div>
 <script>
-	setTimeout(function(){document.querySelector('.loading-screen').style.opacity = '0'}, 0);
-	setTimeout(function(){document.querySelector('.loading-screen').style.display = 'none'}, 0)
+	setTimeout(function(){document.querySelector('.loading-screen').style.opacity = '0'}, 5000);
+	setTimeout(function(){document.querySelector('.loading-screen').style.display = 'none'}, 6000)
 </script>
-
+{% comment %} <script src='{% static 'js/landing-page-carousel.js' %}'/> {% endcomment %}
 <div class='landing-page'>
 	
 	<div class='container-fluid'>
@@ -318,7 +318,7 @@
 				<div class='info'>
 					<h2>Guaranteed entry *</h2>
 					<hr/>
-					<h4>
+					<h4 style='padding: 0 20px'>
 						99forMed has an exceptionally high success rate. 
 						If you put in the work and effort, you will get 
 						into medicine with their help.
@@ -437,12 +437,14 @@
 	<div class='container'>
 		
 		<div id="carouselExampleIndicators" class="carousel slide desktop" data-bs-ride="carousel">
-			<h2 style='color: rgba(0,0,0,0.4)'>Testimonials</h2>
+			<h2 style='color: black'>Testimonials</h2>
 			<div class="carousel-indicators">
-			  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-			  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-			  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-			</div>
+				
+			<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+			 {% for i in testimonials_grouped %} <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{{forloop.counter}}" aria-label="Slide {{forloop.counter}}"></button>
+			  
+				{% endfor %} 
+			</div> 
 			<div class="carousel-inner">
 			  {% for group in testimonials_grouped %}
 			  <div class="carousel-item{% if forloop.counter == 1 %} active{% endif %}">
@@ -519,8 +521,9 @@
 			<h2>Testimonials</h2>
 			<div class="carousel-indicators">
 			  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-			  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-			  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+			  {% for i in testimonials %} <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{{forloop.counter}}" aria-label="Slide {{forloop.counter}}"></button>
+			  
+				{% endfor %} 
 			</div>
 			<div class="carousel-inner">
 				{% for testimonial in testimonials_all %}

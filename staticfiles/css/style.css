@@ -85,6 +85,7 @@ body {
   width: auto;
   height: auto;
   overflow-y: hidden;
+  object-position: left;
   
 }
 
@@ -823,9 +824,15 @@ nav a{
   
   }
 
+  .flex-list{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 90%;
+  }
+
   .flex-list .student-flex{
-    margin-left: 0;
-    margin-right: 0;
+    margin-left: auto;
+    margin-right: auto;
     max-width: 90%;
   }
 }
@@ -856,7 +863,9 @@ nav a{
 }
 
 .testimonials-section .carousel h2{
-  font-size: 50px;
+  font-size: 40px;
+  font-family: 'montage';
+  color: rgba(0, 0, 0, 0.6);
 }
 
 .testimonials-section .carousel .carousel-inner .carousel-item .d-flex .testimonial{
@@ -880,6 +889,18 @@ nav a{
 }
 
 @media (max-width: 786px){
+  .testimonials-section .carousel{
+    /* position: absolute;
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    /* margin-right: auto; */
+    width: 100%; 
+    padding-top: 10vh;
+    padding-bottom: 15vh;
+  
+  }
+  
   .testimonials-section .carousel.desktop{
     display: none;
   }
@@ -1283,6 +1304,35 @@ input[type=file]{
   color: darkorange;
 }
 
+@media (max-width: 786px){
+  .course-options{
+    display: none;
+  }
+
+  .course-options-mobile{
+    padding-top: 160px;
+    padding-bottom: 80px;
+    background-color: #1E1E1E;
+  }
+  
+  .course-options-mobile .card-body{
+    padding: 0 20px;
+  }
+
+  .course-options-mobile .card-body p{
+    margin-bottom: 0px;
+  }
+
+  #top-btn{
+    margin-bottom: 30px;
+  }
+
+  .course-options-mobile .btn{
+    color: darkorange;
+    padding: 0 0;
+    
+  }
+}
 
 
 
@@ -1416,6 +1466,12 @@ input[type=file]{
 
 .successful-students .back:hover{
   color: orange;
+}
+
+@media (min-width: 786px){
+  .show-on-mobile{
+    display: none;
+  }
 }
 
 /* End Successful students page */
