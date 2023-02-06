@@ -122,6 +122,14 @@ body {
   font-family: 'montage';
 }
 
+@media (min-width: 787px){
+  .landing-page .banner-info{
+    width:100vw;
+    position: absolute;
+    bottom: 10vh;
+  }
+}
+
 .landing-page .container-fluid .banner-info a{
   color: darkorange;
   font-size: 25px;
