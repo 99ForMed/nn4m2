@@ -1304,6 +1304,12 @@ input[type=file]{
   color: darkorange;
 }
 
+@media (min-width: 786px){
+  .course-options-mobile{
+    display: none;
+  }
+}
+
 @media (max-width: 786px){
   .course-options{
     display: none;
