@@ -155,6 +155,22 @@ body {
   }
 }
 
+@media (max-height: 400px){
+
+  #landing-page-carousel{
+    height: fit-content;
+  }
+
+  .landing-page .banner-info{
+    position: static;
+    padding-top: 20vh;
+  }
+
+  .landing-page .banner-info h1{
+    font-size: 30px;
+  }
+}
+
 /* End Landing Page */
 
 /* Landing Page */
