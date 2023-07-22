@@ -4,7 +4,8 @@ from django.http import HttpResponse
 from django.template.loader import render_to_string
 from django.core.mail import EmailMultiAlternatives
 
-from .models import Testimonial
+from .models import Testimonial, successfulStudent
+
 # Create your views here.
 
 def home_view(request):
@@ -187,7 +188,21 @@ def our_story_view(request):
     return render(request, 'our-story.html', context)
 
 def successful_students_view(request):
+
+    render_students = []
+
+    for student in successfulStudent.objects.all():
+        render_students.append({
+            'logo': student.university,
+            'name': student.name,
+            'score': student.score,
+            'percentile': student.percentile
+        })
+    
+
     context = {
+
+        'render_students': render_students
 
     }
     return render(request, 'successful-students.html', context)

@@ -2,6 +2,16 @@ from django.db import models
 
 # Create your models here.
 
+UNI_CHOICES =(
+    ("unsw-logo.png", "University of New South Wales"),
+    ("wsu-logo.webp", "Western Sydney University"),
+    ("griffith-logo.png", "Griffith University"),
+    ("une-logo.png", "University of New England"),
+    ("charles-stuart-logo.png", "Charles Stuart"),
+    ("anu-logo.png", "Australian National University"),
+    ("university-of-qld-logo.png", "University of Queensland"),
+)
+
 class Testimonial(models.Model):
     name = models.CharField(max_length=100)
     credentials = models.CharField(max_length=100)
@@ -9,3 +19,12 @@ class Testimonial(models.Model):
 
     def __str__(self):
         return self.name
+
+class successfulStudent(models.Model):
+    university = models.CharField(max_length = 100, choices = UNI_CHOICES)
+    name = models.CharField(max_length=100)
+    score = models.CharField(max_length=100)
+    percentile = models.CharField(max_length=100)
+
+    def __str__(self):
+        return str(self.name)
