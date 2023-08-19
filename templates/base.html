@@ -23,7 +23,17 @@
         <link rel="stylesheet" href="{% static 'css/flickity.css' %}" media="screen">
         {% block head %}
         {% endblock head %}
+        
 	</head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HQHXG892G1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-HQHXG892G1');
+    </script>
 	<body>
         <div class='container-fluid' style='padding: 0 0; margin: 0 0;'>
         <nav class='navbar navbar-expand-lg navbar-dark' style='z-index: 99'>
