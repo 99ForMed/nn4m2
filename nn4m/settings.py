@@ -141,9 +141,11 @@ EMAIL_HOST = "mail.privateemail.com"
 EMAIL_PORT = 587
 
 EMAIL_HOST_USER = 'website.notification@yourweb.sydney'
-EMAIL_HOST_PASSWORD = '2003@Priyanshu'
+EMAIL_HOST_PASSWORD = 'Tiana@2016'
 
 EMAIL_USE_TLS = True
+
+
 
 # REDIRECT TO SSL
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
