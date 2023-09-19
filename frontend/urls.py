@@ -11,7 +11,7 @@ urlpatterns = [
     path('eligibility-check/secondary-qualifiers/', secondary_qualifiers_view),
     path('eligibility-check/accepted/', accepted_view),
     path('eligibility-check/submitted/', submitted_view),
-    path('eligibility-check/rejected/', rejected_view),
+    path('eligibility-check/rejected/', rejected_view, name='rejected_view'),
     path('coming-soon/', coming_soon_view),
     path('our-story', our_story_view),
     path('courses/', courses_view),

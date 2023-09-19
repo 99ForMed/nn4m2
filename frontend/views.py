@@ -33,7 +33,7 @@ def eligibility_view(request):
                 accepted = True
                 return redirect('secondary-qualifiers/?fname=%s&lname=%s&email=%s&pn=%s&sm=%s&gpa=%s&a=%s&atar=%s' % (request.POST['fname'], request.POST['lname'], request.POST['email'], request.POST['mob'], request.POST['job'], request.POST['gpa'], str(accepted), str(atar)))
             elif atar < 93 and gpa < 5.5:
-                return redirect('rejected/?scores=1')
+                return redirect('../rejected/?scores=1')
             else:
                 return redirect('secondary-qualifiers/?fname=%s&lname=%s&email=%s&pn=%s&sm=%s&gpa=%s&a=%s&atar=%s' % (request.POST['fname'], request.POST['lname'], request.POST['email'], request.POST['mob'], request.POST['job'], request.POST['gpa'], str(accepted), str(atar)))
 
@@ -58,7 +58,7 @@ def secondary_qualifiers_view(request):
 
         if float(request.POST['hours-amount']) > 90:
             print(int(request.POST['hours-amount']))
-            return redirect('rejected/?hours=1')
+            return redirect('../rejected/?hours=1')
         if accepted:
             status = "accepted"
         else:
