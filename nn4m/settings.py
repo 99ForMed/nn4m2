@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 from pathlib import Path
 import os
+import ssl
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -138,16 +139,18 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Email sending
 EMAIL_HOST = "mail.privateemail.com"
-EMAIL_PORT = 587
+EMAIL_PORT = 465
 
 EMAIL_HOST_USER = 'website.notification@yourweb.sydney'
 EMAIL_HOST_PASSWORD = 'Tiana@2016'
 
-EMAIL_USE_TLS = True
+EMAIL_USE_TLS = False
+EMAIL_USE_SSL = True
+
 
 
 
 # REDIRECT TO SSL
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+# SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
-SECURE_SSL_REDIRECT = True
+# SECURE_SSL_REDIRECT = True
