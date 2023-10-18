@@ -229,3 +229,9 @@ def dentistry_interview_course_content_view(request):
 
     }
     return render(request, 'dentistry-interview-course-content.html', context)
+
+def contact_view(request):
+    context = {
+
+    }
+    return render(request, 'contact.html', context)

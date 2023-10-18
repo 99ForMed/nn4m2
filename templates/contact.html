@@ -1,0 +1,123 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+<style>
+    .contact-page {
+        font-family: 'Arial', sans-serif;
+        padding: 50px 0;
+        background-color: #1e1e1e;
+    }
+
+    .contact-page-card {
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .contact-page-card h3 {
+        color: #e1e1e1;
+        border-bottom: 2px solid darkorange;
+        padding-bottom: 10px;
+
+    }
+
+    .contact-page-card a {
+        color: #e1e1e1;
+        text-decoration: none;
+    }
+
+    .contact-page-card ul li{
+        text-decoration: none;
+    }
+
+    .book-button {
+        background-color: #3498db;
+        color: #ffffff;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+    }
+
+    .book-button:hover {
+        background-color: #2980b9;
+    }
+</style>
+
+<div class='contact-page'>
+    
+    <div class='course-title'>
+        <h1 class="text-center">Contact us</h1>
+    </div>
+
+    <div class="container">
+
+        <!-- ... (carousel code can be added here if needed) ... -->
+
+        <div class="contact-page-card mt-5">
+            <div class="contact-page-card-body">
+                
+                <div class="row">
+                    <!-- Email -->
+                    <div class='col-lg-4 col-md-4 col-sm-12 col-xs-12'>
+                        <h3>Email</h3>
+                        <table>
+                            <tr>
+                                <td>
+                                    info@99formed.com
+                                </td>
+                            </tr>
+                            <tr>
+                                
+                                <td>
+                                    rakin@99formed.com
+                                </td>
+                            </tr>
+                        </table>
+                        
+                    </div>
+                    <br/>
+                    <!-- Phone -->
+                    <div class='col-lg-4 col-md-4 col-sm-12 col-xs-12'>
+                        <h3>Phone</h3>
+                        <p><a href="tel:+1234567890">+61 470 157 279</a></p>
+                    </div>
+                    <br/>
+                    <!-- Social Media -->
+                    <div class='col-lg-4 col-md-4 col-sm-12 col-xs-12'>
+                        <h3>Follow us</h3>
+                        <table>
+                            <tr>
+                                <td>
+                                    Instagram
+                                </td>
+                                <td>
+                                    @99formed
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    TikTok
+                                </td>
+                                <td>
+                                    @99formedmain
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    TikTok
+                                </td>
+                                <td>
+                                    @RakTheMedic
+                                </td>
+                            </tr>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
