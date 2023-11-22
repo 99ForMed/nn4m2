@@ -4,7 +4,7 @@ from django.http import HttpResponse
 from django.template.loader import render_to_string
 from django.core.mail import EmailMultiAlternatives
 
-from .models import Testimonial, successfulStudent
+from .models import Testimonial, successfulStudent, DynamicContent
 
 # Create your views here.
 
@@ -14,7 +14,8 @@ def home_view(request):
         'testimonials': testimonials,
         'testimonials_all': testimonials,
         'testimonials_grouped': [testimonials[n:n+3] for n in range(0, len(testimonials), 3)],
-        'successfulStudents': successfulStudent.objects.all()    
+        'successfulStudents': successfulStudent.objects.all(),  
+        'dynamicContent': DynamicContent.objects.all()[0]
     }
     return render(request, 'index.html', context) 
 

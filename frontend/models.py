@@ -33,3 +33,10 @@ class successfulStudent(models.Model):
 
     def __str__(self):
         return str(self.name)
+
+class DynamicContent(models.Model):
+    success_rate = models.IntegerField()
+    success_amount = models.IntegerField()
+
+    def __str__(self):
+        return "Edit me"

@@ -503,8 +503,8 @@
 	addEventListener("scroll", (event) => {
 		if(isInViewport(document.querySelector('.past-students .info'))){
 			//console.log(getComputedStyle(document.querySelector('.past-students .container .row .col-lg-6 .success-rate h3')).getPropertyValue("--num"));
-			document.querySelector('.past-students .container .row .col-lg-6 .success-rate h3 span').style.setProperty('--num', 90);
-			document.querySelector('.past-students .container .row .col-lg-6 .amount-students h3 span').style.setProperty('--num', 21);
+			document.querySelector('.past-students .container .row .col-lg-6 .success-rate h3 span').style.setProperty('--num', {{dynamicContent.success_rate}});
+			document.querySelector('.past-students .container .row .col-lg-6 .amount-students h3 span').style.setProperty('--num', {{dynamicContent.success_amount}});
 		}
 	});
 
