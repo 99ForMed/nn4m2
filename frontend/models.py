@@ -3,6 +3,7 @@ from django.db import models
 # Create your models here.
 
 UNI_CHOICES =(
+    ('empty.png', 'Empty'),
     ("unsw-logo.png", "University of New South Wales"),
     ("wsu-logo.webp", "Western Sydney University"),
     ("griffith-logo.png", "Griffith University"),
@@ -10,6 +11,9 @@ UNI_CHOICES =(
     ("charles-stuart-logo.png", "Charles Stuart"),
     ("anu-logo.png", "Australian National University"),
     ("university-of-qld-logo.png", "University of Queensland"),
+    ("university-of-adelaide-logo.png", "University of Adelaide"),
+
+    
 )
 
 class Testimonial(models.Model):
@@ -25,6 +29,7 @@ class successfulStudent(models.Model):
     name = models.CharField(max_length=100)
     score = models.CharField(max_length=100)
     percentile = models.CharField(max_length=100)
+    banner = models.BooleanField(default=False)
 
     def __str__(self):
         return str(self.name)

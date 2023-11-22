@@ -336,96 +336,27 @@
 			</div>
 			<div class='col-lg-6 col-md-6 col-sm-12 col-sm-12 test'>
 				<div class='flex-list'>
-					<div class='row student-flex'>
-						<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 img-container'>
-								<img src='{% static 'img/wsu-logo.webp' %}'>
+					{% for student in successfulStudents %}
+						{% if student.banner %}
+						<div class='row student-flex'>
+							<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 img-container'>
+								<img src="{% static 'img/' %}{{ student.university }}">
+							</div>
+							<div class='col-lg-10 col-md-10 col-sm-10 col-xs-10'>
+								<div class='student-info-container'>
+									<span class='score' style="padding-left: 0px;">
+										<p>Name </p><span class='big'>{{student.name}}</span>
+									</span>
+									<span class='score' style="padding-left: 0px;">
+										<p>Score</p><span class='big'>{{student.score}} <span style='color: darkorange'>{{student.percentile}} Percentile</span></span>
+									</span>
+								</div>
+							</div>
 							
 						</div>
-						<div class='col-lg-10 col-md-10 col-sm-10 col-xs-10'>
-							<div class='student-info-container'>
-								<span class='score' style="padding-left: 0px;">
-									<p>Name </p><span class='big'>R.Ashraf</span>
-								</span>
-								<span class='score' style="padding-left: 0px;">
-									<p>Score</p><span class='big'>3200 <span style='color: darkorange'>98th Percentile</span></span>
-								</span>
-								
-							</div>
-						</div>
-						
-					</div>
-					<div class='row student-flex'>
-						<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 img-container'>
-								<img src='{% static 'img/unsw-logo.png' %}'>
-							
-						</div>
-						<div class='col-lg-10 col-md-10 col-sm-10 col-xs-10'>
-							<div class='student-info-container'>
-								<span class='score' style="padding-left: 0px;">
-									<p>Name </p><span class='big'>S.Bhatia</span>
-								</span>
-								<span class='score' style="padding-left: 0px;">
-									<p>Score</p><span class='big'>3080 <span style='color: darkorange'>95th Percentile</span></span>
-								</span>
-								
-							</div>
-						</div>
-						
-					</div>
-					<div class='row student-flex'>
-						<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 img-container'>
-								<img src='{% static 'img/university-of-adelaide-logo.png' %}'>
-							
-						</div>
-						<div class='col-lg-10 col-md-10 col-sm-10 col-xs-10'>
-							<div class='student-info-container'>
-								<span class='score' style="padding-left: 0px;">
-									<p>Name </p><span class='big'>A.Rajapakse</span>
-								</span>
-								<span class='score' style="padding-left: 0px;">
-									<p>Score</p><span class='big'>3320 <span style='color: darkorange'>99th Percentile</span></span>
-								</span>
-								
-							</div>
-						</div>
-						
-					</div>
-					<div class='row student-flex'>
-						<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 img-container'>
-								<img src='{% static 'img/une-logo.png' %}'>
-							
-						</div>
-						<div class='col-lg-10 col-md-10 col-sm-10 col-xs-10'>
-							<div class='student-info-container'>
-								<span class='score' style="padding-left: 0px;">
-									<p>Name </p><span class='big'>A.Rahman</span>
-								</span>
-								<span class='score' style="padding-left: 0px;">
-									<p>Score</p><span class='big'>3100 <span style='color: darkorange'>95th Percentile</span></span>
-								</span>
-								
-							</div>
-						</div>
-						
-					</div>
-					<div class='row student-flex' style='margin-bottom: 13px'>
-						<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 img-container'>
-								<img src='{% static 'img/university-of-qld-logo.png' %}'>
-							
-						</div>
-						<div class='col-lg-10 col-md-10 col-sm-10 col-xs-10'>
-							<div class='student-info-container'>
-								<span class='score' style="padding-left: 0px;">
-									<p>Name </p><span class='big'> M.Ahmad</span>
-								</span>
-								<span class='score' style="padding-left: 0px;">
-									<p>Score</p><span class='big'>3100 <span style='color: darkorange'>95th Percentile</span></span>
-								</span>
-								
-							</div>
-						</div>
-						
-					</div>
+						{% endif %}
+					{% endfor %}
+					
 				</div>
 				<a class='see-more-successful-students' href='successful-students/'>See more...</a>
 			</div>

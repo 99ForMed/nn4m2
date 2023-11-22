@@ -13,7 +13,8 @@ def home_view(request):
     context = {
         'testimonials': testimonials,
         'testimonials_all': testimonials,
-        'testimonials_grouped': [testimonials[n:n+3] for n in range(0, len(testimonials), 3)]
+        'testimonials_grouped': [testimonials[n:n+3] for n in range(0, len(testimonials), 3)],
+        'successfulStudents': successfulStudent.objects.all()    
     }
     return render(request, 'index.html', context) 
 
