@@ -1,0 +1,144 @@
+{% extends 'base-updated-course-page.html' %}
+{% load static %}
+
+    {% block head %}
+    <!-- Replace with general style of the current page -->
+    <!-- <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'course-page-updated/css/selection-page/selection-page.css"
+    /> -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'course-page-updated/css/selection-page/selection-page.css' %}"
+    />
+
+    <title>Selection Page</title>
+
+    {% endblock %}
+
+    {% block body %}
+    <div class="circle-cursor">
+      <div class="right-arrow"><img src="{% static 'course-page-updated/img/right-arrow.png' %}" /></div>
+    </div>
+    <div class="container-fluid">
+      <!-- Navbar -->
+      <div class="banner-part">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+              <img
+                src="{% static 'course-page-updated/img/logo-long.png' %}"
+                alt=""
+                height="24"
+                class="d-inline-block align-text-top"
+              />
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    id="navbarDropdown"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="true"
+                  >
+                    Courses
+                  </a>
+                  <ul class="dropdown-menu multi-column columns-2">
+
+                    <div class="row dropdown-content">
+                      <div class="col-6">
+                        <ul class="multi-column-dropdown">
+                          <h3>Ucat</h3>
+                          <li><a href="#">Comprehensive</a></li>
+                        </ul>
+                      </div>
+                      <div class="col-6">
+                        <ul class="multi-column-dropdown">
+                          <h3>Interview</h3>
+                          <li><a href="#">Medicine</a></li>
+                          <li><a href="#">Dentistry</a></li>
+                          <li><a href="#">Application Writing</a></li>
+                          <li class="divider"></li>
+                          <li><a href="#">Mocks</a></li>
+                          <li class="divider"></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Our Story</a>
+                </li>
+
+                <li class="nav-item mtg-fnt" id="go-to-lms">
+                  <a class="nav-link" href="#">GO TO LMS</a>
+                </li>
+                <li class="nav-item mtg-fnt" id="enrol-today">
+                  <a class="nav-link" href="#">ENROL TODAY</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+        <!-- REPLACE CLASS NAME WITH NAME OF PAGE -->
+        <div class="selection-page">
+          <div class="banner-copy">
+            <h2>JOIN THE SUCCESSFUL</h2>
+            <div class="join-statement">
+              <p>WITH <strong style="font-size: large">YOU</strong> +</p>
+              <img src="{% static 'course-page-updated/img/logo-long.png' %}" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Needed the banner in the background as well that's why
+        there's two selection-page divs -->
+    </div>
+    <div class="container">
+      <div class="selection-page selection-options-wrapper row">
+        <li id="courses-word-exact">Courses</li>
+        <div
+          class="selection-option-wrapper ucat-selection-option-wrapper col-12 col-md-6"
+          onclick="window.location.href='{% url 'ucat-course-page-updated' %}'"
+        >
+          <div class="selection-option ucat-selection">
+            <div class="btm-lft-cnr"> </div>
+            <span class="tp-rt-cnr"> </span>
+            <p class="mtg-fnt">UCAT</p>
+          </div>
+        </div>
+        <div
+          class="selection-option-wrapper interview-selection-option-wrapper col-12 col-md-6"
+        >
+          <div class="selection-option interview-selection">
+            <span class="tp-lft-cnr"> </span>
+            <span class="btm-rt-cnr"> </span>
+            <p class="mtg-fnt">INTERVIEW</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="{% static 'course-page-updated/js/cursor-animation.js' %}"></script>
+    {% endblock %}

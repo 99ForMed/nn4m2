@@ -1,0 +1,1186 @@
+{% extends 'base-updated-course-page.html' %}
+{% load static %}
+    {% block head %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Replace with general style of the current page -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'course-page-updated/css/ucat-sell/ucat-sell.css' %}"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'course-page-updated/css/ucat-sell/click-graphic.css' %}"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'course-page-updated/css/ucat-sell/modals.css' %}"
+    />
+
+    <title>99ForMed UCAT Course</title>
+    {% endblock %}
+  </head>
+  <body>
+    {% block body %}
+    <div class="container-fluid">
+      <!-- Navbar -->
+      <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img
+              src="{% static 'course-page-updated/img/logo-long.png' %}"
+              alt=""
+              height="24"
+              class="d-inline-block align-text-top"
+            />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="true"
+                >
+                  Courses
+                </a>
+                <ul class="dropdown-menu multi-column columns-2">
+                  <div class="row dropdown-content">
+                    <div class="col-6">
+                      <ul class="multi-column-dropdown">
+                        <h3>Ucat</h3>
+                        <li><a href="#">Comprehensive</a></li>
+                      </ul>
+                    </div>
+                    <div class="col-6">
+                      <ul class="multi-column-dropdown">
+                        <h3>Interview</h3>
+                        <li><a href="#">Medicine</a></li>
+                        <li><a href="#">Dentistry</a></li>
+                        <li><a href="#">Application Writing</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Mocks</a></li>
+                        <li class="divider"></li>
+                      </ul>
+                    </div>
+                  </div>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Our Story</a>
+              </li>
+
+              <li class="nav-item mtg-fnt" id="go-to-lms">
+                <a class="nav-link" href="#">GO TO LMS</a>
+              </li>
+              <li class="nav-item mtg-fnt" id="enrol-today">
+                <a class="nav-link" href="#">ENROL TODAY</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+      <!-- REPLACE CLASS NAME WITH NAME OF PAGE -->
+      <div class="ucat-sell">
+        <div class="container">
+          <div class="past-students row">
+            {% for student in successfulStudents %}
+              {% if student.banner %}
+                {% if forloop.counter < 5 %}
+                <div class="past-student-wrapper col-6 col-md-4">
+                  <div class="past-student">
+                    <div class="copy-container">
+                      <h3 class="name mtg-fnt">{{student.name}}</h3>
+                      <p class="score">Scored: {{student.score}}</p>
+                      <p class="percentile-label">Percentile</p>
+                      <p class="percentile-numeral">{{student.percentile}}</p>
+                    </div>
+                  </div>
+                </div>
+                {% else %}
+                <div class="past-student-wrapper d-none d-md-block col-md-4">
+                  <div class="past-student">
+                    <div class="copy-container">
+                      <h3 class="name mtg-fnt">{{student.name}}</h3>
+                      <p class="score">Scored: {{student.score}}</p>
+                      <p class="percentile-label">Percentile</p>
+                      <p class="percentile-numeral">{{student.percentile}}</p>
+                    </div>
+                  </div>
+                </div>
+                {% endif %}
+              {% endif %}
+					  {% endfor %}
+          </div>
+          <div class="bottom-copy">
+            <div class="click-graphic">
+              <svg
+                data-bs-toggle="modal"
+                data-bs-target="modal-1"
+                class="outer-circle"
+                xmlns="http://www.w3.org/2000/svg"
+                width="22"
+                height="22"
+                viewBox="0 0 22 22"
+                fill="none"
+              >
+                <circle
+                  cx="10.5321"
+                  cy="10.5321"
+                  r="10.156"
+                  stroke="#C3C5C3"
+                  stroke-width="0.752294"
+                  stroke-dasharray="6.02 6.02"
+                />
+              </svg>
+              <svg
+                class="inner-circle"
+                xmlns="http://www.w3.org/2000/svg"
+                width="13"
+                height="13"
+                viewBox="0 0 13 13"
+                fill="none"
+              >
+                <circle
+                  cx="6.53202"
+                  cy="6.53202"
+                  r="5.6422"
+                  stroke="#C3C5C3"
+                  stroke-width="0.752294"
+                />
+              </svg>
+              <svg
+                class="mouse"
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="20"
+                viewBox="0 0 16 20"
+                fill="none"
+              >
+                <path
+                  d="M1.06362 1.7553L3.62289 17.336C3.72883 17.981 4.55021 18.1934 4.95546 17.6806L7.42232 14.5592C7.76053 14.1312 8.42752 14.1942 8.67965 14.6779L10.8282 18.7998C11.043 19.2119 11.5764 19.3326 11.9477 19.0532L14.5858 17.0675C14.9503 16.7931 14.9887 16.2601 14.6672 15.9363L11.5589 12.8063C11.1654 12.4101 11.3255 11.7385 11.8554 11.5623L14.38 10.7232C14.9715 10.5265 15.081 9.73703 14.5652 9.38688L2.22853 1.01096C1.68185 0.639792 0.956513 1.10325 1.06362 1.7553Z"
+                  fill="#111111"
+                  stroke="#FFFFFF"
+                  stroke-width="0.752294"
+                />
+              </svg>
+            </div>
+            <p class="hover-to-reveal">Hover to reveal testimonial</p>
+          </div>
+          <div class="ace-the-ucat-copy">
+            <p class="ace-the-ucat-heading mtg-fnt">ACE THE UCAT</p>
+            <div class="join-statement">
+              <p>WITH <strong>YOU</strong> +</p>
+              <img src="{% static 'course-page-updated/img/logo-long.png' %}" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container not-scroll">
+        <div class="mini-nav">
+          <div class="left-part">
+            <li>COURSES</li>
+            <p>UCAT COURSE</p>
+          </div>
+          <div class="continue-btn">
+            <p>CONTINUE<span class=">">></span></p>
+            <!-- <svg class="svg" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"/></svg> -->
+          </div>
+        </div>
+
+        <div class="modal-banner-1 modal-banner">
+          <div class="heading-section">
+            <h2>OUR COURSE IS ALL YOU NEED</h2>
+            
+            <div class="modal-toggle" data-bs-toggle="modal" data-bs-target="#modal-1">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="153"
+                height="153"
+                viewBox="0 0 153 153"
+                fill="none"
+              >
+                <g filter="url(#filter0_d_178_668)">
+                  <circle
+                    cx="76.5"
+                    cy="76.5"
+                    r="31.5"
+                    fill="white"
+                    fill-opacity="0.1"
+                    stroke="white"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M62.1846 74.5C61.08 74.5 60.1846 75.3954 60.1846 76.5C60.1846 77.6046 61.08 78.5 62.1846 78.5L62.1846 74.5ZM91.069 77.9143C91.8501 77.1332 91.8501 75.8669 91.069 75.0859L78.3411 62.3579C77.5601 61.5769 76.2938 61.5769 75.5127 62.3579C74.7317 63.1389 74.7317 64.4053 75.5127 65.1863L86.8264 76.5001L75.5126 87.8137C74.7316 88.5948 74.7316 89.8611 75.5126 90.6422C76.2937 91.4232 77.56 91.4232 78.3411 90.6422L91.069 77.9143ZM62.1846 78.5L89.6548 78.5001L89.6548 74.5001L62.1846 74.5L62.1846 78.5Z"
+                    fill="white"
+                  />
+                </g>
+                <defs>
+                  <filter
+                    id="filter0_d_178_668"
+                    x="0"
+                    y="0"
+                    width="153"
+                    height="153"
+                    filterUnits="userSpaceOnUse"
+                    color-interpolation-filters="sRGB"
+                  >
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feColorMatrix
+                      in="SourceAlpha"
+                      type="matrix"
+                      values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                      result="hardAlpha"
+                    />
+                    <feOffset />
+                    <feGaussianBlur stdDeviation="22" />
+                    <feComposite in2="hardAlpha" operator="out" />
+                    <feColorMatrix
+                      type="matrix"
+                      values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+                    />
+                    <feBlend
+                      mode="normal"
+                      in2="BackgroundImageFix"
+                      result="effect1_dropShadow_178_668"
+                    />
+                    <feBlend
+                      mode="normal"
+                      in="SourceGraphic"
+                      in2="effect1_dropShadow_178_668"
+                      result="shape"
+                    />
+                  </filter>
+                </defs>
+              </svg>
+            </div>
+            
+            
+          </div>
+          <div id="modal-1" class="modal fade modal-1" tabindex="-1" aria-labelledby="modal-1" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen">
+              <div class="modal-content">
+                <div class="modal-body" id="modal-body-1">
+                  <div class="section section1 development">
+                    <div class="modal-title">
+                      <p>Don't risk your learning on mediocrity</p>
+                    </div>
+                  </div>
+                  <div class="section section2">
+                    <div class="copy1">
+                      <div class="top-line">
+                        <p>WITHOUT</p>
+                        <div class="striked-logo">
+                          <div class="striked-logo">
+                            <img class="logo" src="{% static 'course-page-updated/img/modals/footer/logo.png' %}" />
+                            <img class="strikethrough" src="{% static 'course-page-updated/img/modals/footer/strikethrough.png' %}" />
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <p class="conventional-learning">Conventional Learning</p>
+                    </div>
+                    <div class="section2-content">
+                      <div class="lms-hero-img">
+                        <img src="{% static 'course-page-updated/img/lms-showcase.png' %}" height="500px"/>
+                      </div>
+                      <div class="copy2">
+                        <div class="warning-style-message">
+                          <i class="fa-solid fa-circle-info"></i><p>INFERIOR QUALITY</p>
+                        </div>
+                        <div class="copy2-explanation">
+                          <div class="top-left-corner"></div>
+                          <p>
+                            Conventional learning is <span class="wht-txt">confusing</span> and 
+                            riddled with <span class="wht-txt">cookie-cutter information.</span>
+                          </p>
+                        </div>
+                        
+                      </div>
+                      
+                    </div>
+                    
+                  </div>
+                  <div class="section section3">
+                    <div class="section3-img">
+                      <img src="{% static 'course-page-updated/img/modals/modal1/section3-img.png' %}"/>
+                    </div>
+                    <div class="section3-content">
+                      <div class="warning-style-message">
+                        <i class="fa-solid fa-circle-info"></i><p>OUTDATED CONTENT</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="section section4">
+                    <div class="section4-content">
+                      <div class="warning-style-message">
+                        <i class="fa-solid fa-circle-info"></i><p>UNGUIDED QUESTION BANKS</p>
+                      </div>
+                    </div>
+                    <div class="section4-img">
+                      <img src="{% static 'course-page-updated/img/modals/modal1/section4-img.png' %}"/>
+                    </div>
+                    
+                  </div>
+                  <div class="section section4">
+                    <div class="section4-content">
+                      <div class="warning-style-message">
+                        <i class="fa-solid fa-circle-info"></i><p>UNGUIDED QUESTION BANKS</p>
+                      </div>
+                    </div>
+                    <div class="section4-img">
+                      <img src="{% static 'course-page-updated/img/modals/modal1/section4-img.png' %}"/>
+                    </div>
+                    
+                  </div>
+                  <div class="section section5">
+                    <div class="left-seperator"></div>
+                    <div class="you-plus-graphic">
+                      <p class="mtg-fnt">YOU </p>+
+                      <div class="visible-logo">
+                        <img class="logo" src="{% static 'course-page-updated/img/modals/footer/logo.png' %}" />
+                      </div>
+                    </div>
+                    <div class="section5-copy">
+                      <div class="copy1">
+                        <p>90+ VIDEOS</p>
+                      </div>
+                      <div class="copy2">
+                        <p><span class="wht-txt">90+ Courses</span>
+                        which is <span class="wht-txt">structured 
+                          & straight to the point.
+                        </span>
+                        </p>
+                        <div class="top-right-corner"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="section section6">
+                    <img src="{% static 'course-page-updated/img/modals/modal1/section6-img.png' %}" />
+                  </div>
+                  <div class="section section7">
+                    <img src="{% static 'course-page-updated/img/modals/modal1/section7-img.png' %}" />
+                  </div>
+                  <div class="section section8">
+                    <p class="main-heading wht-txt">MASTER TECHNIQUES</p>
+                    <div class="copy1">
+                      <p><span class="wht-txt">All techniques & strategies</span> are taught with<span class="wht-txt"> quality mentors.</span></p>
+                      <div class="top-left-corner"></div>
+                    </div>
+                    
+                  </div>
+                  <div class="section section9">
+                    <img src="{% static 'course-page-updated/img/modals/modal1/section9-img.png' %}" />
+                  </div>
+                  <div class="section section10">
+                    <div class="main-copy">
+                      <p>Find a better UCAT program. We dare you.</p>
+                      <div class="top-left-corner"></div>
+                    </div>
+                  </div>
+                  <div class="section section11">
+                    <div class="section11-content">
+                      <div class="top-section">
+                        <div class="top-section-copy">
+                          <p>DOCTORS MAKE GOOD CHOICES. MAKE ONE TODAY.</p>
+                        </div>
+                        <button type="button" data-bs-dismiss="modal" class="left-arrow-icon">
+                            <img src="{% static 'course-page-updated/img/modals/modal1/exit.png' %}" />
+                        </button>
+                      </div>
+                      <div class="bottom-section">
+                        <div class="row">
+                          <div class="top-line-left-box col-3">
+                            <div class="you-plus-graphic">
+                              <p class="mtg-fnt">YOU </p>+
+                              <div class="visible-logo">
+                                <img class="logo" src="{% static 'course-page-updated/img/modals/footer/logo.png' %}" />
+                              </div>
+                            </div>
+                            
+                          </div>
+                          <div class="col-9 bottom-section-copy1-container">
+                            <div class="bottom-section-copy1">
+                              <p>90+ VIDEOS</p>
+                              <p class="plus-span"> + </p>
+                              <p>MASTER TECHNIQUE</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-3 bottom-line-left-box">
+                            <div class="conventional-learning-heading">
+                              <p>CONVENTIONAL LEARNING</p>
+                            </div>
+                            
+                          </div>
+                          <div class="col-9 bottom-section-copy2-container">
+                            <div class="bottom-section-copy2">
+                              <div class="warning-style-message">
+                                <i class="fa-solid fa-circle-exclamation"></i><p>CONFUSING LEARNING</p>
+                              </div>
+                              <p class="plus-span">+</p>
+                              <div class="warning-style-message">
+                                <i class="fa-solid fa-circle-exclamation"></i><p>OUTDATED CONTENT</p>
+                              </div>
+                              <p class="plus-span">+</p>
+                              <div class="warning-style-message">
+                                <i class="fa-solid fa-circle-exclamation"></i><p>INFERIOR QUALITY</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                  </div>
+                </div>
+                <div class="modal-footer" id="modal-body-1">
+                  <div class="footer-nav">
+                    <div class="nav-part nav-1">
+                      <div class="text">
+
+                      </div>
+                      <div class="indicator current">
+
+                      </div>
+                    </div>
+                    <div class="nav-part nav-2">
+                      <div class="text">
+                        <p class="mtg-fnt">WITHOUT</p>
+                        <div class="striked-logo">
+                          <img class="logo" src="{% static 'course-page-updated/img/modals/footer/logo.png' %}" />
+                          <img class="strikethrough" src="{% static 'course-page-updated/img/modals/footer/strikethrough.png' %}" />
+                        </div>
+                      </div>
+                      <div class="indicator">
+
+                      </div>
+                    </div>
+                    <div class="nav-part nav-3">
+                      <div class="text">
+                        <div class="you-plus-graphic">
+                          <p class="mtg-fnt">YOU </p>+
+                          <div class="visible-logo">
+                            <img class="logo" src="{% static 'course-page-updated/img/modals/footer/logo.png' %}" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="indicator">
+
+                      </div>
+                    </div>
+                    <div class="nav-part nav-4 exit-nav">
+                      <button type="button" data-bs-dismiss="modal" class="exit-btn-footer">
+                        <img src="{% static 'course-page-updated/img/modals/modal1/exit-btn-footer.png" />
+                    </button>
+                      <p>EXIT</p>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+          <div class="modal-banner-1-content modal-banner-content">
+            <div class="row">
+              <div class="col-12 col-md-7 left-part">
+                <img class="left-img" src="{% static 'course-page-updated/img/placeholder1.png' %}" />
+              </div>
+              <div class="col-12 col-md-5">
+                <div class="right-part-outer-container">
+                  <div class="right-part-inner-container">
+                    <p class="one">90+ VIDEOS</p>
+                    <p class="two">+</p>
+                    <p class="three">MASTER TECHNIQUES</p>
+                    <div class="placeholder2">
+                      <img class="right-img" src="{% static 'course-page-updated/img/placeholder2.png' %}" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="modal-banner-2 modal-banner">
+          <div class="heading-section">
+            <h2>GET IN 5 MONTHS, NOT 5 YEARS</h2>
+            <div class="modal-toggle" data-bs-toggle="modal" data-bs-target="#modal-2">
+              <div class="modal-toggle">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="153"
+                  height="153"
+                  viewBox="0 0 153 153"
+                  fill="none"
+                >
+                  <g filter="url(#filter0_d_178_668)">
+                    <circle
+                      cx="76.5"
+                      cy="76.5"
+                      r="31.5"
+                      fill="white"
+                      fill-opacity="0.1"
+                      stroke="white"
+                      stroke-width="2"
+                    />
+                    <path
+                      d="M62.1846 74.5C61.08 74.5 60.1846 75.3954 60.1846 76.5C60.1846 77.6046 61.08 78.5 62.1846 78.5L62.1846 74.5ZM91.069 77.9143C91.8501 77.1332 91.8501 75.8669 91.069 75.0859L78.3411 62.3579C77.5601 61.5769 76.2938 61.5769 75.5127 62.3579C74.7317 63.1389 74.7317 64.4053 75.5127 65.1863L86.8264 76.5001L75.5126 87.8137C74.7316 88.5948 74.7316 89.8611 75.5126 90.6422C76.2937 91.4232 77.56 91.4232 78.3411 90.6422L91.069 77.9143ZM62.1846 78.5L89.6548 78.5001L89.6548 74.5001L62.1846 74.5L62.1846 78.5Z"
+                      fill="white"
+                    />
+                  </g>
+                  <defs>
+                    <filter
+                      id="filter0_d_178_668"
+                      x="0"
+                      y="0"
+                      width="153"
+                      height="153"
+                      filterUnits="userSpaceOnUse"
+                      color-interpolation-filters="sRGB"
+                    >
+                      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                      <feColorMatrix
+                        in="SourceAlpha"
+                        type="matrix"
+                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                        result="hardAlpha"
+                      />
+                      <feOffset />
+                      <feGaussianBlur stdDeviation="22" />
+                      <feComposite in2="hardAlpha" operator="out" />
+                      <feColorMatrix
+                        type="matrix"
+                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+                      />
+                      <feBlend
+                        mode="normal"
+                        in2="BackgroundImageFix"
+                        result="effect1_dropShadow_178_668"
+                      />
+                      <feBlend
+                        mode="normal"
+                        in="SourceGraphic"
+                        in2="effect1_dropShadow_178_668"
+                        result="shape"
+                      />
+                    </filter>
+                  </defs>
+                </svg>
+              </div>
+            </div>
+            
+          </div>
+          <div id="modal-2" class="modal fade modal-2" tabindex="-1" aria-labelledby="modal-2" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen">
+              <div class="modal-content">
+                <div class="modal-body" id="modal-body-2">
+                  <div class="section section12">
+                    <div class="modal-title">
+                      <p>Get in in 5 months, not 5 years</p>
+                    </div>
+                  </div>
+                  <div class="section section13">
+                    <div class="copy1">
+                      <div class="top-line">
+                        <p>WITHOUT</p>
+                        <div class="striked-logo">
+                          <div class="striked-logo">
+                            <img class="logo" src="{% static 'course-page-updated/img/modals/footer/logo.png' %}" />
+                            <img class="strikethrough" src="{% static 'course-page-updated/img/modals/footer/strikethrough.png' %}" />
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <p class="conventional-learning">Conventional Learning</p>
+                      <div class="middle-content flex-fill">
+                        <div class="warning-style-message">
+                          <i class="fa-solid fa-circle-info"></i><p>WASTING YEARS OF LIFE</p>
+                        </div>
+                        <div class="copy-explanation">
+                          <p>
+                            The average person who guesses and checks their way to the UCAT takes 36 months to figure it out. We do it in five.
+                          </p>
+                          <div class="top-right-corner"></div>
+                        </div>
+                      </div>
+                      
+                    </div>
+                  </div>
+                  <div class="section section14">
+                    <div class="section14-content">
+                      <div class="copy-explanation">
+                        <p class="one">OUR TIME TO PREPARE</p>
+                        <p class="two">5 MONTHS</p>
+                        <p class="three">CONVENTIONAL LEARNING</p>
+                        <p class="four">36 MONTHS <i class="fa-solid fa-circle-exclamation"></i></p>
+                        <div class="bottom-left-corner"></div>
+                      </div>
+
+                    </div>
+                  </div>
+                  <div class="section section15" onmouseover="playAnimation1()">
+                    <div class="section15-content">
+                      <div class="warning-style-message">
+                        <i class="fa-solid fa-circle-info"></i><p>INFERIOR QUALITY</p>
+                      </div>
+                      <div class="animation1">
+                        <video id="animation1Video" muted width="600">
+                            <source src="{% static 'course-page-updated/animations/animation1.mp4' %}" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="section section16">
+                    <div class="section16-content">
+                      <div class="you-plus-graphic">
+                        <p class="mtg-fnt">YOU </p>+
+                        <div class="visible-logo">
+                          <img class="logo" src="{% static 'course-page-updated/img/modals/footer/logo.png' %}" />
+                        </div>
+                      </div>
+                      <div class="explanation-container flex-fill">
+                        <div class="copy-explanation">
+                          <p>Mentors will pick up on your mistakes so that your learning is supercharged.</p>
+                          <div class="top-right-corner"></div>
+                        </div>
+                      </div>
+                      
+                    </div>
+                  </div>
+                  <div class="section section17" onmouseover="playAnimation2()">
+                    <div class="section17-content">
+                      <div class="section-pros">
+                        <p>GUIDED MENTORSHIP</p>
+                        <p class="plus-icon">+</p>
+                        <p>TECHNIQUES & DEMOS</p>
+                      </div>
+                      <div class="animation2">
+                        <video id="animation2Video" muted width="800">
+                            <source src="{% static 'course-page-updated/animations/animation2.mp4' %}" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="section section18">
+                    <div class="section18-content">
+                      <div class="top-section">
+                        <div class="top-section-copy">
+                          <p>DON'T WASTE UNNECESSARY TIME</p>
+                        </div>
+                        <button type="button" data-bs-dismiss="modal" class="left-arrow-icon">
+                            <img src="{% static 'course-page-updated/img/modals/modal1/exit.png' %}" />
+                        </button>
+                      </div>
+                      <div class="bottom-section">
+                        <div class="row">
+                          <div class="top-line-left-box col-3">
+                            <div class="you-plus-graphic">
+                              <p class="mtg-fnt">YOU </p>+
+                              <div class="visible-logo">
+                                <img class="logo" src="{% static 'course-page-updated/img/modals/footer/logo.png' %}" />
+                              </div>
+                            </div>
+                            
+                          </div>
+                          <div class="col-9 bottom-section-copy1-container">
+                            <div class="bottom-section-copy1">
+                              <p>90+ VIDEOS</p>
+                              <p class="plus-span"> + </p>
+                              <p>MASTER TECHNIQUE</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-3 bottom-line-left-box">
+                            <div class="conventional-learning-heading">
+                              <p>CONVENTIONAL LEARNING</p>
+                            </div>
+                            
+                          </div>
+                          <div class="col-9 bottom-section-copy2-container">
+                            <div class="bottom-section-copy2">
+                              <div class="warning-style-message">
+                                <i class="fa-solid fa-circle-exclamation"></i><p>CONFUSING LEARNING</p>
+                              </div>
+                              <p class="plus-span">+</p>
+                              <div class="warning-style-message">
+                                <i class="fa-solid fa-circle-exclamation"></i><p>OUTDATED CONTENT</p>
+                              </div>
+                              <p class="plus-span">+</p>
+                              <div class="warning-style-message">
+                                <i class="fa-solid fa-circle-exclamation"></i><p>INFERIOR QUALITY</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                  </div>
+                </div>
+                <div class="modal-footer" id="modal-body-2">
+                  <div class="footer-nav">
+                    <div class="nav-part nav-1">
+                      <div class="text">
+
+                      </div>
+                      <div class="indicator current">
+
+                      </div>
+                    </div>
+                    <div class="nav-part nav-2">
+                      <div class="text">
+                        <p class="mtg-fnt">WITHOUT</p>
+                        <div class="striked-logo">
+                          <img class="logo" src="{% static 'course-page-updated/img/modals/footer/logo.png' %}" />
+                          <img class="strikethrough" src="{% static 'course-page-updated/img/modals/footer/strikethrough.png' %}" />
+                        </div>
+                      </div>
+                      <div class="indicator">
+
+                      </div>
+                    </div>
+                    <div class="nav-part nav-3">
+                      <div class="text">
+                        <div class="you-plus-graphic">
+                          <p class="mtg-fnt">YOU </p>+
+                          <div class="visible-logo">
+                            <img class="logo" src="{% static 'course-page-updated/img/modals/footer/logo.png' %}" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="indicator">
+
+                      </div>
+                    </div>
+                    <div class="nav-part nav-4 exit-nav">
+                      <button type="button" data-bs-dismiss="modal" class="exit-btn-footer">
+                        <img src="{% static 'course-page-updated/img/modals/modal1/exit-btn-footer.png' %}" />
+                    </button>
+                      <p>EXIT</p>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+          <div class="modal-banner-2-content modal-banner-content">
+            <div class="row">
+              <div class="col-12 col-md-7 left-part">
+                <img class="left-img" src="{% static 'course-page-updated/img/placeholder4.png' %}" />
+              </div>
+              <div class="col-12 col-md-5">
+                <div class="right-part-outer-container">
+                  <div class="right-part-inner-container">
+                    <div class="right-copy">
+                      <p class="one">GUIDED MENTORSHIP</p>
+                      <p class="two">+</p>
+                      <p class="three">TECHNIQUES & DEMOS</p>
+                    </div>
+
+                    <div class="placeholder2-container">
+                      <div class="placeholder2">
+                        <img class="right-img" src="{% static 'course-page-updated/img/placeholder3.png' %}" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-banner-3 modal-banner">
+          <div class="heading-section">
+            <h2>SEE YOUR LMS</h2>
+            <div class="modal-toggle" data-bs-toggle="modal" data-bs-target="#modal-3">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="153"
+                height="153"
+                viewBox="0 0 153 153"
+                fill="none"
+              >
+                <g filter="url(#filter0_d_178_668)">
+                  <circle
+                    cx="76.5"
+                    cy="76.5"
+                    r="31.5"
+                    fill="white"
+                    fill-opacity="0.1"
+                    stroke="white"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M62.1846 74.5C61.08 74.5 60.1846 75.3954 60.1846 76.5C60.1846 77.6046 61.08 78.5 62.1846 78.5L62.1846 74.5ZM91.069 77.9143C91.8501 77.1332 91.8501 75.8669 91.069 75.0859L78.3411 62.3579C77.5601 61.5769 76.2938 61.5769 75.5127 62.3579C74.7317 63.1389 74.7317 64.4053 75.5127 65.1863L86.8264 76.5001L75.5126 87.8137C74.7316 88.5948 74.7316 89.8611 75.5126 90.6422C76.2937 91.4232 77.56 91.4232 78.3411 90.6422L91.069 77.9143ZM62.1846 78.5L89.6548 78.5001L89.6548 74.5001L62.1846 74.5L62.1846 78.5Z"
+                    fill="white"
+                  />
+                </g>
+                <defs>
+                  <filter
+                    id="filter0_d_178_668"
+                    x="0"
+                    y="0"
+                    width="153"
+                    height="153"
+                    filterUnits="userSpaceOnUse"
+                    color-interpolation-filters="sRGB"
+                  >
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feColorMatrix
+                      in="SourceAlpha"
+                      type="matrix"
+                      values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                      result="hardAlpha"
+                    />
+                    <feOffset />
+                    <feGaussianBlur stdDeviation="22" />
+                    <feComposite in2="hardAlpha" operator="out" />
+                    <feColorMatrix
+                      type="matrix"
+                      values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+                    />
+                    <feBlend
+                      mode="normal"
+                      in2="BackgroundImageFix"
+                      result="effect1_dropShadow_178_668"
+                    />
+                    <feBlend
+                      mode="normal"
+                      in="SourceGraphic"
+                      in2="effect1_dropShadow_178_668"
+                      result="shape"
+                    />
+                  </filter>
+                </defs>
+              </svg>
+            </div>
+            
+          </div>
+          <div id="modal-3" class="modal fade modal-3" tabindex="-1" aria-labelledby="modal-3" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen">
+              <div class="modal-content">
+                <div class="modal-body" id="modal-body-3">
+                  <div class="section section19">
+                    <div class="modal-title">
+                      <p>WE'LL GIVE YOU THE SYSTEM FOR SUCCESS</p>
+                    </div>
+                  </div>
+                  <div class="section section20">
+                    <div class="section20-content">
+                      <div class="you-plus-graphic" style="justify-content: start;">
+                        <p class="mtg-fnt" style="display: inline-block;width: max-content;">YOU </p>+
+                        <div class="visible-logo">
+                          <img class="logo" src="{% static 'course-page-updated/img/modals/footer/logo.png' %}" />
+                        </div>
+                      </div>
+                      <div class="explanation-container flex-fill">
+                        <div class="copy-explanation ">
+                          <p>Say goodbye to one-size-fits-all approaches. 
+                            Our system tailors your learning experience to your unique needs and strengths, maximising your potential for success.</p>
+                            <div class="top-right-corner"></div>
+                        </div>
+                      </div>
+                      
+                    </div>
+                  </div>
+                  <div class="section section21">
+                    <div class="section21-content">
+                      <div class="img-container">
+                        <img src="{% static 'course-page-updated/img/modals/modal3/img1.png' %}" />
+
+                      </div>
+                    </div>
+                  </div>
+                  <div class="section section22">
+                    <div class="section22-content">
+                      <div class="img-container">
+                        <img src="{% static 'course-page-updated/img/modals/modal3/img2.png' %}" />
+                      </div>
+                      
+                    </div>
+                  </div>
+                  <div class="section section23">
+                    <div class="section23-content">
+                      <div class="copy-explanation">
+                        <p>Study on your terms. Our system is accessible 24/7, so you can learn at your own pace, whether you're at home, in a café, or on the go.
+                        </p>
+                        <div class="top-left-corner"></div>
+                      </div>
+                      
+                    </div>
+                  </div>
+                  <div class="section section24 development">
+                    <div class="section24-content">
+                      <div class="top-section">
+                        <div class="top-section-copy">
+                          <p>WHAT ARE YOU WAITING FOR?</p>
+                          <a><button class="btn btn-primary go-to-lms">GO TO LMS</button></a>
+                        </div>
+                        <button type="button" data-bs-dismiss="modal" class="left-arrow-icon">
+                            <img src="{% static 'course-page-updated/img/modals/modal1/exit.png' %}" />
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer" id="modal-body-2">
+                  <div class="footer-nav">
+                    <div class="nav-part nav-1">
+                      <div class="text">
+
+                      </div>
+                      <div class="indicator current">
+
+                      </div>
+                    </div>
+                    <div class="nav-part nav-2">
+                      <div class="text">
+                        <p class="mtg-fnt">WITHOUT</p>
+                        <div class="striked-logo">
+                          <img class="logo" src="{% static 'course-page-updated/img/modals/footer/logo.png' %}" />
+                          <img class="strikethrough" src="{% static 'course-page-updated/img/modals/footer/strikethrough.png' %}" />
+                        </div>
+                      </div>
+                      <div class="indicator">
+
+                      </div>
+                    </div>
+                    <div class="nav-part nav-3">
+                      <div class="text">
+                        <div class="you-plus-graphic">
+                          <p class="mtg-fnt">YOU </p>+
+                          <div class="visible-logo">
+                            <img class="logo" src="{% static 'course-page-updated/img/modals/footer/logo.png' %}" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="indicator">
+
+                      </div>
+                    </div>
+                    <div class="nav-part nav-4 exit-nav">
+                      <button type="button" data-bs-dismiss="modal" class="exit-btn-footer">
+                        <img src="{% static 'course-page-updated/img/modals/modal1/exit-btn-footer.png' %}" />
+                    </button>
+                      <p>EXIT</p>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+          
+          <div class="modal-banner-3-content modal-banner-content">
+            <img src="{% static 'course-page-updated/img/lms-showcase.png' %}" width="100%" />
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div class="container">
+        <div class="community-support">
+          <div class="row">
+            <div class="col-6 col-md-3 individual-sect">
+              <li>Community & Support</li>
+            </div>
+            <div class="col-6 col-md-3 individual-sect">
+              <img class="one" src="{% static 'course-page-updated/img/community-support/1.png' %}" />
+              <img class="icon" src="{% static 'course-page-updated/img/community-support/chat.png' %}" />
+            </div>
+            <div class="col-6 col-md-3 individual-sect">
+              <img class="two" src="{% static 'course-page-updated/img/community-support/2.png' %}" />
+              <img class="icon" src="{% static 'course-page-updated/img/community-support/discord.png' %}" />
+            </div>
+            <div class="col-6 col-md-3 individual-sect">
+              <img class="three" src="{% static 'course-page-updated/img/community-support/3.png' %}" />
+            </div>
+          </div>
+        </div>
+        <div class="modal-banner-4 modal-banner">
+          <div class="heading-section">
+            <h2>RESERVE YOUR SEAT</h2>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="153"
+              height="153"
+              viewBox="0 0 153 153"
+              fill="none"
+            >
+              <g filter="url(#filter0_d_178_668)">
+                <circle
+                  cx="76.5"
+                  cy="76.5"
+                  r="31.5"
+                  fill="white"
+                  fill-opacity="0.1"
+                  stroke="white"
+                  stroke-width="2"
+                />
+                <path
+                  d="M62.1846 74.5C61.08 74.5 60.1846 75.3954 60.1846 76.5C60.1846 77.6046 61.08 78.5 62.1846 78.5L62.1846 74.5ZM91.069 77.9143C91.8501 77.1332 91.8501 75.8669 91.069 75.0859L78.3411 62.3579C77.5601 61.5769 76.2938 61.5769 75.5127 62.3579C74.7317 63.1389 74.7317 64.4053 75.5127 65.1863L86.8264 76.5001L75.5126 87.8137C74.7316 88.5948 74.7316 89.8611 75.5126 90.6422C76.2937 91.4232 77.56 91.4232 78.3411 90.6422L91.069 77.9143ZM62.1846 78.5L89.6548 78.5001L89.6548 74.5001L62.1846 74.5L62.1846 78.5Z"
+                  fill="darkorange"
+                />
+              </g>
+              <defs>
+                <filter
+                  id="filter0_d_178_668"
+                  x="0"
+                  y="0"
+                  width="153"
+                  height="153"
+                  filterUnits="userSpaceOnUse"
+                  color-interpolation-filters="sRGB"
+                >
+                  <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                  <feColorMatrix
+                    in="SourceAlpha"
+                    type="matrix"
+                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                    result="hardAlpha"
+                  />
+                  <feOffset />
+                  <feGaussianBlur stdDeviation="22" />
+                  <feComposite in2="hardAlpha" operator="out" />
+                  <feColorMatrix
+                    type="matrix"
+                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+                  />
+                  <feBlend
+                    mode="normal"
+                    in2="BackgroundImageFix"
+                    result="effect1_dropShadow_178_668"
+                  />
+                  <feBlend
+                    mode="normal"
+                    in="SourceGraphic"
+                    in2="effect1_dropShadow_178_668"
+                    result="shape"
+                  />
+                </filter>
+              </defs>
+            </svg>
+          </div>
+
+          <div class="modal-banner-4-content modal-banner-content">
+            <img src="{% static 'course-page-updated/img/reserve-seat.png' %}" width="100%" />
+            <hr />
+            <div class="row">
+              <div class="col-12 col-md-3">
+                <li>What's Included?</li>
+              </div>
+              <div class="col-12 col-md-9">
+                <div class="row">
+                  <div class="col-12 col-md-6 left-part">
+                    <div class="left-part-outer-container outer-container">
+                      <div class="left-part-inner-container">
+                        <p class="one">90+ VIDEOS</p>
+                        <div class="placeholder2">
+                          <img
+                            class="right-img"
+                            src="{% static 'course-page-updated/img/placeholder2.png' %}"
+                          />
+                        </div>
+                        <div class="bottom-left-corner"></div>
+                      </div>
+                    </div>
+                    <p>Over 90+ Insightful Videos</p>
+                  </div>
+                  <div class="col-12 col-md-6 right-part">
+                    <div class="right-part-outer-container outer-container">
+                      <div class="right-part-inner-container">
+                        <div class="right-copy">
+                          <p class="one">GUIDED MENTORSHIP</p>
+                        </div>
+
+                        <div class="placeholder2-container">
+                          <div class="placeholder2">
+                            <img
+                              class="right-img"
+                              src="{% static 'course-page-updated/img/placeholder3.png' %}"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <p>Guided 1 on 1 Mentorship</p>
+                  </div>
+                  <div class="col-6 col-md-4 detail1 detail">
+                    <div class="detail1-outer-container detail-outer-container">
+                      <div
+                        class="detail1-inner-container detail-inner-container"
+                      >
+                        <div class="icons">
+                          <img src="{% static 'course-page-updated/img/community-support/chat.png' %}" />
+                          <p>+</p>
+                          <img src="{% static 'course-page-updated/img/community-support/discord.png' %}" />
+                        </div>
+                        <div class="bottom-left-corner"></div>
+                      </div>
+                    </div>
+                    <p>Rapid Q&A Response with Active Discord Servers</p>
+                  </div>
+                  <div class="col-6 col-md-4 detail2 detail">
+                    <div class="detail2-outer-container detail-outer-container">
+                      <div
+                        class="detail2-inner-container detail-inner-container"
+                      >
+                        <div class="icons">
+                          <img src="{% static 'course-page-updated/img/community.png' %}" />
+                        </div>
+                        <div class="bottom-left-corner"></div>
+                      </div>
+                    </div>
+                    <p>Active & Studious Community</p>
+                  </div>
+                  <div class="col-6 col-md-4 detail3 detail">
+                    <div class="detail3-outer-container detail-outer-container">
+                      <div
+                        class="detail3-inner-container detail-inner-container"
+                      >
+                        <p class="go-to-lms">GO TO LMS</p>
+                        <div class="bottom-left-corner"></div>
+                      </div>
+                    </div>
+                    <p>Access to powerful LMS designed for UCAT</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script src="{% static 'course-page-updated/js/horizontal-scroll.js' %}"></script>
+      <script src="{% static 'course-page-updated/js/playAnimations.js' %}"></script>
+      <script src="{% static 'course-page-updated/js/ucat-sell-initial-animation.js' %}"></script>
+      {% endblock %}

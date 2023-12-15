@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" type="text/css" href="../css/global-styles.css" />
+
+    <!-- Replace with general style of the current page -->
+    <link rel="stylesheet" type="text/css" href="../css/reserve/reserve.css" />
+
+    <title>Reserve Your Seat</title>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img
+              src="../img/logo-long.png"
+              alt=""
+              height="24"
+              class="d-inline-block align-text-top"
+            />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="true" 
+                >
+                  Courses
+                </a>
+                <ul class="dropdown-menu multi-column columns-2">
+                  <div class="row dropdown-content">
+                    <div class="col-6">
+                      <ul class="multi-column-dropdown">
+                        <h3>Ucat</h3>
+                        <li><a href="#">Comprehensive</a></li>
+                      
+                      </ul>
+                    </div>
+                    <div class="col-6">
+                      <ul class="multi-column-dropdown">
+                        <h3>Interview</h3>
+                        <li><a href="#">Medicine</a></li>
+                        <li><a href="#">Dentistry</a></li>
+                        <li><a href="#">Application Writing</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Mocks</a></li>
+                        <li class="divider"></li>
+                      </ul>
+                    </div>
+                  </div>
+                </ul>
+                
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Our Story</a>
+              </li>
+              
+              <li class="nav-item mtg-fnt" id="go-to-lms">
+                <a class="nav-link" href="#">GO TO LMS</a>
+              </li>
+              <li class="nav-item mtg-fnt" id="enrol-today">
+                <a class="nav-link" href="#">ENROL TODAY</a>
+              </li>
+            </ul>
+            
+          </div>
+        </div>
+      </nav>
+
+      <!-- REPLACE CLASS NAME WITH NAME OF PAGE -->
+      <div class="reserve">
+        <hr/>
+        <div class="breadcrumbs">
+            
+            <div class="step1">
+                <p>Courses</p>
+            </div>
+            <div class="arrow"></div>
+            <div class="step2">
+                <p>UCAT</p>
+            </div>
+            <div class="arrow"></div>
+            <div class="step3">
+                <p>Enrol</p>
+            </div>
+        </div>
+        <hr/>
+        <div class="enrol-process-outer">
+            <div class="enrol-process-visual">
+                <div class="milestone milestone1 enrol-milestone">
+                  <div class="circle"></div>
+                  <div class="circle circle-effect-1"></div>
+                  <div class="circle circle-effect-2"></div>
+                  <div class="circle circle-effect-3"></div>
+                  <div class="circle circle-effect-4"></div>
+                </div>
+                <div class="milestone milestone2 receive-offer-milestone">
+                    <div class="circle"></div>
+                    <div class="circle circle-effect-1"></div>
+                    <div class="circle circle-effect-2"></div>
+                    <div class="circle circle-effect-3"></div>
+                    <div class="circle circle-effect-4"></div>
+                </div>
+                <div class="milestone milestone3 accept-offer-milestone">
+                  <div class="circle"></div>
+                  <div class="circle circle-effect-1"></div>
+                  <div class="circle circle-effect-2"></div>
+                  <div class="circle circle-effect-3"></div>
+                  <div class="circle circle-effect-4"></div>
+                </div>
+                <div class="progress-bar">
+
+                </div>
+
+            </div>
+            
+            
+        </div>
+        <div class="row enrol-process-steps">
+          <div class="col-4" style="text-align: left;">
+            <p class="active">Enrol</p>
+          </div>
+          <div class="col-4" style="text-align: center;">
+            <p>Receive Offer</p>
+          </div>
+          <div class="col-4" style="text-align: right;">
+            <p>Accept Offer</p>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row main-content phase phase1">
+            <div class="col-12 col-md-6">
+              <div class="ucat-course-flex-carousel-container">
+                <div id="ucatCourseFlexCarousel" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#ucatCourseFlexCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#ucatCourseFlexCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#ucatCourseFlexCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  </div>
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="https://images2.alphacoders.com/132/1325120.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="https://wallpapercave.com/wp/wp7711072.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-image_large.png?format=jpg&quality=90&v=1530129081" class="d-block w-100" alt="...">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="whats-included">
+                <div class="accordion" id="solo-accordion">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="whats-included-accordion">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <p>WHAT'S INCLUDED?</p>
+                      </button>
+                    </h2>
+                    <div id="the-only-dropdown" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        <ul>
+                          <li>90+ VIDEOS TAUGHT WITH MASTER TECHNIQUES</li>
+                          <li>GUIDED MENTORSHIP</li>
+                          <li>MONTHLY SEMINARS WITH STRONG COMMUNITY</li>
+                          <li>ONE DAY Q&A RESPONSE VIA DISCORD SERVERS</li>
+                          <li>POWERFUL LMS</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 right-part-container">
+              <div class="right-part-content">
+                <div class="section heading-section">
+                  <h3 class="exa-content-enrolment-form">ENROLMENT FORM</h3>
+                  <h2 class="exa-content-secure-your-spot">SECURE YOUR SPOT</h2>
+                </div>
+                <div class="section line-items-section">
+                  <p class="course-subtitle">5 MONTH INTENSIVE</p>
+                  <div class="row">
+                    <div class="col-6">
+                      <p class="course-name">UCAT Course</p>
+                    </div>
+                    <div class="col-6">
+                      <p class="course-price">$1499.00</p>
+                    </div>
+                  </div>
+                  
+                  
+                </div>
+                <hr class="line-items-separator" />
+                <div class="section line-items-description-section">
+                  <p>
+                    90+ VIDEOS TAUGHT WITH MASTER TECHNIQUES
+                    GUIDED MENTORSHIP + 5 MONTHS ACCELERATED COURSE
+                    MONTHLY SEMINARS WITH STRONG COMMUNITY
+                    ONE DAY Q&A RESPONSE VIA DISCORD SERVERS
+                    POWERFUL LMS 
+                  </p>
+                </div>
+                <div class="section enrolment-dates">
+                  <h3 class="subheading">ENROLMENT DATES</h3>
+                  <hr/>
+                  <div class="enrolment-timeline-card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Clock_simple_white.svg/1200px-Clock_simple_white.svg.png" />               
+                    <div class="card-copy">
+                      <p class="course-cohort">Class of 2023</p>
+                    <p class="course-timeline">3 JAN 2023 to 3 JUNE 2023</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="section enrolment-form-section">
+                  <h3>Student Details</h3>
+                  <form>
+                    <div class="input-group">
+                      <label for="first_name">FIRST NAME</label>
+                      <input type="text" name="first_name"/>
+                    </div>
+
+                    <div class="input-group">
+                      <label for="last_name">LAST NAME</label>
+                      <input type="text" name="last_name"/>
+                    </div>
+
+
+                    <div class="input-group">
+                      <label for="email">EMAIL</label>
+                      <input type="email" name="email"/>
+                    </div>
+
+                    
+                    </div>
+
+                    <div class="row atar-gpa-section">
+                      <div class="col-6">
+                        <div class="input-group">
+                          <label for="atar">ATAR</label>
+                        <input type="number" name="atar"/>
+                        <!-- implement min/max range -->
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <div class="input-group">
+                          <label for="gpa">GPA</label>
+                          <input type="number" name="gpa"/>
+                        <!-- implement min/max range -->
+                        </div>
+                      </div>
+                    </div>
+                    
+
+                    <input type="submit" name="submit_form" id="submit_form"/>
+
+
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row main-content phase phase2">
+              <div class="col-12 col-md-6">
+                <div class="ucat-course-flex-carousel-container">
+                  <div id="ucatCourseFlexCarousel2" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#ucatCourseFlexCarousel2" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#ucatCourseFlexCarousel2" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                      <button type="button" data-bs-target="#ucatCourseFlexCarousel2" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="https://images2.alphacoders.com/132/1325120.png" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="https://wallpapercave.com/wp/wp7711072.jpg" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-image_large.png?format=jpg&quality=90&v=1530129081" class="d-block w-100" alt="...">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="whats-included">
+                  <div class="accordion" id="solo-accordion">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="whats-included-accordion">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                          <p>WHAT'S INCLUDED?</p>
+                        </button>
+                      </h2>
+                      <div id="the-only-dropdown" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <ul>
+                            <li>90+ VIDEOS TAUGHT WITH MASTER TECHNIQUES</li>
+                            <li>GUIDED MENTORSHIP</li>
+                            <li>MONTHLY SEMINARS WITH STRONG COMMUNITY</li>
+                            <li>ONE DAY Q&A RESPONSE VIA DISCORD SERVERS</li>
+                            <li>POWERFUL LMS</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+  
+                    
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6">
+                <div class="enrolment-submitted-section">
+                  <img src="../img/check-circle-broken.png" />
+                  <div class="section-copy">
+                    <p class="exa-content-enrolment-submitted">ENROLMENT SUBMITTED</p>
+                    <p class="exa-content-well-be-in-touch">WE'LL BE IN TOUCH</p>
+                  </div>
+                 
+                </div>
+                <div class="section line-items-section">
+                  <p class="course-subtitle">5 MONTH INTENSIVE</p>
+                  <div class="row">
+                    <div class="col-6">
+                      <p class="course-name">UCAT Course</p>
+                    </div>
+                    <div class="col-6">
+                      <p class="course-price">$1499.00</p>
+                    </div>
+                  </div>
+                  
+                  
+                </div>
+                <div class="section enrolment-dates">
+                  <h3 class="subheading">ENROLMENT DATES</h3>
+                  <hr/>
+                  <div class="enrolment-timeline-card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Clock_simple_white.svg/1200px-Clock_simple_white.svg.png" />               
+                    <div class="card-copy">
+                      <p class="course-cohort">Class of 2023</p>
+                    <p class="course-timeline">3 JAN 2023 to 3 JUNE 2023</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="section summary-section">
+                  <h3>Summary</h3>
+                  <hr/>
+                  <div class="row">
+                    <p class="col-4">NAME</p>
+                    <p class="col-8">Rakin Rahman</p>
+                  </div>
+                  <hr/>
+                  <div class="row">
+                    <p class="col-4">EMAIL</p>
+                    <p class="col-8">example@gmail.com</p>
+                  </div>
+                  <hr/>
+                  <div class="row">
+                    <p class="col-4">PHONE</p>
+                    <p class="col-8">04 1234 5678</p>
+                  </div>
+                  <hr/>
+                  <div class="row">
+                    <p class="col-4">ATAR</p>
+                    <p class="col-8">0</p>
+                  </div>
+                  <hr/>
+                  <div class="row">
+                    <p class="col-4">GPA</p>
+                    <p class="col-8">0</p>
+                  </div>
+                  <p class="offer-submitted-copy">Offer Submitted on 21/11/2023 at 10:23PM</p>
+                  <p class="save-email-btn">SAVE TO EMAIL</p>
+                  <p class="update-details-btn">UPDATE DETAILS</p>
+                </div>
+              </div>
+  
+            </div>
+          </div>
+          <div class="container">
+            <div class="row main-content phase phase3">
+              <div class="col-12 col-md-6 course-offer-part">
+                <h2>COURSE OFFER</h2>
+                <p>To Rakin Rahman,<br/><br/> We are delighted to offer you entry into the Class of 2023 for our UCAT Course. <br/><br/> We look forward to work with you to start your medical journey.<br/><br/>Rakin & Rafi<br/><span class="scr-fnt">Rakin & Rafi</span></p>
+              </div>
+              <div class="col-12 col-md-6">
+                <h3>OFFER SUMMARY</h3>
+                <div class="section line-items-section">
+                  <p class="course-subtitle">5 MONTH INTENSIVE</p>
+                  <div class="row">
+                    <div class="col-6">
+                      <p class="course-name">UCAT Course</p>
+                    </div>
+                    <div class="col-6">
+                      <p class="course-price">$1499.00</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="course-timeline-table-container">
+                  <table class="course-timeline-table">
+                    <tr>
+                      <td>
+                        <span>
+                          <img src="../img/calendar.png" />
+                          <p>COURSE START</p>
+                        </span>
+                        
+                      </td>
+                      <td>
+                        <span class="date">
+                          3 JAN 2024
+                        </span>
+                        
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span>
+                          <img src="../img/calendar.png" />
+                          <p>COURSE END</p>
+                        </span>
+                      </td>
+                      <td>
+                        <span class="date">
+                          3 JUN 2024
+                        </span>
+                        
+                      </td>
+                    </tr>
+                    
+                  </table>
+                  <div class="whats-included">
+                    <div class="accordion" id="solo-accordion">
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="whats-included-accordion">
+                          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#the-only-dropdown" aria-expanded="true" aria-controls="collapseOne">
+                            <p>WHAT'S INCLUDED?</p>
+                          </button>
+                        </h2>
+                        <div id="the-only-dropdown" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#whats-included-accordion">
+                          <div class="accordion-body">
+                            <ul>
+                              <li>90+ VIDEOS TAUGHT WITH MASTER TECHNIQUES</li>
+                              <li>GUIDED MENTORSHIP</li>
+                              <li>MONTHLY SEMINARS WITH STRONG COMMUNITY</li>
+                              <li>ONE DAY Q&A RESPONSE VIA DISCORD SERVERS</li>
+                              <li>POWERFUL LMS</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <hr/>
+                <div class="due-today">
+                  <p>DUE TODAY</p>
+                  <p>$499.00</p>
+                </div>
+              </div>
+  
+            </div>
+          </div>
+          
+        </div>
+        
+
+      </div>
+    </div>
+
+    <!-- Bootstrap 5 JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="../js/reserve-progress.js"></script>
+    
+  </body>
+
+</html>

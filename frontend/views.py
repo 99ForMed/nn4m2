@@ -237,3 +237,15 @@ def contact_view(request):
 
     }
     return render(request, 'contact.html', context)
+
+def courses_updated_view(request):
+    context = {
+
+    }
+    return render(request, 'course-page-2/selection-page.html', context)
+
+def ucat_course_updated_view(request):
+    context = {
+        'successfulStudents':successfulStudent.objects.all(),  
+    }
+    return render(request, 'course-page-2/ucat-sell.html', context)

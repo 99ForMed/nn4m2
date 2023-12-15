@@ -14,6 +14,10 @@ from pathlib import Path
 import os
 import ssl
 
+from dotenv import load_dotenv
+
+load_dotenv() 
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -25,7 +29,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-g%3c!z^lev(yr_nfy+#7bi1)4u4uc2hawo+lttu#86rb_)kdpj'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = os.getenv('DEBUG')
 
 ALLOWED_HOSTS = ['127.0.0.1', 'pri-kundnani.herokuapp.com', 'localhost', '99formed.com', 'www.99formed.com']
 
@@ -60,7 +64,7 @@ ROOT_URLCONF = 'nn4m.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates'],
+        'DIRS': ['templates', 'templates/course-page-2'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -157,3 +161,20 @@ EMAIL_USE_SSL = True
 # SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # SECURE_SSL_REDIRECT = True
+
+# if not DEBUG:
+if True:
+    # Use the storage backend for static and media files
+    DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+    AWS_ACCESS_KEY_ID="AKIA3SUPPFQ3KHX6LDOP"
+    AWS_SECRET_ACCESS_KEY="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"
+    AWS_STORAGE_BUCKET_NAME = '99formed-main'
+    AWS_S3_REGION_NAME = 'ap-southeast-2'
+
+    # Use the same storage backend for static files
+    STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
+    # Static and media file URLs
+    AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+    STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/static/'
+    MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/media/'
