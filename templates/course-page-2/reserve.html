@@ -1,33 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+{% extends 'base-updated-course-page.html' %}
+{% load static %}
 
-    <!-- Bootstrap 5 CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
-
-    <link rel="stylesheet" type="text/css" href="../css/global-styles.css" />
-
-    <!-- Replace with general style of the current page -->
-    <link rel="stylesheet" type="text/css" href="../css/reserve/reserve.css" />
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{% static 'course-page-updated/css/reserve/reserve.css' %}" />
 
     <title>Reserve Your Seat</title>
-  </head>
-  <body>
+{% endblock %}
+{% block body %}
     <div class="container-fluid">
       <!-- Navbar -->
       <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="{% url 'home-page' %}">
             <img
-              src="../img/logo-long.png"
+              src="{% static 'course-page-updated/img/logo-long.png' %}"
               alt=""
               height="24"
               class="d-inline-block align-text-top"
@@ -215,13 +201,13 @@
                   <h2 class="exa-content-secure-your-spot">SECURE YOUR SPOT</h2>
                 </div>
                 <div class="section line-items-section">
-                  <p class="course-subtitle">5 MONTH INTENSIVE</p>
+                  <p class="course-subtitle">{{ucatCourseDetails.subtext}}</p>
                   <div class="row">
                     <div class="col-6">
-                      <p class="course-name">UCAT Course</p>
+                      <p class="course-name">{{ucatCourseDetails.title}}</p>
                     </div>
                     <div class="col-6">
-                      <p class="course-price">$1499.00</p>
+                      <p class="course-price">${{ucatCourseDetails.price}}</p>
                     </div>
                   </div>
                   
@@ -244,48 +230,43 @@
                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Clock_simple_white.svg/1200px-Clock_simple_white.svg.png" />               
                     <div class="card-copy">
                       <p class="course-cohort">Class of 2023</p>
-                    <p class="course-timeline">3 JAN 2023 to 3 JUNE 2023</p>
+                    <p class="course-timeline">{{ucatCourseDetails.course_start}} to {{ucatCourseDetails.course_end}}</p>
                     </div>
                   </div>
                 </div>
                 <div class="section enrolment-form-section">
                   <h3>Student Details</h3>
-                  <form>
-                    <div class="input-group">
-                      <label for="first_name">FIRST NAME</label>
-                      <input type="text" name="first_name"/>
-                    </div>
-
-                    <div class="input-group">
-                      <label for="last_name">LAST NAME</label>
-                      <input type="text" name="last_name"/>
-                    </div>
-
-
-                    <div class="input-group">
-                      <label for="email">EMAIL</label>
-                      <input type="email" name="email"/>
-                    </div>
+                  
+                  <form class="EntryFormSubmission" action="" method="POST" >
 
                     
-                    </div>
-
-                    <div class="row atar-gpa-section">
-                      <div class="col-6">
-                        <div class="input-group">
-                          <label for="atar">ATAR</label>
-                        <input type="number" name="atar"/>
-                        <!-- implement min/max range -->
+                    {% csrf_token %}
+                    {% for field in form %}
+                      {% if field.name == 'atar' %}
+                      <div class="row atar-gpa-section">
+                        <div class="col-6">
+                          <div class="input-group">
+                            <label for="{{field.name}}">{{field.label|upper}}</label>
+                            {{field}}
+                          </div>
+                        </div>
+                      {% elif field.name == 'gpa' %}
+                        <div class="col-6">
+                          <div class="input-group">
+                            <label for="{{field.name}}">{{field.name|upper}}</label>
+                            {{field}}
+                          <!-- implement min/max range -->
+                          </div>
                         </div>
                       </div>
-                      <div class="col-6">
-                        <div class="input-group">
-                          <label for="gpa">GPA</label>
-                          <input type="number" name="gpa"/>
-                        <!-- implement min/max range -->
-                        </div>
+                      {% else %}
+                      <div class="input-group">
+                        <label for="{{field.name}}">{{field.label|upper}}</label>
+                        {{field}}
                       </div>
-                    </div>
+                      {% endif %}
+                    
+                    {% endfor %}
                     
 
                     <input type="submit" name="submit_form" id="submit_form"/>
@@ -346,7 +327,7 @@
               </div>
               <div class="col-12 col-md-6">
                 <div class="enrolment-submitted-section">
-                  <img src="../img/check-circle-broken.png" />
+                  <img src="{% static 'course-page-updated/img/check-circle-broken.png' %}" />
                   <div class="section-copy">
                     <p class="exa-content-enrolment-submitted">ENROLMENT SUBMITTED</p>
                     <p class="exa-content-well-be-in-touch">WE'LL BE IN TOUCH</p>
@@ -354,13 +335,13 @@
                  
                 </div>
                 <div class="section line-items-section">
-                  <p class="course-subtitle">5 MONTH INTENSIVE</p>
+                  <p class="course-subtitle">{{ucatCourseDetails.subtext}}</p>
                   <div class="row">
                     <div class="col-6">
-                      <p class="course-name">UCAT Course</p>
+                      <p class="course-name">{{ucatCourseDetails.title}}</p>
                     </div>
                     <div class="col-6">
-                      <p class="course-price">$1499.00</p>
+                      <p class="course-price">${{ucatCourseDetails.price}}</p>
                     </div>
                   </div>
                   
@@ -373,7 +354,7 @@
                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Clock_simple_white.svg/1200px-Clock_simple_white.svg.png" />               
                     <div class="card-copy">
                       <p class="course-cohort">Class of 2023</p>
-                    <p class="course-timeline">3 JAN 2023 to 3 JUNE 2023</p>
+                    <p class="course-timeline">{{ucatCourseDetails.course_start}} to {{ucatCourseDetails.course_end}}</p>
                     </div>
                   </div>
                 </div>
@@ -382,31 +363,33 @@
                   <hr/>
                   <div class="row">
                     <p class="col-4">NAME</p>
-                    <p class="col-8">Rakin Rahman</p>
+                    <p class="col-8">{{enrolment_summary.first_name}} {{enrolment_summary.last_name}}</p>
                   </div>
                   <hr/>
                   <div class="row">
                     <p class="col-4">EMAIL</p>
-                    <p class="col-8">example@gmail.com</p>
+                    <p class="col-8">{{enrolment_summary.email}}</p>
                   </div>
                   <hr/>
                   <div class="row">
                     <p class="col-4">PHONE</p>
-                    <p class="col-8">04 1234 5678</p>
+                    <p class="col-8">{{enrolment_summary.phone}}</p>
                   </div>
                   <hr/>
                   <div class="row">
                     <p class="col-4">ATAR</p>
-                    <p class="col-8">0</p>
+                    <p class="col-8">{{enrolment_summary.atar}}</p>
                   </div>
                   <hr/>
                   <div class="row">
                     <p class="col-4">GPA</p>
-                    <p class="col-8">0</p>
+                    <p class="col-8">{{enrolment_summary.gpa}}</p>
                   </div>
-                  <p class="offer-submitted-copy">Offer Submitted on 21/11/2023 at 10:23PM</p>
+                  <p class="offer-submitted-copy">Offer Submitted on {{dt_now}}</p>
                   <p class="save-email-btn">SAVE TO EMAIL</p>
-                  <p class="update-details-btn">UPDATE DETAILS</p>
+                  <p class="update-details-btn" onclick="window.location.href={% url 'reserve-page' %}">UPDATE DETAILS</p>
+                  <p style="border-color: darkorange;" class="next-page-btn" onclick="progressPhase()">NEXT</p>
+
                 </div>
               </div>
   
@@ -416,18 +399,18 @@
             <div class="row main-content phase phase3">
               <div class="col-12 col-md-6 course-offer-part">
                 <h2>COURSE OFFER</h2>
-                <p>To Rakin Rahman,<br/><br/> We are delighted to offer you entry into the Class of 2023 for our UCAT Course. <br/><br/> We look forward to work with you to start your medical journey.<br/><br/>Rakin & Rafi<br/><span class="scr-fnt">Rakin & Rafi</span></p>
+                <p>To Rakin Rahman,<br/><br/>{{ucatCourseDetails.custom_letter}}<br/><br/>Rakin & Rafi<br/><span class="scr-fnt">Rakin & Rafi</span></p>
               </div>
               <div class="col-12 col-md-6">
                 <h3>OFFER SUMMARY</h3>
                 <div class="section line-items-section">
-                  <p class="course-subtitle">5 MONTH INTENSIVE</p>
+                  <p class="course-subtitle">{{ucatCourseDetails.subtext}}</p>
                   <div class="row">
                     <div class="col-6">
-                      <p class="course-name">UCAT Course</p>
+                      <p class="course-name">{{ucatCourseDetails.title}}</p>
                     </div>
                     <div class="col-6">
-                      <p class="course-price">$1499.00</p>
+                      <p class="course-price">${{ucatCourseDetails.price}}</p>
                     </div>
                   </div>
                 </div>
@@ -436,14 +419,14 @@
                     <tr>
                       <td>
                         <span>
-                          <img src="../img/calendar.png" />
+                          <img src="{% static 'course-page-updated/img/calendar.png' %}" />
                           <p>COURSE START</p>
                         </span>
                         
                       </td>
                       <td>
                         <span class="date">
-                          3 JAN 2024
+                          {{ucatCourseDetails.course_start}}
                         </span>
                         
                       </td>
@@ -451,13 +434,13 @@
                     <tr>
                       <td>
                         <span>
-                          <img src="../img/calendar.png" />
+                          <img src="{% static 'course-page-updated/img/calendar.png' %}" />
                           <p>COURSE END</p>
                         </span>
                       </td>
                       <td>
                         <span class="date">
-                          3 JUN 2024
+                          {{ucatCourseDetails.course_end}}
                         </span>
                         
                       </td>
@@ -503,15 +486,12 @@
       </div>
     </div>
 
-    <!-- Bootstrap 5 JS -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
 
-    <script src="../js/reserve-progress.js"></script>
-    
-  </body>
 
-</html>
+    <script src="{% static 'course-page-updated/js/reserve-progress.js' %}"></script>
+    <script>
+      for(i = 0; i < {{phase}}; i++){
+        progressPhase();
+      }
+    </script>
+{% endblock %}

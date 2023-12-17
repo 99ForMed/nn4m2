@@ -1,6 +1,14 @@
-currentReservePagePhase = 0;
+updateProgressBar(1)
+var currentReservePagePhase = 1;
+var phases = document.querySelectorAll('.phase')
+for(i = 0; i < phases.length; i++){
+    phases[i].style.display = 'none';
+}
+document.querySelector('.phase'+currentReservePagePhase).style.display = ''
 
 function progressPhase(){
+    
+    document.querySelector('.phase'+currentReservePagePhase).style.display = ''
     currentReservePagePhase += 1;
     var phases = document.querySelectorAll('.phase')
     for(i = 0; i < phases.length; i++){
@@ -24,5 +32,3 @@ function updateProgressBar(currentReservePagePhase){
     document.querySelector('.milestone'+currentReservePagePhase).classList.add('active');
     
 }
-
-progressPhase();

@@ -57,7 +57,7 @@
 }
 
 .enrol-process-visual .circle {
-  background-color: white;
+  background-color: #2f2f2f;
   height: 30px;
   width: 30px;
   border-radius: 100%;
@@ -400,6 +400,15 @@
     cursor: pointer;
 }
 
+.next-page-btn{
+  border: solid white 0.5px;
+  text-align: center;
+  border-radius: 12px;
+  padding: 10px;
+  margin: 10px !important;
+  cursor: pointer;
+}
+
 /* Phase 3 */
 
 .phase3 .course-offer-part p{
@@ -499,4 +508,8 @@
 .phase3 .due-today p{
     display: inline-block;
     font-weight: bold;
+}
+
+.EntryFormSubmission input{
+  color: white;
 }

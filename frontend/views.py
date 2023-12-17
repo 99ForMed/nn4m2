@@ -4,7 +4,12 @@ from django.http import HttpResponse
 from django.template.loader import render_to_string
 from django.core.mail import EmailMultiAlternatives
 
-from .models import Testimonial, successfulStudent, DynamicContent
+from .models import Testimonial, successfulStudent, DynamicContent, UcatCourseDetails
+from .forms import EntrySubmissionForm
+
+from django.utils import timezone
+
+
 
 # Create your views here.
 
@@ -249,3 +254,29 @@ def ucat_course_updated_view(request):
         'successfulStudents':successfulStudent.objects.all(),  
     }
     return render(request, 'course-page-2/ucat-sell.html', context)
+
+def reserve_page_view(request):
+    errors = []
+    phase = 0
+    enrolment_summary = {}
+
+    if request.method == "POST":
+        form = EntrySubmissionForm(request.POST)
+        if form.is_valid():
+            EntrySubmissionForm(form.cleaned_data).save()
+            phase = 1
+            enrolment_summary = form.cleaned_data
+
+    print(timezone.now())
+
+    context = {
+        'form': EntrySubmissionForm,
+        'errors': errors,
+        'phase': phase,
+        'enrolment_summary': enrolment_summary,
+        'dt_now': timezone.now(), 
+        'ucatCourseDetails': UcatCourseDetails.objects.all()[0]
+        # Assuming there's only one ucatcourseobject
+    }
+
+    return render(request, 'course-page-2/reserve.html', context)

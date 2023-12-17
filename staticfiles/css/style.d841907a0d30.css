@@ -1,0 +1,1619 @@
+@font-face {
+    font-family: 'montage';
+    src: url("../fonts/montage.f004fc06198a.otf")  format('truetype');
+  }
+
+html{
+  overflow-x: hidden;
+  background-color: #111111;
+}
+
+body {
+    color: #DDDDDD;
+    overflow-x: hidden;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Montserrat';
+    
+}
+/* Landing Page Rakin */
+
+/* .landing-page-rakin{
+  position: relative;
+}
+
+.banner-info{
+  position: absolute;
+  bottom: 20vh;
+} */
+
+/* End Landing Page Rakin */
+
+/* Landing Page */
+
+/* .landing-page{
+    height: 100vh;
+    background-image: url("../img/banner.d55629545167.jpg");
+    background-attachment: fixed;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+
+/* .landing-page .container{
+    None
+} */
+
+/* .landing-page .banner-info{
+  display: inline-block;
+  background-color: #111111;
+  width: 50%;
+  height: 100%;
+  padding-top: 35vh;
+  padding-bottom: 35vh;
+  margin: 0 0;
+}
+
+.landing-page .banner-info h1{
+    font-family: 'Montage', sans-serif;
+}
+
+@media (max-width: 767px) {
+	.landing-page .banner-info h1{
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 767px) {
+	.landing-page .banner-info h1{
+    font-size: 50px;
+
+  }
+} */
+
+
+
+#landing-page-carousel{
+  height: 100vh;
+  overflow-y: hidden;
+
+}
+
+#landing-page-carousel img{
+  min-height: 100vh;
+  min-width: 150vh;
+  width: auto;
+  height: auto;
+  overflow-y: hidden;
+  object-position: left;
+  
+}
+
+.landing-page{
+  min-height: 100vh;
+  position: absolute;
+  padding-top: 100px;
+  z-index: 1;
+}
+
+.landing-page .row{
+  margin: 0 0;
+  padding: 0 0;
+  z-index: 0;
+  
+}
+
+.banner-info{
+  padding-left: 30px;
+  padding-right: 30px;
+  width:100vw;
+  position: absolute;
+  bottom: 10vh;
+}
+
+.banner-info h1{
+  font-size: 50px;
+  padding: 15px 0;
+  font-family: 'montage';
+}
+
+.banner-info h4{
+  color: #ccc;
+  font-family: 'montage';
+}
+
+.landing-page .container-fluid .banner-info a{
+  color: darkorange;
+  font-size: 25px;
+  background-color: #1E1E1E;
+  padding: 18px 33.2px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.4s, color 0.4s;
+  text-decoration: none;
+  font-family: 'montage';
+  
+}
+
+.landing-page .container-fluid .banner-info a:hover{
+  background-color: #444444;
+  color: orange;
+}
+
+@media only screen and (max-device-width: 1366px) {
+  .parallax {
+    background-attachment: scroll;
+  }
+}
+
+@media (max-width: 786px){
+
+  .landing-page .banner-info{
+    padding-top: 20vh;
+  }
+}
+
+@media (max-height: 400px){
+
+  #landing-page-carousel{
+    height: fit-content;
+  }
+
+  .landing-page .banner-info{
+    position: static;
+    padding-top: 20vh;
+  }
+
+  .landing-page .banner-info h1{
+    font-size: 30px;
+  }
+}
+
+/* End Landing Page */
+
+/* Landing Page */
+@media (min-width: 786px){
+  .ParallaxVideo video{ 
+    min-width: 100%;
+    top:0;
+    z-index: -9;
+  }
+  .ParallaxVideo h1 {
+  color: #fff;
+  font-size: 76px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  }
+}
+
+@media (max-width: 786px){
+  .ParallaxVideo video{
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+}
+
+/* End Landing Page */
+
+nav{
+  background-color: #111111
+}
+
+nav a{
+    color: white !important;
+    text-decoration: none;
+}
+
+
+
+.dropdown-menu {
+	min-width: 400px;
+    transition: all 0.4s ease-in-out;
+    padding: 10px 10px;
+    font-size: 13px;
+    background-color: #333 !important;
+}
+
+.dropdown-menu .row .all{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.dropdown-menu .row .all a{
+  font-size: 17px;
+  
+}
+
+.dropdown-menu.columns-2 {
+	min-width: 400px;
+}
+.dropdown-menu.columns-3 {
+	min-width: 600px;
+}
+.dropdown-menu li a {
+	padding: 5px 15px;
+	font-weight: 300;
+}
+.multi-column-dropdown {
+	list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.multi-column-dropdown li{
+	color: white;
+    padding: 0 0;
+    margin: 0 0;
+}
+.multi-column-dropdown hr{
+	color: white;
+    padding: 0 0;
+    margin: 2 0;
+}
+
+.multi-column-dropdown li a {
+	display: block;
+	clear: both;
+	line-height: 1.428571429;
+	color: #333;
+	white-space: normal;
+    text-decoration: none;
+    transition: background-color 0.4s;
+}
+.multi-column-dropdown li a:hover {
+	text-decoration: none;
+	color: #262626;
+	background-color: #444444;
+}
+ 
+.navbar{
+  position: fixed;
+  width: 100%;
+  transition: transform 0.4s;
+}
+@media (max-width: 767px) {
+	.dropdown-menu.multi-column {
+		min-width: 240px !important;
+		overflow-x: hidden;
+	}
+}
+
+
+/* DROPDOWN ANIMATION */
+
+@media (min-width: 768px) {
+    .animate {
+      animation-duration: 0.3s;
+      -webkit-animation-duration: 0.3s;
+      animation-fill-mode: both;
+      -webkit-animation-fill-mode: both;
+    }
+  }
+  
+  @keyframes slideIn {
+    0% {
+      transform: translateY(1rem);
+      opacity: 0;
+    }
+  
+    100% {
+      transform: translateY(0rem);
+      opacity: 1;
+    }
+  
+    0% {
+      transform: translateY(1rem);
+      opacity: 0;
+    }
+  }
+  
+  @-webkit-keyframes slideIn {
+    0% {
+      -webkit-transform: transform;
+      -webkit-opacity: 0;
+    }
+  
+    100% {
+      -webkit-transform: translateY(0);
+      -webkit-opacity: 1;
+    }
+  
+    0% {
+      -webkit-transform: translateY(1rem);
+      -webkit-opacity: 0;
+    }
+  }
+  
+  .slideIn {
+    -webkit-animation-name: slideIn;
+    animation-name: slideIn;
+  }
+
+/* END DROPDOWN ANIMATION */
+
+/* UCAT interview section */
+
+.ucat-interview{
+  margin: 0 0;
+  background-image: url("../img/12.83321b710e9b.jpg");
+  background-size: cover;
+  background-position: center;
+  
+  min-height: 100vh;
+
+}
+
+.ucat-interview .toggles{
+  text-align: center;
+  width: fit-content;
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  padding: 10px 0px;
+  position: absolute;
+  left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto;
+  margin-top: 20px; 
+  z-index: 10;
+}
+
+.ucat-interview .toggles h4{
+  margin: 0 0;
+  padding: 0 0;
+  
+}
+
+.ucat-interview .toggles h4 span{
+  transition: background-color 0.4s, color 0.4s;
+  margin: 0;
+  padding: 10px 20px;
+  color: #444444;
+}
+
+.ucat-interview .toggles h4 span.active{
+  text-decoration: underline;
+  color: #ccc;
+}
+
+.ucat-interview .ucat-heading,
+.ucat-interview .interview-heading{
+  color: #DDDDDD;
+}
+
+.ucat-interview h2, h4{
+  font-family: 'montage';
+
+}
+
+.ucat-interview h4{
+  color: #999999;
+}
+@media (min-width: 767px) {
+	.mobile-break{
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+
+  /* .ucat-interview{
+    background-image: none;
+    background-color: #111111;
+    padding-bottom: 100px;
+  } */
+  .ucat-interview .toggles{
+    padding: 0 0;
+  }
+
+  .ucat-heading, .interview-heading{
+    display: block;
+    padding: 0 auto;
+  }
+
+}
+
+/* END UCAT interview section */
+
+/* Ucat only section */
+
+.ucat-interview{
+  
+  background-color: #1E1E1E;
+}
+
+.ucat-interview .container-fluid{
+  padding-top: 45vh;
+  padding-bottom: 15vh;
+}
+
+.ucat-interview .container-fluid .row .col-lg-4,
+.ucat-interview .container-fluid .row .col-lg-6{
+  
+  padding: 30px 40px;
+}
+
+@media (max-width: 786px){
+  .ucat-interview .container-fluid{
+    padding-top:15vh;
+    padding-bottom: 3vh;
+  }
+}
+
+/* ENd Ucat only section */
+
+/* Interview only section */
+
+
+.interview .text{
+  
+  padding: 40vh 100px;
+  padding-bottom: 5vh;
+  height: 100%;
+}
+
+.interview .text h2{
+  color: #DDDDDD;
+  font-size: 50px;
+}
+
+
+.interview .text .interview-info{
+  text-align: left;
+  margin: 10px 15px;
+  margin-left: 0;
+  margin-right: 30px;
+  padding: 25px 35px;
+  background-color: #1E1E1E;
+  border-radius: 7px;
+  width: 500px;
+}
+
+.interview .text .interview-info h5{
+  color: white;
+  font-size: 25px;
+}
+
+.interview .text .interview-info p{
+  margin: 0 0;
+  margin-top: 15px;
+  color: #999999;
+}
+
+.interview .row .col-lg-8{
+  padding: 35vh 30px;
+  background-image: url("../img/studying.f7d6c7ccdaaf.jpg");
+}
+
+@media (max-width: 767px) {
+  .interview .row .col-lg-8{
+    display: none;
+    
+  }
+
+  .interview .row .col-lg-8{
+    display: none;
+    padding: 5vh 30px;
+  }
+
+  .interview .text{
+    min-height: 100vh;
+    padding: 20vh 30px;
+  }
+
+  .interview .text .interview-info{
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+  }
+
+}
+/* Carousel styling */
+
+#ucat-only-carousel,
+#interview-only-carousel,
+#seminars-only-carousel{
+  width: 700px;
+  height: 500px;
+  background-color: rgba(0,0,0,0.2);
+  padding: 70px;
+  border-radius: 4px;
+}
+
+@media(max-width: 700px){
+  #ucat-only-carousel,
+  #interview-only-carousel,
+  #seminars-only-carousel{
+    width: 100%;
+    height: fit-content;
+    background-color: rgba(0,0,0,0);
+    padding: 70px;
+    border-radius: 4px;
+  }
+}
+
+/* End Carousel Styling */
+
+
+
+/* End Interview only section */
+
+/* Fluff section */
+
+/* .fluff-section-bg-container{
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.fluff-section-bg-container video{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  object-fit: cover;
+  z-index: 0;
+} */
+
+.fluff-section{
+  background: url("../img/12.83321b710e9b.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 20px 0;
+  min-height: 60vh;
+  z-index: 1;
+}
+
+.fluff-section h1{
+  font-family: 'montage';
+  z-index: 1;
+}
+
+.fluff-section .col-lg-6 .video-container{
+  margin: 25vh 0;
+  z-index: 1;
+}
+
+.fluff-section .col-lg-6 .video-container video{
+  width: 100%;
+  z-index: 1;
+}
+
+.fluff-section .container .row .col-lg-6 .fluff-info{
+  margin-top: 25vh;
+}
+
+.fluff-section .container .row .col-lg-6 .fluff-info h2{
+  font-size: 50px;
+}
+.fluff-section .container .row .col-lg-6 .fluff-info h5{
+  font-size: 30px;
+}
+.fluff-section .container .row .col-lg-6 .fluff-info p{
+  color: #999999;
+}
+
+
+
+
+@media (min-width: 787px){
+  
+
+}
+
+@media (max-width: 787px){
+  
+  .fluff-section .container .row .col-lg-6 .fluff-info{
+    margin-top: 5vh;
+  }
+
+  .fluff-section .col-lg-6 .video-container{
+    margin: 5vh 0;
+  }
+  
+  .fluff-section{
+    background-image: url("../img/12.83321b710e9b.jpg");
+  }
+
+}
+
+/* End Fluff section */
+/* Past students section */
+
+.past-students{
+  color: white;
+  background-image: url("../img/past-students.d18ead7c4de0.jpg");
+  background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.past-students .container .row .col-lg-6{
+  padding: 0 0;
+  padding-top: 30vh;
+}
+
+.past-students .container .row .col-lg-6 .info h2{
+  font-size: 50px;
+  color: #DDDDDD;
+  font-family: 'montage';
+
+}
+
+.past-students .container .row .col-lg-6 .info h4{
+  font-size: 25px;
+  color: #ccc;
+}
+
+.past-students .container .row .test{
+  padding: 20px 0;
+}
+
+
+
+.flex-list{
+  margin-left: 20px;
+}
+
+.flex-list .student-flex{
+  height: fit-content;
+  background-color: #1E1E1E;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin: 6vh 0;
+  cursor: pointer;
+  transition: background-color 0.4s, transform 0.4s;
+  
+}
+
+.flex-list .student-flex:hover{
+  background-color: #444444;
+  transform: translateX(10px);
+}
+
+.flex-list .student-flex .img-container{
+  height: 100%;
+  text-align: center;
+  padding: 7px 10px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.flex-list .student-flex .img-container img{
+  display: inline-block;
+  vertical-align: middle;
+  width: 60px;
+}
+
+.flex-list .student-flex .student-info-container span{
+  display: inline-block;
+}
+
+
+
+.flex-list .student-flex .student-info-container .name p{
+  font-size: 14px;
+  padding: 0 0;
+  margin: 0 0;
+  color: gray;
+}
+
+.flex-list .student-flex .student-info-container .name span{
+  font-size: 20px;
+  padding: 0 0;
+  margin: 0 0;
+}
+
+
+
+.flex-list .student-flex .student-info-container .score p{
+  font-size: 14px;
+  padding: 0 0;
+  margin: 0 0;
+  color: gray;
+}
+
+.flex-list .student-flex .student-info-container .score span{
+  font-size: 20px;
+  padding: 0 0;
+  margin: 0 0;
+}
+
+.flex-list .student-flex .student-info-container .score{
+  font-size: 30px;
+  padding: 0 0;
+  margin: 0 0;
+  padding-left: 15px;
+}
+
+.past-students .container .row .col-lg-6 .success-rate{
+  text-align: center;
+  display: inline-block;
+  margin: 0 0;
+  margin-right: 20px;
+}
+
+.past-students .container .row .col-lg-6 .success-rate h3{
+  color: darkorange;
+  font-size: 45px;
+  
+}
+
+  /* Animating Number */
+
+  @property --num {
+    syntax: '<integer>';
+    initial-value: 0;
+    inherits: false;
+  }
+
+  .past-students .container .row .col-lg-6 .success-rate h3 span{
+    color: darkorange;
+    font-size: 45px;
+    transition: --num 4s;
+    counter-reset: num var(--num);
+    
+  }
+
+
+  .past-students .container .row .col-lg-6 .success-rate h3 span::after {
+    content: counter(num);
+  }
+
+  .past-students .container .row .col-lg-6 .amount-students h3 span{
+    color: darkorange;
+    font-size: 45px;
+    transition: --num 4s ease-out;
+    counter-reset: num var(--num);
+    
+  }
+
+
+  .past-students .container .row .col-lg-6 .amount-students h3 span::after {
+    content: counter(num);
+  }
+
+  /* End Animating Number */
+
+
+.past-students .container .row .col-lg-6 .success-rate p{
+  color: #ccc;
+}
+
+.past-students .container .row .col-lg-6 .amount-students{
+  text-align: center;
+  display: inline-block;
+  margin: 0 0;
+  margin-right: 20px;
+}
+
+.past-students .container .row .col-lg-6 .amount-students h3{
+  color: darkorange;
+  font-size: 45px;
+}
+
+.past-students .container .row .col-lg-6 .amount-students p{
+  color: #ccc;
+}
+
+.past-students .see-more-successful-students{
+  color: darkorange;
+  text-decoration: none;
+  padding-left: 30px;
+  padding-top: 13px;
+}
+
+@media(min-width: 1200px){
+  .student-flex .img-container{
+    padding-top: 0;
+  }
+}
+
+@media (min-width: 786px){
+  .flex-list{
+    margin-left: 20px;
+  }
+
+  .flex-list .student-flex .student-info-container .score{
+    padding-left: 10px !important;
+  }
+}
+
+@media (max-width: 786px){
+  .past-students{
+    background-image: none;
+    background-color: #111111;
+  }
+  .past-students .container .row .col-lg-6{
+    padding: 5vh 0;
+    width: 100%;
+  }
+
+  .past-students .container .row .col-lg-6 .info{
+    max-width: 90%;
+  }
+
+  .past-students .container .row .col-lg-6 .info h2{
+    font-size: 40px;
+    color: #DDDDDD;
+    font-family: 'montage';
+  
+  }
+
+  .flex-list{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 90%;
+  }
+
+  .flex-list .student-flex{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 90%;
+  }
+}
+
+/* End past students section */
+
+/* Testimonials Carousel */
+
+.testimonials-section{
+  min-height: 80vh;
+  background-image: url("../img/21.359ec3b02b09.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+
+}
+
+.testimonials-section .carousel{
+  /* position: absolute;
+  left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  /* margin-right: auto; */
+  width: 100%; 
+  padding-top: 40vh;
+  padding-bottom: 30vh;
+
+}
+
+.testimonials-section .carousel h2{
+  font-size: 40px;
+  font-family: 'montage';
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.testimonials-section .carousel .carousel-inner .carousel-item .d-flex .testimonial{
+  padding: 10px 20px;
+  margin: 0 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 350px;
+  border-radius: 5px;
+  flex: 1 1 0px;
+}
+
+.expand-testimonial{
+  cursor: pointer;
+  color: darkorange;
+}
+
+@media (min-width: 786px){
+  .testimonials-section .carousel.mobile{
+    display: none;
+  }
+}
+
+@media (max-width: 786px){
+  .testimonials-section .carousel{
+    /* position: absolute;
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    /* margin-right: auto; */
+    width: 100%; 
+    padding-top: 10vh;
+    padding-bottom: 15vh;
+  
+  }
+  
+  .testimonials-section .carousel.desktop{
+    display: none;
+  }
+}
+
+/* End Testimonials Carousel */
+/* Final Call to Action */
+
+.final-call-to-action{
+  min-height: 80vh;
+  background-image: url("../img/8.4df0c572ddcf.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.final-call-to-action .container .info-block{
+  display: inline-block;
+  padding-top: 45vh;
+  
+}
+
+.final-call-to-action .container .info-block h2{
+  font-size: 40px;
+}
+
+.final-call-to-action .container .info-block a{
+  color: darkorange;
+  font-size: 25px;
+  background-color: #1E1E1E;
+  padding: 18px 33.2px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.4s, color 0.4s;
+  text-decoration: none;
+  font-family: 'montage';
+}
+
+.final-call-to-action .container .info-block a:hover{
+  background-color: #444444;
+  color: orange;
+}
+
+/* End Final Call to Action */
+
+
+/* Footer styling */
+
+.footer{
+  min-height: 20vh;
+  background-color: #111111;
+  padding-top: 20px;
+}
+
+.footer .container-fluid p{
+  color: grey;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.footer .footer-logo{
+  width: 200px;
+  margin: 20px 0;
+}
+
+/* End Footer */
+
+/* Eligibility Form */
+.eligibility-form{
+  background-color: #111111;
+  min-height: 80vh;
+}
+
+.eligibility-form .card {
+    padding: 30px 40px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    border: none !important;
+    box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.2);
+    background-color: #1E1E1E;
+}
+.eligibility-form .blue-text {
+    color: #999999;
+}
+.eligibility-form .form-control-label {
+    margin-bottom: 0;
+}
+.eligibility-form input,
+textarea,
+button {
+    padding: 8px 15px;
+    border-radius: 5px !important;
+    margin: 5px 0px;
+    box-sizing: border-box;
+    border: 0px solid #ccc;
+    font-size: 18px !important;
+    font-weight: 300;
+    background-color: #343434;
+    color: white;
+}
+.eligibility-form input:focus,
+.eligibility-form textarea:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: 1px solid #00bcd4;
+    outline-width: 0;
+    font-weight: 400;
+}
+.eligibility-form .btn-block {
+    text-transform: uppercase;
+    font-size: 15px !important;
+    font-weight: 400;
+    height: 43px;
+    cursor: pointer;
+}
+.eligibility-form .btn-block:hover {
+    color: #fff !important;
+}
+.eligibility-form button:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    outline-width: 0;
+}
+
+.eligibility-form .submit{
+  margin: 40px 0;
+  padding: 10px 0;
+  width: 100%;
+  font-size: 20px;
+  color: darkorange;
+  background-color: #343434;
+  border-radius: 5px;
+  transition: transform 0.4s, box-shadow 0.4s, color 0.4s;
+  cursor: pointer;
+
+}
+
+.eligibility-form .submit:hover{
+  transform: scale(1.05);
+  box-shadow: 2px 3px 2px #262626;
+  color: orange;
+
+}
+
+.form-group.d-flex{
+  margin-top: 25px;
+}
+
+.hint{
+  cursor: pointer;
+}
+
+.hours-counter{
+  margin-top: 15px;
+  margin-bottom: 0;
+  padding: 0 15px;
+  float: left;
+  text-align: left;
+  color: grey;
+}
+
+#hours-amount{
+  margin-top: 0;
+  background: none;
+  border: none;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  background-color: grey;
+  border:grey;
+}
+
+input[type=range]::-webkit-slider-thumb:active {
+  background-color: white;
+  border: none;
+}
+
+input[type=file]{
+  background: none;
+  filter: alpha(opacity=0)
+}
+
+/* End Eligibility Form */
+
+/* Accepted Screen */
+.accepted-screen{
+  background-color: #1E1E1E;
+}
+
+.card-accepted {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Update the background color of the card */
+.card-accepted {
+  background: none;
+  color: #999999;
+  border: none;
+}
+
+.card-accepted .card-accepted-body .card-accepted-title{
+  color: #006B38FF;
+}
+
+.card-accepted-body .contact .col-lg-4 p{
+  cursor: pointer;
+}
+
+.submitted-screen{
+  background-color: #1E1E1E;
+}
+
+.card-submitted {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Update the background color of the card */
+.card-submitted {
+  background: none;
+  color: #999999;
+  border: none;
+}
+
+.card-submitted .card-submitted-body .card-submitted-title{
+  color: darkorange;
+}
+
+.card-submitted-body .contact .col-lg-4 p{
+  cursor: pointer;
+}
+/* End Accepted Screen */
+/* UCAT Page */
+
+.ucat-page{
+  padding-top: 80px;
+  min-height: 100vh;
+  background-color: #1E1E1E;;
+}
+
+.course-title{
+  min-height: 20vh;
+  background-image: url("../img/7.8446b1a841b5.jpg");
+  padding-top: 6vh;
+  background-position: center;
+  background-size: cover;
+}
+
+.ucat-page-title h1{
+  font-size: 50px;
+}
+
+.ucat-page .container{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.ucat-page .ucat-page-card{
+  padding: 20px 0;
+  color: #ccc
+  
+}
+
+.ucat-page .ucat-page-card p{
+  color: #999999;
+}
+
+.ucat-page .book-button{
+  color: darkorange;
+  font-size: 25px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.4s, padding 0.4s, color 0.4s;
+  
+}
+
+/* Global CSS */
+.course-content-btn{
+  color: rgb(199, 199, 199);
+  font-size: 17px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: color 0.4s;
+  margin-left: 30px;
+}
+
+.course-content-btn:hover{
+  color: white
+}
+
+/* Global CSS */
+
+.ucat-page .book-button:hover{
+  color: orange;
+  padding: 10px 20px;
+  background-color: #333;
+  border-radius: 4px;
+  
+  
+}
+
+/* End UCAT Page */
+/* Interview Page */
+.interview-page{
+  padding-top: 80px;
+  min-height: 100vh;
+  background-color: #1E1E1E;;
+}
+
+.course-title{
+  min-height: 20vh;
+  background-image: url("../img/15.163519aa5197.jpg");
+  padding-top: 6vh;
+  background-position: center;
+  background-size: cover;
+}
+
+.course-title h1{
+  font-size: 50px; 
+  font-family: 'montage';
+}
+
+.interview-page .container .carousel .interview-page-card-body{
+  margin-top: 30vh;
+}
+
+.interview-page .container{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  min-height: 100vh;
+}
+
+.interview-page .book-button{
+  color: darkorange;
+  font-size: 25px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.4s, padding 0.4s, color 0.4s;
+}
+
+.interview-page .book-button:hover{
+  color: orange;
+  padding: 10px 20px;
+  font-size: 25px;
+  cursor: pointer;
+  text-decoration: none;
+  background-color: #333;
+  border-radius: 4px;
+}
+
+.interview-page .interview-page-card{
+  padding: 20px 0;
+  color: #ccc
+  
+}
+
+.interview-page .interview-page-card p{
+  color: #999999;
+}
+
+/* End Interview Page */
+
+/* Course Options Page */
+.course-options{
+  padding-top: 20vh;
+  min-height: 75vh;
+  background-color: #111111;
+}
+
+.course-options .card{
+  border:  none;
+  background-color: #1E1E1E;
+}
+
+.course-options .card .card-body{
+  background-color: #1E1E1E;
+  border: none;
+  position: relative;
+  padding-bottom: 50px;
+  border-radius: 7px;
+}
+
+.course-options .card .card-body p{
+  color: #999999;
+}
+
+.course-options .card .card-body a{
+  position: absolute;
+  bottom: 10px;
+  left:0;
+  right:0;
+  margin-left:auto;
+  margin-right:auto;
+  color: darkorange;
+}
+
+@media (min-width: 786px){
+  .course-options-mobile{
+    display: none;
+  }
+}
+
+@media (max-width: 786px){
+  .course-options{
+    display: none;
+  }
+
+  .course-options-mobile{
+    padding-top: 160px;
+    padding-bottom: 80px;
+    background-color: #1E1E1E;
+  }
+  
+  .course-options-mobile .card-body{
+    padding: 0 20px;
+  }
+
+  .course-options-mobile .card-body p{
+    margin-bottom: 0px;
+  }
+
+  #top-btn{
+    margin-bottom: 30px;
+  }
+
+  .course-options-mobile .btn{
+    color: darkorange;
+    padding: 0 0;
+    
+  }
+}
+
+
+
+/* End Course Options Page */
+/* Our Story */
+.our-story-page{
+  padding-top: 80px;
+  background-color: #1E1E1E;
+}
+
+.our-story-page h1{
+  color: #ccc;
+}
+
+.our-story-page .our-story-title{
+  min-height: 20vh;
+  background-image: url("../img/our-story.17a3a95cd5aa.jpg");
+  padding-top: 6vh;
+  background-position: center;
+  background-size: cover;
+  
+}
+
+.our-story-page .container-fluid .row .col-lg-6.rakin-pic {
+  background-image: url("../img/7.8446b1a841b5.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.our-story-page .rakin-part-a{
+  padding-top: 20px;
+  color: #999999;
+  background-image: none !important;
+}
+
+.our-story-page .rakin-part-a h3{
+  color: #ccc;
+}
+
+.our-story-page .rakin-part-b{
+  color: #999999;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.our-story-page .rakin-part-b h3{
+  color: #ccc;
+}
+
+.our-story-page .rakin-pic-b{
+  background-image: url("../img/14.5fb6e3ae6e59.jpg");
+  background-position: center;
+  background-size: cover;
+
+}
+
+.our-story-page .rakin-part-c p,.our-story-page .rakin-part-d p{
+  color: #999999;
+}
+
+.our-story-page p{
+  padding: 30px;
+}
+
+.our-story-page .rafi-pic{
+  background-image: url("../img/rafi.8674914130c4.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.our-story-page .rafi-part-a h3{
+  color: #ccc;
+}
+
+.our-story-page .rafi-part-a p{
+  color: #999999;
+}
+
+.our-story-page .rafi-part-b h3{
+  color: #ccc;
+}
+
+.our-story-page .rafi-part-b p{
+  color: #999999;
+}
+
+.our-story-page .rafi-part-c h3{
+  color: #ccc;
+}
+
+.our-story-page .rafi-part-c p{
+  color: #999999;
+}
+/* End our Story */
+/* Successful Students */
+
+/* Loading Page */
+.loading-screen{
+  background-color: black;
+  min-height: 100vh; 
+  min-width: 100vw; 
+  position: fixed; 
+  z-index: 100; 
+  padding: 0 0; 
+  margin: 0 0;
+  display: flex;
+  justify-content: center;
+  transition: opacity 0.4s;
+}
+
+.loading-screen img{
+  width: 200px;
+  height: fit-content;
+  padding-top: 40vh;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 40%;
+  }
+  50% {
+    opacity: 100%;
+  }
+}
+/* End Loading Page */
+/* Successful students page */
+
+.successful-students{
+  background-color: #111111;
+  padding: 30px 10px;
+}
+
+.successful-students .flex-list{
+  margin: 0 0;
+}
+
+.successful-students .flex-list .big{
+  font-size: 15px;
+}
+
+.successful-students .back{
+  text-align: left;
+  color: darkorange;
+  cursor: pointer;
+}
+
+.successful-students .back:hover{
+  color: orange;
+}
+
+@media (min-width: 786px){
+  .show-on-mobile{
+    display: none;
+  }
+}
+
+/* End Successful students page */
+/* Full Testimonial */
+
+.full-testimonial{
+  background-color: #111111;
+  vertical-align: middle;
+  min-height: 100vh;
+  padding-top: 100px;
+  text-align: center;
+}
+
+.full-testimonial .container .testimonial-block{
+  background-color: #1E1E1E;
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+  width: 100%;
+  padding: 100px;
+  border-radius: 7px;
+}
+
+.full-testimonial .container .testimonial-block .back{
+  text-align: left;
+  color: darkorange;
+  cursor: pointer;
+}
+
+.full-testimonial .container .testimonial-block .back:hover{
+  color: orange;
+}
+
+.full-testimonial .container ol{
+  text-align: left;
+}
+
+/* End Full Testimonial */
+
+/* Ucat Course Page */
+
+.ucat-course-content{
+  color: #999999 ;
+}
+
+.ucat-course-content .row .col-lg-3{
+  padding: 20px;
+  margin-bottom: 10px;
+}
+
+.ucat-course-content .row .col-lg-4{
+  padding: 20px;
+  margin-bottom: 10px;
+}
+
+.ucat-course-content .book-button{
+  color: darkorange;
+  font-size: 25px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.4s, padding 0.4s, color 0.4s;
+}
+
+.ucat-course-content .book-button:hover{
+  color: orange;
+  padding: 10px 20px;
+  background-color: #333;
+  border-radius: 4px;
+  
+  
+}
+
+.ucat-course-content h1{
+  font-family: 'montage';
+  color: #ccc;
+}
+
+.ucat-course-content h3{
+  color: #DDDDDD;
+}
+
+.ucat-course-content .dropdown .btn{
+  color: #999999;
+  padding: 0 0;
+  margin: 0 0;
+  border: none;
+}
+
+.ucat-course-content .dropdown .dropdown-menu{
+  transition: visibility 0.4s, display 0.4s, opacity 0.4s !important;
+  background-color: #262626;
+}
+
+.ucat-course-content .dropdown .dropdown-menu li{
+  color: #999999;
+  padding: 6px;
+}
+
+.ucat-course-content .dropdown .dropdown-menu li:hover{
+  background-color: none;
+}
+
+/* End Ucat Course Page */

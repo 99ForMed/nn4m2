@@ -30,7 +30,7 @@
       <!-- Navbar -->
       <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="{% url 'home-page' %}">
             <img
               src="{% static 'course-page-updated/img/logo-long.png' %}"
               alt=""
@@ -1028,7 +1028,7 @@
         </div>
         <div class="modal-banner-4 modal-banner">
           <div class="heading-section">
-            <h2>RESERVE YOUR SEAT</h2>
+            <h2 id="exa-content-reserve-your-seat">RESERVE YOUR SEAT</h2>
 
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -1036,6 +1036,7 @@
               height="153"
               viewBox="0 0 153 153"
               fill="none"
+              onclick="window.location.href='{% url 'reserve-page' %}'"
             >
               <g filter="url(#filter0_d_178_668)">
                 <circle
@@ -1092,7 +1093,7 @@
             </svg>
           </div>
 
-          <div class="modal-banner-4-content modal-banner-content">
+          <div class="modal-banner-4-content modal-banner-content" onclick="window.location.href='{% url 'reserve-page' %}'">
             <img src="{% static 'course-page-updated/img/reserve-seat.png' %}" width="100%" />
             <hr />
             <div class="row">
@@ -1115,6 +1116,7 @@
                       </div>
                     </div>
                     <p>Over 90+ Insightful Videos</p>
+                    
                   </div>
                   <div class="col-12 col-md-6 right-part">
                     <div class="right-part-outer-container outer-container">
@@ -1149,7 +1151,9 @@
                       </div>
                     </div>
                     <p>Rapid Q&A Response with Active Discord Servers</p>
+                    
                   </div>
+
                   <div class="col-6 col-md-4 detail2 detail">
                     <div class="detail2-outer-container detail-outer-container">
                       <div

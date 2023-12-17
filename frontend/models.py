@@ -1,4 +1,7 @@
 from django.db import models
+from django.core.validators import MaxValueValidator, MinValueValidator
+from phonenumber_field.modelfields import PhoneNumberField
+
 
 # Create your models here.
 
@@ -40,3 +43,38 @@ class DynamicContent(models.Model):
 
     def __str__(self):
         return "Edit me"
+
+class EntrySubmission(models.Model):
+
+    first_name = models.CharField(max_length=200)
+    last_name = models.CharField(max_length=200)
+    email = models.EmailField(max_length = 254)
+    atar = models.DecimalField(max_digits=10, decimal_places=2)
+    gpa = models.DecimalField(max_digits=10, decimal_places=2)
+    phone = PhoneNumberField(null=True, blank=True, region = 'AU', default=None)
+    submitted_datetime = models.DateField(auto_now_add=True)
+
+    class Meta:
+        verbose_name = 'Entry Submission'
+        verbose_name_plural = 'Entry Submissions'
+    
+    def __str__(self):
+        return self.first_name + ' ' + self.last_name
+
+class UcatCourseDetails(models.Model):
+
+    custom_letter = models.TextField()
+    subtext = models.CharField(max_length = 400)
+    title = models.CharField(max_length = 400)
+    price = models.DecimalField(max_digits=10, decimal_places=2)
+    course_start = models.DateField()
+    course_end = models.DateField()
+
+    def __str__(self):
+        return 'Edit me...'
+
+
+
+    class Meta:
+        verbose_name = 'UCAT Course'
+        verbose_name_plural = 'UCAT Course'

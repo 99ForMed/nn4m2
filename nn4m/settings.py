@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'phonenumber_field',
 
     # Custom apps
     'frontend'
@@ -154,6 +155,8 @@ EMAIL_HOST_PASSWORD = 'Tiana@2016'
 EMAIL_USE_TLS = False
 EMAIL_USE_SSL = True
 
+TIME_ZONE = 'Australia/Sydney'
+USE_TZ = True
 
 
 
@@ -162,8 +165,7 @@ EMAIL_USE_SSL = True
 
 # SECURE_SSL_REDIRECT = True
 
-# if not DEBUG:
-if True:
+if not DEBUG:
     # Use the storage backend for static and media files
     DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
     AWS_ACCESS_KEY_ID = os.getenv('AWS_ACCESS_KEY_ID')

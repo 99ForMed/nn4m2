@@ -168,6 +168,7 @@
 .heading-section svg{
     height: 100%;   
     cursor: pointer;
+    
 }
 
 .modal-banner{
@@ -183,6 +184,12 @@
     background-color: #000;
     padding: 50px;
     filter: invert(100%);
+    color: #1e1e1e !important;
+}
+
+.modal-banner:hover .heading-section:not(.modal:hover) h2{
+    
+    color: #e1e1e1 !important;
 }
 
 
@@ -259,6 +266,7 @@
     display: flex;
     justify-content: center;
     position: relative;
+    margin-bottom: 25px;
 
 }
 
@@ -399,5 +407,34 @@
     box-shadow: -6px 8px 4px 0px rgba(0, 0, 0, 0.2);
 }
 
+@media (max-width: 992px) {
+    .modal-banner-1-content .left-img{
+        margin-bottom: 20px;
+    }
 
+    .modal-banner-1-content .right-part-inner-container{
+        margin: 30px 0;
+    }
 
+    .modal-banner-2-content .left-img{
+        margin-bottom: 20px;
+    }
+
+    .modal-banner-2-content .right-part-inner-container{
+        margin: 30px 0;
+    }
+
+    .modal-banner-2-content .right-part-inner-container .right-copy p{
+        margin-bottom: 10px
+    }
+
+    .detail{
+        margin-top: 40px;
+    }
+
+    .heading-section h2{
+        font-size: 22px;
+    }
+    .heading-section svg{
+    }
+}
