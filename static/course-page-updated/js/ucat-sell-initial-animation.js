@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const aceUcatCopy = document.querySelector('.ace-the-ucat-copy')
     const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
     const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0)
+    const navbar = document.querySelector('.navbar')
 
     if(vw > 992){
         window.addEventListener('scroll', function() {
@@ -23,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 bottomCopy.style.transform = '';
                 aceUcatCopy.style.transform = 'translateY(-100px)';
                 ucatsell.style.visibility = 'hidden'
-                
+                navbar.style.backgroundColor = "#111111"
     
             }else if (scrollPosition > 500) {
                 // Action 1: Scale .past-students to double its size
@@ -33,14 +34,16 @@ document.addEventListener("DOMContentLoaded", function() {
                 ucatsell.style.transform = ''
                 ucatsell.style.visibility = ''
                 ucatsell.style.opacity = ''
+                navbar.style.backgroundColor = "rgba(0,0,0,0)"
+                
             }else if(scrollPosition <= 100){
                 pastStudents.style.transform = '';
                 bottomCopy.style.transform = '';
                 aceUcatCopy.style.transform = '';
                 ucatsell.style.transform = ''
                 ucatsell.style.opacity = ''
+                navbar.style.backgroundColor = "#0D1810"
                 
-    
     
     
             }
