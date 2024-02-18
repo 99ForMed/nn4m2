@@ -81,7 +81,7 @@ def secondary_qualifiers_view(request):
             files.append(request.FILES[key])
 
         email_package = {
-            'author': 'website.notification@yourweb.sydney',
+            'author': 'enquiries@yourpulse.com.au',
             'recipients': ['admin@yourweb.sydney'],
             'subject': '99ForMed Application - ' + request.GET['fname']+' '+request.GET['lname'],
             'template': 'application-email.html',
@@ -108,7 +108,7 @@ def secondary_qualifiers_view(request):
         email = EmailMultiAlternatives(
             email_package['subject'],
             'This email is unavailable from this browser. Please contact admin@yourweb.sydney if this is an urgent issue.',
-            'website.notification@yourweb.sydney',
+            'enquiries@yourpulse.com.au',
             ['pri@yourpulse.com.au', 'info@99formed.com']
         )
 

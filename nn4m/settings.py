@@ -144,17 +144,6 @@ STATIC_ROOT = 'staticfiles/'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-
-# Email sending
-EMAIL_HOST = "mail.privateemail.com"
-EMAIL_PORT = 465
-
-EMAIL_HOST_USER = 'website.notification@yourweb.sydney'
-EMAIL_HOST_PASSWORD = 'Tiana@2016'
-
-EMAIL_USE_TLS = False
-EMAIL_USE_SSL = True
-
 TIME_ZONE = 'Australia/Sydney'
 USE_TZ = True
 
@@ -179,3 +168,11 @@ if not DEBUG:
     AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
     STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/static/'
     MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/media/'
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.sendgrid.net'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'apikey'  # This is literally the word 'apikey'
+EMAIL_HOST_PASSWORD = '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'  # Replace with your actual SendGrid API Key
+EMAIL_USE_TLS = True
+
