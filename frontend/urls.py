@@ -8,7 +8,7 @@ from .views import contact_view, courses_updated_view, ucat_course_updated_view,
 
 urlpatterns = [
     path('', home_view, name='home-page'),
-    path('eligibility-check/', eligibility_view),
+    path('eligibility-check/', coming_soon_view),
     path('eligibility-check/secondary-qualifiers/', secondary_qualifiers_view),
     path('eligibility-check/accepted/', accepted_view),
     path('eligibility-check/submitted/', submitted_view),
