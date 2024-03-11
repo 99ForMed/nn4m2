@@ -1,3 +1,5 @@
+
+
 .banner-part {
   height: 40vh;
   background-image: url(../../img/selection-banner.png);
@@ -18,11 +20,17 @@
 
 .banner-copy h2 {
   font-size: 2.8rem;
+  font-weight: 100;
+  font-family: 'mirage';
 }
 
 .banner-copy p,
 .banner-copy img {
   display: inline;
+}
+
+.banner-copy .join-statement img{
+  max-height: 35px;
 }
 
 .selection-options-wrapper {
@@ -149,6 +157,38 @@
   display: inline-block;
   cursor: pointer;
 
+}
+
+.muted{
+  color: #5a5a5a;
+}
+
+.credits p{
+  margin: 0 10px;
+  float: right;
+}
+
+.credits p a{
+  /* color: rgba(255, 140, 0, 0.5); */
+  text-decoration: none;
+  color: #e1e1e1;
+}
+
+.reveal{
+  opacity: 0;
+  transition: all 0.4s;
+}
+
+.credits:hover .reveal{
+  opacity: 1;
+}
+
+.credits .reveal span{
+  transition: all 0.4s;
+}
+
+.credits .reveal span:hover{
+  color: darkorange;
 }
 
 /* end Lower */

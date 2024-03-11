@@ -1,13 +1,61 @@
 @font-face {
-  font-family: "montage";
-  src: url(../fonts/montage-99formed.otf);
+  font-family: 'mirage';
+  src: url('../fonts/MADE Mirage Black PERSONAL USE.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
 }
+
+@font-face {
+  font-family: 'mirage';
+  src: url('../fonts/MADE Mirage Bold PERSONAL USE.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'mirage';
+  src: url('../fonts/MADE Mirage Medium PERSONAL USE.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'mirage';
+  src: url('../fonts/MADE Mirage Regular PERSONAL USE.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'mirage';
+  src: url('../fonts/MADE Mirage Thin PERSONAL USE.otf') format('opentype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'montage';
+  src: url('../fonts/montage-99formed.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'montserrat';
+  src: url('../fonts/Montserrat/Montserrat-VariableFont_wght.ttf')  format('truetype');
+}
+
+
+
+
 
 h1,
 h2,
 h3,
 .mtg-fnt {
   font-family: "montage";
+}
+
+.mnt-fnt {
+  font-family: "montserrat";
 }
 
 body {

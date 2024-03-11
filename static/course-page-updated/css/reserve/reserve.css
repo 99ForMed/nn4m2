@@ -13,6 +13,7 @@
   padding: 0 10px;
   margin: 0;
   width: max-content;
+  cursor: pointer;
 }
 
 .breadcrumbs > div {
@@ -167,6 +168,8 @@
 
 .right-part-content .exa-content-secure-your-spot {
   font-size: 42px;
+  font-family: 'mirage';
+  font-weight: 700;
 }
 
 .right-part-content .line-items-section {
@@ -200,6 +203,7 @@
 .right-part-content .line-items-description-section p {
   font-size: 16px;
   line-height: 2.5;
+  font-family: 'montserrat';
 }
 
 .enrolment-timeline-card {
@@ -360,7 +364,8 @@
 
 .phase2 .line-items-section .course-name{
     font-size: 31px;
-    font-family: 'montage';
+    font-family: 'mirage';
+    font-weight: 700;
     margin: 0 0;
 }
 

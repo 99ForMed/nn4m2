@@ -4,8 +4,8 @@ from .views import home_view, eligibility_view, secondary_qualifiers_view, accep
 from .views import coming_soon_view, our_story_view, courses_view, ucat_view, interview_view
 from .views import our_story_view, successful_students_view, full_testimonial_view
 from .views import ucat_course_content_view, medicine_interview_course_content_view, dentistry_interview_course_content_view, rejected_view
-from .views import contact_view, courses_updated_view, ucat_course_updated_view, reserve_page_view
-
+from .views import contact_view, selection_view, ucat_sell_view, reserve_page_view
+from .views import selection_view, ucat_sell_view
 urlpatterns = [
     path('', home_view, name='home-page'),
     path('eligibility-check/', coming_soon_view),
@@ -25,8 +25,9 @@ urlpatterns = [
     path('course-content/interview/medicine/', medicine_interview_course_content_view),
     path('course-content/interview/dentistry/', dentistry_interview_course_content_view),
     path('contact/', contact_view),
-    path('courses-updated/', courses_updated_view),
-    path('ucat-course-updated/', ucat_course_updated_view, name='ucat-course-page-updated'),
+    path('courses-updated/', selection_view, name='selection-page'),
+    path('ucat-course-updated/', ucat_sell_view, name='ucat-course-page-updated'),
+    path('selection/', selection_view, name='selection-page'),
     path('reserve-page/', reserve_page_view, name='reserve-page'),
 
     

@@ -44,13 +44,13 @@ for (i = 0; i < sections.length; i++) {
       e.target.closest(".section").classList[1].slice(7)
     );
 
-    var indicators = document.querySelectorAll(".indicator");
+    var indicators = document.querySelectorAll(".modal-1-indicator");
 
     for (i = 0; i < indicators.length; i++) {
       indicators[i].classList.remove("current");
     }
-
-    if (section_num < 3) {
+    
+    if (section_num < 2) {
       indicators[0].classList.add("current");
     } else if (section_num < 5) {
       indicators[1].classList.add("current");
@@ -65,23 +65,25 @@ for (i = 0; i < sections.length; i++) {
 var sections2 = document.querySelectorAll(".modal-2 .section");
 
 // Modal 2 indicator logic
-for (i = 0; i < sections.length; i++) {
-  sections[i].addEventListener("mouseover", function (e) {
+for (i = 0; i < sections2.length; i++) {
+  sections2[i].addEventListener("mouseover", function (e) {
+    
     var section_num = parseInt(
       e.target.closest(".section").classList[1].slice(7)
     );
 
-    var indicators = document.querySelectorAll(".indicator");
+    var indicators = document.querySelectorAll(".modal-2-indicator");
 
     for (i = 0; i < indicators.length; i++) {
       indicators[i].classList.remove("current");
     }
 
-    if (section_num < 3) {
+    console.log(section_num)
+    if (section_num < 13) {
       indicators[0].classList.add("current");
-    } else if (section_num < 5) {
+    } else if (section_num < 16) {
       indicators[1].classList.add("current");
-    } else if (section_num < 12) {
+    } else if (section_num < 19) {
       indicators[2].classList.add("current");
     } else {
       console.log("error, section_number not being read properly.");
@@ -91,28 +93,25 @@ for (i = 0; i < sections.length; i++) {
 
 var sections3 = document.querySelectorAll(".modal-3 .section");
 
-// // Modal 3 indicator logic
-// for (i = 0; i < sections.length; i++) {
-//   sections[i].addEventListener("mouseover", function (e) {
-//     var section_num = parseInt(
-//       e.target.closest(".section").classList[1].slice(7)
-//     );
+// Modal 3 indicator logic
+for (i = 0; i < sections3.length; i++) {
+  sections3[i].addEventListener("mouseover", function (e) {
+    var section_num = parseInt(
+      e.target.closest(".section").classList[1].slice(7)
+    );
 
-//     var indicators = document.querySelectorAll(".indicator");
+    var indicators = document.querySelectorAll(".modal-3-indicator");
 
-//     for (i = 0; i < indicators.length; i++) {
-//       indicators[i].classList.remove("current");
-//     }
-
-//     if (section_num < 3) {
-//       indicators[0].classList.add("current");
-//     } else if (section_num < 5) {
-//       indicators[1].classList.add("current");
-//     } else if (section_num < 12) {
-//       indicators[2].classList.add("current");
-//     } else {
-//       console.log("error, section_number not being read properly.");
-//     }
-//   });
-//   console.log(sections[i]);
-// }
+    for (i = 0; i < indicators.length; i++) {
+      indicators[i].classList.remove("current");
+    }
+    console.log(section_num)
+    if (section_num < 20) {
+      indicators[0].classList.add("current");
+    } else if (section_num < 25) {
+      indicators[1].classList.add("current");
+    } else {
+      console.log("error, section_number not being read properly.");
+    }
+  });
+}

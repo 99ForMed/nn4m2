@@ -3,6 +3,27 @@
     src: url('../../fonts/Montserrat/Montserrat-VariableFont_wght.ttf')  format('truetype');
 }
 
+@font-face {
+    font-family: 'Cardo';
+    src: url('../../fonts/Cardo-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Cardo';
+    src: url('../../fonts/Cardo-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+  }
+  
+  @font-face {
+    font-family: 'Cardo';
+    src: url('../../fonts/Cardo-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
 .navbar{
     background-color: #0D1810;
 }
@@ -48,9 +69,11 @@
     display: flex;
     align-items: center;
     position: relative;
+    cursor: pointer;
 }
 
-.past-students .past-student{
+.past-students .past-student,
+.past-students .past-student-testimonial{
     aspect-ratio: 1;
     width: 80%;
     margin-left: auto;
@@ -65,6 +88,44 @@
     border-radius: 9px;
     box-shadow: rgba(255,255,255,0.5) 0px 0px 10px;
     background: linear-gradient(180deg, #000 0%, rgba(28, 28, 28, 0.92) 100%);
+    backface-visibility: hidden;
+    transition: transform 0.3s ease-in-out;
+    
+}
+
+.past-students .past-student-testimonial .opening-quotes{
+    position: absolute;
+    top: 3px;
+    right: 3px;
+}
+
+
+.past-students .past-student-testimonial .opening-quotes img{
+    height: 50px;
+}
+.past-students .past-student-testimonial .ending-quotes{
+    position: absolute;
+    bottom: 3px;
+    right: 3px;
+    font-family: 'montage';
+    font-size: 50px;
+}
+
+.past-students .past-student{
+}
+
+.past-students .past-student-testimonial{
+    transform: translate(-50%, -50%) rotateY(180deg);
+    background: linear-gradient(180deg, #000 0%, rgb(28, 28, 28) 100%);
+}
+
+
+.past-student-wrapper:hover .past-student.active {
+    transform: translate(-50%, -50%) rotateY(180deg);
+}
+
+.past-student-wrapper:hover .past-student-testimonial.active {
+    transform: translate(-50%, -50%) rotateY(360deg);
 }
 
 @media (max-width: 992px) {
@@ -85,29 +146,47 @@
 .past-students .past-student .name{
     margin: 0 0;
     text-align: center;
+    font-family: "Cardo", serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .past-students .past-student .score{
     font-weight: bold;
     font-size: small;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    font-family: 'montserrat';
 }
 
 .past-students .past-student .percentile-label{
-    font-weight: light;
-    font-size: small;
     color: #5a5a5a;
     margin: 0 0;
+    font-family: 'montserrat';
+    font-weight: 600;
 }
 
 .past-students .past-student .percentile-numeral{
     color: darkorange;
     font-size: 50px;
+    font-family: 'montserrat';
+    line-height: 55px;
 }
 
 .bottom-copy{
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+
+.bottom-copy .hover-to-reveal{
+    font-weight: 100;
+    font-size: 9px;
+    margin: 0 0;
+}
+
+.bottom-copy .click-graphic svg{
+    /* height: 12px; */
 }
 
 .ace-the-ucat-copy{
@@ -116,6 +195,8 @@
 
 .ace-the-ucat-copy .ace-the-ucat-heading{
     font-size: 18px;
+    font-weight: 100;
+    letter-spacing: 2px;
 }
 
 .ace-the-ucat-copy .join-statement p,
@@ -132,7 +213,7 @@
 }
 
 .mini-nav{
-    margin-top: 1200px;
+    margin-top: 10px;
 }
 
 .mini-nav .left-part{
@@ -165,21 +246,15 @@
     margin-bottom: 5px;
 }
 
-.heading-section{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: solid white 1px;
-}
-
 
 .heading-section h2{
     font-size: 3rem;
 }
 
-.heading-section svg{
+.heading-section img{
     height: 100%;   
     cursor: pointer;
+    margin: 10px 0;
     
 }
 
@@ -188,31 +263,65 @@
 }
 
 .modal-banner .heading-section{
-    transition: all 0.4s;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: solid white 1px;
+    background-color: #dfdfdf;
     cursor: pointer;
+    padding: 10px;
+    color: #dfdfdf;
+    
+    background: linear-gradient(to bottom, #111111 50%, #fff 50%);
+    background-size: 100% 200%;
+    background-position: top left;
+    transition: all 0.4s, background-position .2s ease-in;
+}
+
+.modal-banner .heading-section img{
+    filter: invert(100%);
+    transition: filter 0.4s;
 }
 
 .modal-banner:hover .heading-section:not(.modal:hover) {
-    background-color: #000;
-    padding: 50px;
-    filter: invert(100%);
+    padding: 25px;
+    background-position: bottom left;
     color: #1e1e1e !important;
 }
 
-.modal-banner:hover .heading-section:not(.modal:hover) h2{
-    
-    color: #e1e1e1 !important;
+.modal-banner:hover .heading-section:not(.modal:hover) img{
+    filter: invert(0%);
 }
 
+.modal-banner-4 img{
+    filter: invert(0%) !important;
+    border-radius: 5px;
+}
 
+.modal-banner-4 .modal-banner-4-img-container{
+    position: relative;
+}
+
+.modal-banner-4 .modal-banner-4-img-container .bottom-left-corner{
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    height: 33px;
+    width: 31px;
+    border-left: solid #C09368 3px;
+    border-bottom: solid #C09368 3px;
+    border-bottom-left-radius: 4px;
+}
 
 .modal-banner-content{
     margin-top: 20px;
 
 }
 
+
 .modal-banner-content .left-part img{
     width: 100%;
+    border-radius: 3px;
 }
 
 .modal-banner-content .right-part-outer-container{
@@ -221,38 +330,71 @@
     height: 100%;
     display: flex;
     align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 5px;
+    position: relative;
 }
 
 .modal-banner-content .right-part-inner-container{
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
 }
 
 .modal-banner-content .right-part-inner-container .one,
 .modal-banner-content .right-part-inner-container .three{
     display: inline;
     background-color: #A15E1F;
-    padding: 10px 10px;
+    padding: 5px 10px;
     border-radius: 5px;
     box-shadow: 0px 0px 4.61017px 0px rgba(0, 0, 0, 0.25);
+    font-family: 'montserrat';
+    margin: 0 15px;
+    font-weight: 500;
+}
+
+.modal-banner-content .right-part-inner-container .three{
+    display: flex;
+    flex-direction: column;
 }
 
 .modal-banner-content .right-part-inner-container .two{
+    font-family: 'montserrat';
+    color: white;
     display: inline;
+    margin: 0 0;
 }
 
-.modal-banner-content .right-part-inner-container img{
+.modal-banner-content .right-part-outer-container img{
     width: 100%;
-    margin-top: 10px;
+}
+
+.modal-banner-content .bottom-left-corner{
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    height: 31px;
+    width: 31px;
+    border-left: solid #897961 2px;
+    border-bottom: solid #897961 2px;
+    border-bottom-left-radius: 4px;
 }
 
 .modal-banner-2-content .right-part-inner-container .right-copy{
     padding: 0 0;
     margin-bottom: 0;
     margin-top: 10px;
+    display: flex;
+    align-items: center;
+
 }
 .modal-banner-2-content .right-part-inner-container .right-copy p{
     display: inline-block;
     margin-bottom: 0;
+    font-weight: 500;
 }
 
 .modal-banner-2 .placeholder2-container{
@@ -266,12 +408,17 @@
     width: 80%;
 }
 
+.modal-banner-3 img{
+    border-radius: 5px;
+}
+
 .community-support{
     /* border: solid red 2px; */
 }
 
 .community-support li{
     list-style-type: square;
+    font-family: 'montserrat';
 }
 
 .community-support .row .individual-sect{
@@ -282,12 +429,26 @@
 
 }
 
+.community-support .individual-sect .bottom-left-corner{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 25px;
+    width: 23px;
+    border-left: solid #C09368 2px;
+    border-bottom: solid #C09368 2px;
+    border-bottom-left-radius: 4px;
+    bottom: 15px;
+    left: 25px;
+    
+}
+
 .community-support .icon{
     position: absolute;
     width: 65px;
     height: auto;
-    top: 8px;
-    right: 20px;
+    top: 25px;
+    right: 25px;
 }
 
 .community-support img:not(.icon){
@@ -295,6 +456,7 @@
     width: 100%;
     height: 100%;
     margin: 0 10px;
+    border-radius: 3px;
 } 
 
 .modal-banner-4 hr{
@@ -316,12 +478,14 @@
 
 .modal-banner-4 .outer-container{
     height: 100%;
+    margin-bottom: 10px;
 
 }
 
 .modal-banner-4 .left-part-outer-container{
     background-color: #BFA083;
     padding: 15px 15px;
+    border-radius: 3px;
 }
 
 .modal-banner-4 .left-part-inner-container{
@@ -330,16 +494,26 @@
     position: relative;
 }
 
+.modal-banner-4 .left-part-inner-container p{
+    font-family: 'montserrat';
+    font-weight: 500;
+}
+
 .modal-banner-4 .bottom-left-corner{
     position: absolute;
-    bottom: 0px;
-    left: 0px;
+    bottom: 0;
+    left: 0;
     height: 36px;
     width: 34px;
     border-left: solid #DED4C6 2px;
     border-bottom: solid #DED4C6 2px;
     border-bottom-left-radius: 4px;
 
+}
+
+.modal-banner-4 .bottom-left-corner#guided-mentorship-corner{
+    bottom: 12px;
+    left: 12px;
 }
 
 .modal-banner-4 .left-part-inner-container p{
@@ -356,10 +530,15 @@
 }
 
 .modal-banner .right-part-outer-container{
+    padding: 15px;
 }
 
 .modal-banner .right-part-inner-container{
-    margin: 15px 15px;
+    height: 100%;
+}
+
+.modal-banner-4 .right-part-inner-container{
+    display: block !important;
 }
 
 .modal-banner-4 .right-part-inner-container .right-copy{
@@ -372,6 +551,12 @@
     margin: 0 0;
     padding: 5px 9px;
     border-radius: 4px;
+    font-family: 'montserrat';
+    font-weight: 500;
+}
+
+.li-exa-content-whats-included{
+    font-family: 'montserrat';
 }
 
 .detail-outer-container{
@@ -380,6 +565,7 @@
     background-color: #775C43;
     height: 300px;
     margin: 15px 0;
+    border-radius: 3px;
 }
 
 .detail-inner-container{
@@ -388,6 +574,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    
 }
 
 .detail-inner-container .bottom-left-corner{
@@ -450,3 +637,65 @@
     .heading-section svg{
     }
 }
+
+
+/* Lower */
+
+.lower{
+    margin: 20px 0;
+    font-weight: 150;
+    font-size: 13px;
+    
+  }
+  
+  .lower .socials{
+    display: inline-block;
+  }
+  
+  .lower .socials p{
+    margin: 0 10px;
+    
+  }
+  
+  .lower p{
+    margin: 0 0;
+    display: inline-block;
+    cursor: pointer;
+  
+  }
+  
+  .muted{
+    color: #5a5a5a;
+  }
+  
+  .credits p{
+    margin: 0 10px;
+    float: right;
+  }
+  
+  .credits p a{
+    /* color: rgba(255, 140, 0, 0.5); */
+    text-decoration: none;
+    color: #e1e1e1;
+  }
+  
+  .reveal{
+    opacity: 0;
+    transition: all 0.4s;
+  }
+  
+  .credits:hover .reveal{
+    opacity: 1;
+  }
+  
+  .credits .reveal span{
+    transition: all 0.4s;
+  }
+  
+  .credits .reveal span:hover{
+    color: darkorange;
+  }
+  
+  /* end Lower */
+  
+  
