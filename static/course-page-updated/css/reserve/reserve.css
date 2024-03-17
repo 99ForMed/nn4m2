@@ -179,13 +179,16 @@
 .right-part-content .line-items-section .course-subtitle {
   font-size: 16px;
   margin: 0 0;
+  font-weight: 500;
+  font-family: 'montserrat';
 }
 
 .right-part-content .line-items-section .course-name {
   display: inline-block;
   font-size: 32px;
-  font-family: "montage";
+  font-family: "mirage";
   margin-bottom: 0;
+  font-weight: 500;
 }
 
 .right-part-content .line-items-section .course-price {
@@ -210,7 +213,7 @@
   display: flex;
   align-items: center;
   padding: 10px;
-  border: solid white 4px;
+  border: solid white 2px;
   border-radius: 12px;
 }
 
@@ -232,10 +235,14 @@
 
 .enrolment-timeline-card .card-copy .course-cohort {
   font-size: 16px;
+  font-family: 'montserrat';
+  font-weight: 600;
 }
 
 .enrolment-timeline-card .card-copy .course-timeline {
-  font-size: 22px;
+  font-size: 18px;
+  font-family: 'montserrat';
+  font-weight: 600;
 }
 
 .enrolment-form-section label {
@@ -274,10 +281,30 @@
   width: 100%;
   margin: 40px 0;
   border-radius: 12px;
-  border: solid darkorange 3px;
+  border: solid darkorange 1px;
   background: none;
-  padding: 20px;
+  padding: 8px;
   color: darkorange;
+  font-family: 'montserrat';
+  font-size: 16px;
+}
+
+.whats-included .accordion-button{
+  padding-left: 0;
+}
+
+.whats-included hr{
+  margin-top: 10px;
+}
+
+.whats-included ul{
+  padding: 0 0;
+}
+
+.whats-included ul li{
+  font-family: 'montserrat';
+  list-style-type: none;
+  margin: 10px 0;
 }
 
 .whats-included .accordion {
@@ -301,7 +328,9 @@
 
 .whats-included .accordion-header .accordion-button p {
   margin: 0 0;
-  font-size: 22px;
+  font-size: 18px;
+  font-family: 'montserrat';
+  font-weight: 600;
 }
 
 .accordion-button:not(.collapsed)::after {
