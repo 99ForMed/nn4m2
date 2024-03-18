@@ -26,6 +26,20 @@
 .warning-style-message.formatting-style-A p{
     margin-top: 10px;
     margin-bottom: 10px;
+    font-family: 'montserrat';
+}
+
+.left-arrow-icon img{
+    transition: box-shadow 0.4s;
+    border-radius: 50%;
+    box-shadow: 0 0 10px 3.75 #fff;
+
+}
+
+.left-arrow-icon img:hover{
+    
+    box-shadow: 0 0 15px 7.5px #fff, 0 0 25px 15px #6a6a6a, 0 0 35px 22.5px #165029;
+
 }
 
 /* .modal.fade .modal-dialog { 
@@ -92,6 +106,8 @@
 .copy-explanation p{
     width: 100%;
     line-height: 53.3px;
+    color: white;
+    text-align: right;
 }
 
 .copy-explanation .top-left-corner{
@@ -285,7 +301,7 @@
 
 #modal-1 .modal-title p{
     
-    border-bottom: solid rgba(255, 255, 255, 0.15) 2px;
+    border-bottom: solid #272E29 2px;
     padding: 20px 0;
     margin: 0 0;
     font-size: 52px;
@@ -321,8 +337,10 @@
 }
 
 .section2 .copy1 .conventional-learning{
-    font-size: 34px;
+    font-size: 22px;
     font-family: "montserrat";
+    font-weight: 500;
+    margin-top: 15px;
 }
 
 .section2-content{
@@ -662,7 +680,7 @@
 }
 
 .section11 .section11-content .top-section .left-arrow-icon img{
-    height: 250px;
+    height: 150px;
 }
 
 .section11 .bottom-section{
@@ -888,6 +906,10 @@
     border-bottom-left-radius: 4px;
 }
 
+.section14 .section14-content .copy-explanation p{
+    font-family: 'montserrat';
+}
+
 .section14 .section14-content .copy-explanation .one{
     color: white;
     font-weight: 300;
@@ -896,7 +918,7 @@
     margin-bottom: 0;
 }
 .section14 .section14-content .copy-explanation .two{
-    background-color: #897961;
+    background-color: #A15E1F80;
     display: inline-block;
     color: white;
     padding: 5px 10px;
@@ -919,6 +941,11 @@
     padding: 5px 10px;
     margin: 10px 0;
     margin-top: 0;
+}
+
+.section14 .section14-content .copy-explanation .four img{
+    filter: brightness(0) invert(1);
+    transform: translateX(-3px);
 }
 
 /* End Section 14 */
@@ -965,6 +992,14 @@
     display: flex;
     align-items: center;
     
+}
+
+.section16 .section16-content .explanation-container .copy-explanation{
+    padding: 3px 25px;
+}
+
+.section16 .section16-content .explanation-container .copy-explanation p{
+    text-align: right;
 }
 
 /* End Section 16 */
@@ -1033,7 +1068,7 @@
 }
 
 .section18 .section18-content .top-section .left-arrow-icon img{
-    height: 250px;
+    height: 150px;
 }
 
 .section18 .bottom-section{
@@ -1245,6 +1280,11 @@
     align-items: center;
 }
 
+.section23 .copy-explanation p{
+    color: white;
+    text-align: left;
+}
+
 /* End Section 23 */
 
 /* Section 24 */
@@ -1277,11 +1317,16 @@
     font-size: 40px;
     font-family: "mirage";
     font-weight: 700;
+    text-align: right;
 }
 
 .section24 .section24-content .top-section .left-arrow-icon{
     background: none;
     border: none
+}
+
+.section24 .section24-content .top-section .left-arrow-icon img{
+    height: 150px;
 }
 
 .section24 .bottom-section{
@@ -1391,6 +1436,11 @@
     border: solid white 1px;
     border-radius: 2px;
     padding: 4px 20px !important;
+    float: right;
+}
+
+.section24 .left-arrow-icon{
+    margin: 0 30px;
 }
 
 /* End Section 24 */
