@@ -380,6 +380,11 @@ nav a{
   color: #ccc;
 }
 
+.ucat-interview .carousel-item p {
+  padding-left: -1px;
+  /* border: 2px solid red; */
+}
+
 .ucat-interview .ucat-heading,
 .ucat-interview .interview-heading{
   color: #DDDDDD;
@@ -393,6 +398,7 @@ nav a{
 .ucat-interview h4{
   color: #999999;
 }
+
 @media (min-width: 767px) {
 	.mobile-break{
     display: none;
