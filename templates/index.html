@@ -444,7 +444,6 @@
 
 	addEventListener("scroll", (event) => {
 		if(isInViewport(document.querySelector('.past-students .info'))){
-			//console.log(getComputedStyle(document.querySelector('.past-students .container .row .col-lg-6 .success-rate h3')).getPropertyValue("--num"));
 			document.querySelector('.past-students .container .row .col-lg-6 .success-rate h3 span').style.setProperty('--num', {{dynamicContent.success_rate}});
 			document.querySelector('.past-students .container .row .col-lg-6 .amount-students h3 span').style.setProperty('--num', {{dynamicContent.success_amount}});
 		}
@@ -459,16 +458,6 @@
 			rect.right <= (window.innerWidth || document.documentElement.clientWidth)
 		);
 	}
-
-	/*function isVisibleThroughViewport(element){
-		const rect = element.getBoundingClientRect();
-		return(
-			rect.bottom >= 0 &&
-			rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
-			rect.left >= 0 &&
-			rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-		)
-	}*/
 </script>
 
 <script>

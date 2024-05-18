@@ -984,6 +984,7 @@ nav a{
   color: grey;
   text-decoration: none;
   cursor: pointer;
+  font-size: 12px;
 }
 
 .footer .footer-logo{
