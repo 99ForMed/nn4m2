@@ -23,6 +23,30 @@
       p {
         color: #999999;
       }
+
+
+      .nav-btns{
+        display: flex;
+        justify-content: space-evenly;
+        
+      }
+
+      .nav-btn{
+        border: solid darkorange 1px;
+        border-radius: 3px;
+        padding: 7px 11px;
+        width: 100px;
+        display: inline-block;
+        margin: 0 10px;
+        transition: all 0.4s;
+        cursor: pointer;
+      }
+
+      .nav-btn:hover{
+        background-color: darkorange;
+        color: black;
+      }
+
     </style>
     {% endblock %}
   {% block body %}
@@ -31,6 +55,13 @@
     <div class="content">
       <h1>Coming Soon</h1>
       <p>We're working hard to bring you something awesome.</p>
+      <div class="nav-btns">
+        <a href="{% url 'home-page' %}"><p class="nav-btn home-btn">Home</p></a>
+        <a href="{% url 'contact-page' %}"><p class="nav-btn contact-btn">Contact</p></a>
+      </div>
+      
+
+      </div>
     </div>
   </div>
 {% endblock %}
