@@ -393,6 +393,7 @@ nav a{
 .ucat-interview h4{
   color: #999999;
 }
+
 @media (min-width: 767px) {
 	.mobile-break{
     display: none;
@@ -524,6 +525,10 @@ nav a{
   background-color: rgba(0,0,0,0.2);
   padding: 70px;
   border-radius: 4px;
+}
+
+#interview-only-carousel{
+  width: 800px !important;
 }
 
 @media(max-width: 700px){
