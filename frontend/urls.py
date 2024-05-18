@@ -24,7 +24,7 @@ urlpatterns = [
     path('course-content/ucat/', ucat_course_content_view),
     path('course-content/interview/medicine/', medicine_interview_course_content_view),
     path('course-content/interview/dentistry/', dentistry_interview_course_content_view),
-    path('contact/', contact_view),
+    path('contact/', contact_view, name='contact-page'),
     path('courses-updated/', selection_view, name='selection-page'),
     path('ucat-course-updated/', ucat_sell_view, name='ucat-course-page-updated'),
     path('selection/', selection_view, name='selection-page'),
