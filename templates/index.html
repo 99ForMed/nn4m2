@@ -363,17 +363,19 @@
 		
 	</div>
 </div>
-<div class='testimonials-section'>
+<div class='testimonials-section' id="testimonials">
 	<div class='container'>
 		
-		<div id="carouselExampleIndicators" class="carousel slide desktop" data-bs-ride="carousel">
+		<div id="carouselDesktopIndicators" class="carousel slide desktop" data-bs-ride="carousel">
 			<h2 style='color: black'>Testimonials</h2>
 			<div class="carousel-indicators">
 				
-			<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-			 {% for i in testimonials_grouped %} <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{{forloop.counter}}" aria-label="Slide {{forloop.counter}}"></button>
+			 {% for i in testimonials_grouped %} 
+			 	<button type="button" data-bs-target="#carouselDesktopIndicators" data-bs-slide-to="{{forloop.counter0}}" aria-label="Slide {{forloop.counter}}"
+				{% if forloop.counter0 == 0 %}class="active"{% endif %}
+				></button>
 			  
-				{% endfor %} 
+			{% endfor %} 
 			</div> 
 			<div class="carousel-inner">
 			  {% for group in testimonials_grouped %}
@@ -384,75 +386,25 @@
 					<div class='testimonial'>
 						<h3>{{testimonial.name}}</h3>
 						<h5>{{testimonial.credentials}}</h5>
-						<p>{{testimonial.content|truncatechars:300|safe}}
+						<p>{{testimonial.content|truncatechars:150|safe}}
 						</p>
-						<p class='expand-testimonial' style='position: absolute; bottom: 10px' onclick='window.location.href="full-testimonial/{{testimonial.id}}"'>Expand</p>
+						<p class='expand-testimonial' style='position: absolute; bottom: 10px' onclick='window.open("full-testimonial/{{testimonial.id}}", "_blank").focus()'>Expand</p>
 					</div>
 					{% endfor %}
 				</div>
 			  </div>
 			  {% endfor %}
-			  {% comment %} <div class="carousel-item">
-				<div class="d-flex justify-content-evenly">
-					<div class='testimonial'>
-						<h3>A. RAJAPAKSE</h3>
-						<h5>WSU MD, 2022</h5>
-						<p>Just wanted to thank you for all of your help leading up to the interviews, especially the mocks were such a good way for me to really get into the style of the upcoming interviews and I know I definitely wouldn't have got an offer without your insight and help.
-						</p>
-					</div>
-					<div class='testimonial'>
-						<h3>P.TRAN</h3>
-						<h5>WSU MD, 2022</h5>
-						<p>Interview training was very helpful. I wish I had started preparation with these guys sooner. 
-						</p>
-					</div>
-					<div class='testimonial'>
-						<h3>I. KARIM</h3>
-						<h5>WSU MD, 2022</h5>
-						<p>What helped me the most get used to the real interview where the mock interviews and the feedback given on every single question. 
-						</p>
-					</div>
-				</div>
-			  </div>
-			  <div class="carousel-item">
-				<div class="d-flex justify-content-evenly">
-					<div class='testimonial'>
-						<h3>M. AHMAD</h3>
-						<h5>WSU MD, 2022</h5>
-						<p>What helped most was the wide variety of prep that focused on question themes allowing the practice answers to be molded to any question they could ask
-						</p>
-					</div>
-					<div class='testimonial'>
-						<h3>P. LAY</h3>
-						<h5>WSU MD, 2022</h5>
-						<p>Going through practice questions helped me a lot. Particularly with your different perspective/approach to questions.
-						</p>
-					</div>
-					<div class='testimonial'>
-						<h3>N.HASSAN</h3>
-						<h5>WSU MD, 2022</h5>
-						<p>I liked the practice interviews which were the most helpful. It makes it easier to understand what to improve when u are doing an actual interview under actual interview conditions
-						</p>
-					</div>
-				</div>
-			  </div> {% endcomment %}
+			  
 			</div>
-			{% comment %} <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-			  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-			  <span class="visually-hidden">Previous</span>
-			</button>
-			<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-			  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-			  <span class="visually-hidden">Next</span>
-			</button> {% endcomment %}
 		</div>
 
-		<div id="carouselExampleIndicators" class="carousel slide mobile" data-bs-ride="carousel">
+		<div id="carouselMobileIndicators" class="carousel slide mobile" data-bs-ride="carousel">
 			<h2>Testimonials</h2>
 			<div class="carousel-indicators">
-			  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-			  {% for i in testimonials %} <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{{forloop.counter}}" aria-label="Slide {{forloop.counter}}"></button>
-			  
+			  	{% for i in testimonials %} 
+			  		<button type="button" data-bs-target="#carouselMobileIndicators" data-bs-slide-to="{{forloop.counter0}}" aria-label="Slide {{forloop.counter}}"
+					{% if forloop.counter0 == 0 %}class='active'{% endif %}
+					></button>
 				{% endfor %} 
 			</div>
 			<div class="carousel-inner">
@@ -470,16 +422,7 @@
 				  </div>
 				</div>
 				{% endfor %}
-			  
 			</div>
-			{% comment %} <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-			  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-			  <span class="visually-hidden">Previous</span>
-			</button>
-			<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-			  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-			  <span class="visually-hidden">Next</span>
-			</button> {% endcomment %}
 		</div>
 	</div>
 </div>

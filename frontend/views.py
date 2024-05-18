@@ -15,6 +15,7 @@ from django.utils import timezone
 
 def home_view(request):
     testimonials = Testimonial.objects.all()
+
     context = {
         'testimonials': testimonials,
         'testimonials_all': testimonials,
