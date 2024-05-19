@@ -11,10 +11,31 @@
 	<img src='{% static "img/logo.png" %}'/>
 </div>
 <script>
-	setTimeout(function(){document.querySelector('.loading-screen').style.opacity = '0'}, 5000);
-	setTimeout(function(){document.querySelector('.loading-screen').style.display = 'none'}, 6000)
+	// Function to check if the user is coming from outside the website
+	function isExternalReferrer() {
+		const referrer = document.referrer;
+		const currentDomain = window.location.hostname;
+		// Check if the referrer is empty or doesn't contain the current domain
+		return referrer === '' || !referrer.includes(currentDomain);
+	}
+
+	// Run the script only if the viewer is coming from outside the website
+	if (isExternalReferrer()) {
+		setTimeout(function() {
+			document.querySelector('.loading-screen').style.opacity = '0';
+		}, 5000);
+		setTimeout(function() {
+			document.querySelector('.loading-screen').style.display = 'none';
+		}, 6000);
+	}else{
+		setTimeout(function() {
+			document.querySelector('.loading-screen').style.opacity = '0';
+		}, 300);
+		setTimeout(function() {
+			document.querySelector('.loading-screen').style.display = 'none';
+		}, 600);
+	}
 </script>
-{% comment %} <script src='{% static 'js/landing-page-carousel.js' %}'/> {% endcomment %}
 <div class='landing-page'>
 	
 	<div class='container-fluid'>
