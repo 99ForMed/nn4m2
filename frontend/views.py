@@ -41,7 +41,7 @@ def eligibility_view(request):
                 accepted = True
                 return redirect('secondary-qualifiers/?fname=%s&lname=%s&email=%s&pn=%s&sm=%s&gpa=%s&a=%s&atar=%s' % (request.POST['fname'], request.POST['lname'], request.POST['email'], request.POST['mob'], request.POST['job'], request.POST['gpa'], str(accepted), str(atar)))
             elif atar < 93 and gpa < 5.5:
-                return redirect('../rejected/?scores=1')
+                return redirect('rejected/?scores=1')
             else:
                 return redirect('secondary-qualifiers/?fname=%s&lname=%s&email=%s&pn=%s&sm=%s&gpa=%s&a=%s&atar=%s' % (request.POST['fname'], request.POST['lname'], request.POST['email'], request.POST['mob'], request.POST['job'], request.POST['gpa'], str(accepted), str(atar)))
 
@@ -83,7 +83,7 @@ def secondary_qualifiers_view(request):
 
         email_package = {
             'author': 'enquiries@yourpulse.com.au',
-            'recipients': ['admin@yourweb.sydney'],
+            'recipients': ['99formed2021@gmail.com', 'pri@yourpulse.com.au'],
             'subject': '99ForMed Application - ' + request.GET['fname']+' '+request.GET['lname'],
             'template': 'application-email.html',
             'context': {
@@ -108,7 +108,7 @@ def secondary_qualifiers_view(request):
         html_content = render_to_string('application-email.html', email_package['context'])
         email = EmailMultiAlternatives(
             email_package['subject'],
-            'This email is unavailable from this browser. Please contact admin@yourweb.sydney if this is an urgent issue.',
+            'This email is unavailable from this browser. Please contact admin@yourpulse.com.au if this is an urgent issue.',
             'enquiries@yourpulse.com.au',
             ['pri@yourpulse.com.au', 'info@99formed.com']
         )
