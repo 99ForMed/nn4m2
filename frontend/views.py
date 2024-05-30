@@ -110,7 +110,7 @@ def secondary_qualifiers_view(request):
             email_package['subject'],
             'This email is unavailable from this browser. Please contact admin@yourpulse.com.au if this is an urgent issue.',
             'enquiries@yourpulse.com.au',
-            ['pri@yourpulse.com.au', 'info@99formed.com']
+            ['pri@yourpulse.com.au', 'admin@99formed.com', '99formed2021@gmail.com']
         )
 
         email.attach_alternative(html_content, "text/html")
