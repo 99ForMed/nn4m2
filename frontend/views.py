@@ -83,7 +83,7 @@ def secondary_qualifiers_view(request):
 
         email_package = {
             'author': 'enquiries@yourpulse.com.au',
-            'recipients': ['99formed2021@gmail.com', 'pri@yourpulse.com.au'],
+            'recipients': ['99formed2021@gmail.com', 'pri.kundnani03@gmail.com'],
             'subject': '99ForMed Application - ' + request.GET['fname']+' '+request.GET['lname'],
             'template': 'application-email.html',
             'context': {
